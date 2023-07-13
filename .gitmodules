@@ -1,0 +1,3 @@
+[submodule "gymnasium"]
+	path = gymnasium
+	url = https://github.com/acrigby/gymnasium
