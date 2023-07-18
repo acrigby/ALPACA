@@ -5,7 +5,7 @@ Created on Wed Jul  5 09:33:41 2023
 @author: localuser
 """
 
-import gymnasium as gym
+from C:\Users\aidan\projects\ALPACA\gymnasium import gymnasium as gym
 from gymnasium.wrappers import TimeLimit
 import numpy as np
 import matplotlib.pyplot as plt
