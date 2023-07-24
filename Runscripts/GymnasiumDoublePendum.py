@@ -20,14 +20,15 @@ window = 5
 t = 0
 i = 0
 
-env = gym.make('CartPole-v0', render_mode = 'human')
+env = gym.make('Acrobot-v1', render_mode = 'human')
 #env = TimeLimit(env, max_episode_steps=5000)
 observation, info = env.reset()
 
 
-for _ in range(10000000):
+for _ in range(10000):
     t += 0.2
     action = env.action_space.sample()  # agent policy that uses the observation and info
+    print(action)
     observation, reward, terminated, truncated, info = env.step(action)
 
     if terminated or truncated:

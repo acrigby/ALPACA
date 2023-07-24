@@ -61,7 +61,7 @@ register(
     id="AcrobotDymola",
     entry_point="gymnasium.envs.classic_control.acrobotDymola:AcrobotEnv",
     reward_threshold=-100.0,
-    max_episode_steps=5000,
+    max_episode_steps=200,
 )
 
 
