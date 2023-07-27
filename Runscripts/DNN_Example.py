@@ -143,8 +143,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 BATCH_SIZE = 128
 GAMMA = 0.99
 EPS_START = 0.9
-EPS_END = 0.05
-EPS_DECAY = 1000
+EPS_END = 0.005
+EPS_DECAY = 10000
 TAU = 0.005
 LR = 1e-4
 
@@ -168,7 +168,20 @@ steps_done = 0
 if torch.cuda.is_available():
     num_episodes = 600
 else:
-    num_episodes = 500
+    num_episodes = 50000
+    
+Orig_results = {}
+Orig_variables = ["Time","sensor_pT.T"]    
+for key in Orig_variables:
+    Orig_results[key] = []
+Orig_trajsize = dymola.readTrajectorySize("C:/Users/localuser/Documents/GitHub/ALPACA/Runscripts/Original_Temp_Profile.mat")
+Orig_signals = dymola.readTrajectory("C:/Users/localuser/Documents/GitHub/ALPACA/Runscripts/Original_Temp_Profile.mat", Orig_variables, Orig_trajsize)
+
+for i in range(0,len(Orig_variables),1):
+    Orig_results[Orig_variables[i]].extend(Orig_signals[i])
+    
+for i in range(0,len(Orig_results["Time"]),1):
+    Orig_results["Time"][i] = Orig_results["Time"][i] - 9900
 
 for i_episode in range(num_episodes):
     # Initialize the environment and get it's state
@@ -220,7 +233,8 @@ for i_episode in range(num_episodes):
         if done:
             fig, axs = plt.subplots(2, 2)
             axs[0, 0].plot(t1, temps)
-            axs[0, 0].axhspan(672.15, 674.15, color='red', alpha=0.5, label = "Temperature Band")
+            axs[0, 0].plot(Orig_results["Time"],Orig_results["sensor_pT.T"])
+            axs[0, 0].axhspan(672.15, 674.15, color='green', alpha=0.5, label = "Temperature Band")
             axs[0, 0].set_title('Temperature')
             axs[0, 1].plot(t1, mdots, 'tab:orange')
             axs[0, 1].set_title('Pump Mdot')
