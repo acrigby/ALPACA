@@ -21,13 +21,13 @@ import os
 from dymola.dymola_interface import DymolaInterface
 from Agent_PyTorch import *
 
-model = "DoublePendulum"
+# model = "DoublePendulum"
 
-dymola = DymolaInterface()
-print(dymola.DymolaVersion())
-dymola.openModel(model)
+# dymola = DymolaInterface()
+# print(dymola.DymolaVersion())
+# dymola.openModel(model)
 
-env = gym.make('AcrobotDymola', render_mode = "human")
+env = gym.make('Acrobot-v1')
 device = torch.device("cpu")
 
 learningtimes = []
@@ -117,7 +117,7 @@ optimizer = torch.optim.Adam(policy_net.parameters(), lr=lr) # The optimizer wil
 loss_fn = nn.SmoothL1Loss()
 
 # Initialize the Gym environment
-env = gym.make('AcrobotDymola', render_mode = "human")
+env = gym.make('Acrobot-v1')
 #env = TimeLimit(env, max_episode_steps=5000)
 observation, info = env.reset()
 
