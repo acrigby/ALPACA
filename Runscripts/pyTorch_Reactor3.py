@@ -21,7 +21,7 @@ import io
 import base64
 import os
 
-enviroment = "Reactor-v2"
+enviroment = "Reactor-v3"
 
 
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
@@ -115,6 +115,7 @@ def plot_scores(show_result=False):
     plt.xlabel('Episode')
     plt.ylabel('Reward')
     plt.plot(durations_t.numpy())
+    plt.yscale("log")
     # Take 100 episode averages and plot them too
     if len(durations_t) >= 100:
         means = durations_t.unfold(0, 100, 1).mean(1).view(-1)
@@ -181,7 +182,7 @@ def choose_action_softmax(net, state, temperature):
     
     print(softmax_out)
     
-    print(all_possible_actions)
+    #print(all_possible_actions)
     
     # this samples a random element from "all_possible_actions" with the probability distribution p (softmax_out in this case)
     action = np.random.choice(all_possible_actions,p=softmax_out)
@@ -191,7 +192,7 @@ def choose_action_softmax(net, state, temperature):
      
 ### Define exploration profile
 initial_value = 5
-num_iterations = 2000
+num_iterations = 500
 exp_decay = np.exp(-np.log(initial_value) / num_iterations * 6) # We compute the exponential decay in such a way the shape of the exploration profile does not depend on the number of iterations
 exploration_profile = [initial_value * (exp_decay ** i) for i in range(num_iterations)]
 
@@ -203,12 +204,12 @@ np.random.seed(0)
 gamma = 0.99   # gamma parameter for the long term reward
 replay_memory_capacity = 10000   # Replay memory capacity
 #lr = 1e-2   # Optimizer learning rate
-lr = 1e-4
-#lr = 1e-3
+#lr = 1e-4
+lr = 1e-3
 target_net_update_steps = 10   # Number of episodes to wait before updating the target network
 batch_size = 256   # Number of samples to take from the replay memory for each update
 bad_state_penalty = 0   # Penalty to the reward when we are in a bad state (in this case when the pole falls down) 
-min_samples_for_training = 500   # Minimum samples in the replay memory to enable the training
+min_samples_for_training = 1000   # Minimum samples in the replay memory to enable the training
 
 
 ### Create environment
@@ -286,6 +287,10 @@ for episode_num, tau in enumerate(tqdm(exploration_profile)):
     t1 = []
     terminated = False
     truncated = False
+    
+    temps.append(observation[0]+673.15)
+    feeds.append(observation[3])
+    t1.append(t*5)
 
     # Go on until the pole falls off
     while not (terminated or truncated):
@@ -294,11 +299,16 @@ for episode_num, tau in enumerate(tqdm(exploration_profile)):
       # Choose the action following the policy
       action, q_values = choose_action_softmax(policy_net, observation, temperature=tau)
       
-      print(action, observation)
+      #print(action, observation)
       
       # Apply the action and get the next state, the reward and a flag "done" that is True if the game is ended
       next_observation, reward, terminated, truncated, info = env.step(action)
-     
+      
+      temps.append(next_observation[0]+673.15)
+      feeds.append(next_observation[3])
+      t1.append(t*5)
+         
+      print(reward)
 
       # Update the final score (+1 for each step)
       score += reward
@@ -314,10 +324,6 @@ for episode_num, tau in enumerate(tqdm(exploration_profile)):
       # Update the network
       if len(replay_mem) > min_samples_for_training: # we enable the training only if we have enough samples in the replay memory, otherwise the training will use the same samples too often
           update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size)
-
-      temps.append(observation[0]+673.15)
-      feeds.append(observation[3])
-      t1.append(t*5 + 5)
       
       observation = next_observation
 
@@ -327,6 +333,92 @@ for episode_num, tau in enumerate(tqdm(exploration_profile)):
         target_net.load_state_dict(policy_net.state_dict()) # This will copy the weights of the policy network to the target network
     
     plotting_rewards.append(score)
+    episode_scores.append(score)
+    plot_scores()
+    fig, axs = plt.subplots(2,1)
+    axs[0].plot(Orig_results["Time"],Orig_results["sensor_pT.T"], label = 'Original')
+    axs[0].plot(t1, temps, label = 'Optimised')
+    axs[0].axhspan(666.15, 680.15, color='red', alpha=0.35)
+    axs[0].axhspan(671.15, 675.15, color='green', alpha=0.5)
+    #axs.set_xlim(0,200)
+    axs[0].legend(ncol=2)
+    axs[0].set(ylabel = 'Temperature / K')
+    axs[0].set_title('Temperature')
+    # axs[0, 1].plot(t1, mdots, 'tab:orange')
+    # axs[0, 1].set_title('Pump Mdot')
+    axs[1].plot(t1, feeds, 'tab:green')
+    axs[1].set_title('FF Signal')
+    # axs[1, 1].plot(t1, TCVdps, 'tab:red')
+    # axs[1, 1].set_title('TCV pressure drop')
+    fig.tight_layout()
+    axs[1].set(xlabel='Time / s')
+        
+    display.display(plt.gcf())
+    plt.close()
+    torch.save(policy_net, 'DQNOutputpk.pt')
+    # Print the final score
+    print(f"EPISODE: {episode_num + 1} - FINAL SCORE: {score} - Temperature: {tau}") # Print the final score
+
+env.close()
+
+plt.plot(plotting_rewards)
+plt.show()
+
+# Initialize the Gym environment
+env = gym.make(enviroment) 
+observation, info = env.reset()
+plotting_rewards_final = []
+
+
+for episode_num in range(10):
+
+    # Reset the environment and get the initial state
+    observation, info = env.reset()
+    # Reset the score. The final score will be the total amount of steps before the pole falls
+    score = 0
+    t = 0
+    temps = []
+    mdots = []
+    powers = []
+    TCVdps = []
+    feeds = []
+    t1 = []
+    terminated = False
+    truncated = False
+    
+    temps.append(observation[0]+673.15)
+    feeds.append(observation[3])
+    t1.append(t*5)
+
+    # Go on until the pole falls off
+    while not (terminated or truncated):
+      t+=1
+
+      # Choose the action following the policy
+      action, q_values = choose_action_softmax(policy_net, observation, temperature=0)
+      
+      #print(action, observation)
+      
+      # Apply the action and get the next state, the reward and a flag "done" that is True if the game is ended
+      next_observation, reward, terminated, truncated, info = env.step(action)
+      
+      temps.append(next_observation[0]+673.15)
+      feeds.append(next_observation[3])
+      t1.append(t*5)
+         
+      print(reward)
+
+      # Update the final score (+1 for each step)
+      score += reward
+
+      # Apply penalty for bad state
+      if terminated or truncated: # if the pole has fallen down 
+          reward += bad_state_penalty
+          next_observation = None
+      
+      observation = next_observation
+    
+    plotting_rewards_final.append(score)
     episode_scores.append(score)
     plot_scores()
     fig, axs = plt.subplots(2,1)
@@ -348,50 +440,7 @@ for episode_num, tau in enumerate(tqdm(exploration_profile)):
     display.display(plt.gcf())
     plt.close()
     # Print the final score
-    print(f"EPISODE: {episode_num + 1} - FINAL SCORE: {score} - Temperature: {tau}") # Print the final score
-
-env.close()
-
-plt.plot(plotting_rewards)
-plt.show()
-
-# Initialize the Gym environment
-env = gym.make(enviroment) 
-observation, info = env.reset()
-plotting_rewards_final = []
-
-for episode_num in range(10):
-
-    # Reset the environment and get the initial state
-    observation, info = env.reset()
-    # Reset the score. The final score will be the total amount of steps before the pole falls
-    score = 0
-    terminated = False
-    truncated = False
-
-    # Go on until the pole falls off
-    while not (terminated or truncated):
-
-      # Choose the action following the policy
-      action, q_values = choose_action_softmax(policy_net, observation, temperature=0)
-      
-      # Apply the action and get the next state, the reward and a flag "done" that is True if the game is ended
-      next_observation, reward, terminated, truncated, info = env.step(action)
-
-      # Update the final score (+1 for each step)
-      score += reward
-
-      # Apply penalty for bad state
-      if terminated or truncated: # if the pole has fallen down 
-          reward += bad_state_penalty
-          next_observation = None
-      
-
-      observation = next_observation
-
-    plotting_rewards_final.append(score)
-    # Print the final score
-    print(f"EPISODE: {episode_num + 1} - FINAL SCORE: {score} - Temperature: {tau}") # Print the final score
+    print(f"EPISODE: {episode_num + 1} - FINAL SCORE: {score} - Temperature: {0}") # Print the final score
 
 env.close()
 
