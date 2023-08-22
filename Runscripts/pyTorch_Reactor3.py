@@ -16,6 +16,7 @@ from tqdm.notebook import tqdm
 from torch import nn
 from collections import deque,namedtuple
 from dymola.dymola_interface import DymolaInterface
+from csv import writer
 import glob
 import io
 import base64
@@ -206,10 +207,10 @@ replay_memory_capacity = 10000   # Replay memory capacity
 #lr = 1e-2   # Optimizer learning rate
 #lr = 1e-4
 lr = 1e-3
-target_net_update_steps = 10   # Number of episodes to wait before updating the target network
+target_net_update_steps = 5   # Number of episodes to wait before updating the target network
 batch_size = 256   # Number of samples to take from the replay memory for each update
 bad_state_penalty = 0   # Penalty to the reward when we are in a bad state (in this case when the pole falls down) 
-min_samples_for_training = 1000   # Minimum samples in the replay memory to enable the training
+min_samples_for_training = 500   # Minimum samples in the replay memory to enable the training
 
 
 ### Create environment
@@ -271,178 +272,188 @@ for i in range(0,len(Orig_variables),1):
     
 for i in range(0,len(Orig_results["Time"]),1):
     Orig_results["Time"][i] = Orig_results["Time"][i] - 9900
-
-for episode_num, tau in enumerate(tqdm(exploration_profile)):
-
-    # Reset the environment and get the initial state
-    observation, info = env.reset()
-    # Reset the score. The final score will be the total amount of steps before the pole falls
-    score = 0
-    t = 0
-    temps = []
-    mdots = []
-    powers = []
-    TCVdps = []
-    feeds = []
-    t1 = []
-    terminated = False
-    truncated = False
     
-    temps.append(observation[0]+673.15)
-    feeds.append(observation[3])
-    t1.append(t*5)
-
-    # Go on until the pole falls off
-    while not (terminated or truncated):
-      t+=1
-
-      # Choose the action following the policy
-      action, q_values = choose_action_softmax(policy_net, observation, temperature=tau)
-      
-      #print(action, observation)
-      
-      # Apply the action and get the next state, the reward and a flag "done" that is True if the game is ended
-      next_observation, reward, terminated, truncated, info = env.step(action)
-      
-      temps.append(next_observation[0]+673.15)
-      feeds.append(next_observation[3])
-      t1.append(t*5)
-         
-      print(reward)
-
-      # Update the final score (+1 for each step)
-      score += reward
-
-      # Apply penalty for bad state
-      if terminated or truncated: # if the pole has fallen down 
-          reward += bad_state_penalty
-          next_observation = None
-      
-      # Update the replay memory
-      replay_mem.push(observation, action, next_observation, reward)
-
-      # Update the network
-      if len(replay_mem) > min_samples_for_training: # we enable the training only if we have enough samples in the replay memory, otherwise the training will use the same samples too often
-          update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size)
-      
-      observation = next_observation
-
-    # Update the target network every target_net_update_steps episodes
-    if episode_num % target_net_update_steps == 0:
-        print('Updating target network...')
-        target_net.load_state_dict(policy_net.state_dict()) # This will copy the weights of the policy network to the target network
+with open('feeds.csv', 'w', newline='') as f_object:
+    writer_object = writer(f_object)
+    for episode_num, tau in enumerate(tqdm(exploration_profile)):
     
-    plotting_rewards.append(score)
-    episode_scores.append(score)
-    plot_scores()
-    fig, axs = plt.subplots(2,1)
-    axs[0].plot(Orig_results["Time"],Orig_results["sensor_pT.T"], label = 'Original')
-    axs[0].plot(t1, temps, label = 'Optimised')
-    axs[0].axhspan(666.15, 680.15, color='red', alpha=0.35)
-    axs[0].axhspan(671.15, 675.15, color='green', alpha=0.5)
-    #axs.set_xlim(0,200)
-    axs[0].legend(ncol=2)
-    axs[0].set(ylabel = 'Temperature / K')
-    axs[0].set_title('Temperature')
-    # axs[0, 1].plot(t1, mdots, 'tab:orange')
-    # axs[0, 1].set_title('Pump Mdot')
-    axs[1].plot(t1, feeds, 'tab:green')
-    axs[1].set_title('FF Signal')
-    # axs[1, 1].plot(t1, TCVdps, 'tab:red')
-    # axs[1, 1].set_title('TCV pressure drop')
-    fig.tight_layout()
-    axs[1].set(xlabel='Time / s')
+        # Reset the environment and get the initial state
+        observation, info = env.reset()
+        # Reset the score. The final score will be the total amount of steps before the pole falls
+        score = 0
+        t = 0
+        temps = []
+        mdots = []
+        powers = []
+        TCVdps = []
+        feeds = []
+        writefeeds = []
+        t1 = []
+        terminated = False
+        truncated = False
         
-    display.display(plt.gcf())
-    plt.close()
-    torch.save(policy_net, 'DQNOutputpk.pt')
-    # Print the final score
-    print(f"EPISODE: {episode_num + 1} - FINAL SCORE: {score} - Temperature: {tau}") # Print the final score
-
-env.close()
-
-plt.plot(plotting_rewards)
-plt.show()
-
-# Initialize the Gym environment
-env = gym.make(enviroment) 
-observation, info = env.reset()
-plotting_rewards_final = []
-
-
-for episode_num in range(10):
-
-    # Reset the environment and get the initial state
-    observation, info = env.reset()
-    # Reset the score. The final score will be the total amount of steps before the pole falls
-    score = 0
-    t = 0
-    temps = []
-    mdots = []
-    powers = []
-    TCVdps = []
-    feeds = []
-    t1 = []
-    terminated = False
-    truncated = False
+        temps.append(observation[0]+673.15)
+        feeds.append(observation[3])
+        t1.append(t*5)
     
-    temps.append(observation[0]+673.15)
-    feeds.append(observation[3])
-    t1.append(t*5)
-
-    # Go on until the pole falls off
-    while not (terminated or truncated):
-      t+=1
-
-      # Choose the action following the policy
-      action, q_values = choose_action_softmax(policy_net, observation, temperature=0)
-      
-      #print(action, observation)
-      
-      # Apply the action and get the next state, the reward and a flag "done" that is True if the game is ended
-      next_observation, reward, terminated, truncated, info = env.step(action)
-      
-      temps.append(next_observation[0]+673.15)
-      feeds.append(next_observation[3])
-      t1.append(t*5)
-         
-      print(reward)
-
-      # Update the final score (+1 for each step)
-      score += reward
-
-      # Apply penalty for bad state
-      if terminated or truncated: # if the pole has fallen down 
-          reward += bad_state_penalty
-          next_observation = None
-      
-      observation = next_observation
+        # Go on until the pole falls off
+        while not (terminated or truncated):
+          t+=1
     
-    plotting_rewards_final.append(score)
-    episode_scores.append(score)
-    plot_scores()
-    fig, axs = plt.subplots(2,1)
-    axs[0].plot(Orig_results["Time"],Orig_results["sensor_pT.T"], label = 'Original')
-    axs[0].plot(t1, temps)
-    axs[0].axhspan(671.15, 675.15, color='green', alpha=0.5, label = "Temperature Band")
-    #axs.set_xlim(0,200)
-    axs[0].legend()
-    axs[0].set_title('Temperature')
-    # axs[0, 1].plot(t1, mdots, 'tab:orange')
-    # axs[0, 1].set_title('Pump Mdot')
-    axs[1].plot(t1, feeds, 'tab:green')
-    axs[1].set_title('FF Signal')
-    # axs[1, 1].plot(t1, TCVdps, 'tab:red')
-    # axs[1, 1].set_title('TCV pressure drop')
-    fig.tight_layout()
-    axs[1].set(xlabel='Time / s')
+          # Choose the action following the policy
+          action, q_values = choose_action_softmax(policy_net, observation, temperature=tau)
+          
+          #print(action, observation)
+          
+          # Apply the action and get the next state, the reward and a flag "done" that is True if the game is ended
+          next_observation, reward, terminated, truncated, info = env.step(action)
+          
+          temps.append(next_observation[0]+673.15)
+          feeds.append(next_observation[3])
+          t1.append(t*5)
+             
+          print(reward)
+    
+          # Update the final score (+1 for each step)
+          score += reward
+    
+          # Apply penalty for bad state
+          if terminated or truncated: # if the pole has fallen down 
+              reward += bad_state_penalty
+              next_observation = None
+          
+          # Update the replay memory
+          replay_mem.push(observation, action, next_observation, reward)
+    
+          # Update the network
+          if len(replay_mem) > min_samples_for_training: # we enable the training only if we have enough samples in the replay memory, otherwise the training will use the same samples too often
+              update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size)
+          
+          observation = next_observation
+    
+        # Update the target network every target_net_update_steps episodes
+        if episode_num % target_net_update_steps == 0:
+            print('Updating target network...')
+            target_net.load_state_dict(policy_net.state_dict()) # This will copy the weights of the policy network to the target network
         
-    display.display(plt.gcf())
-    plt.close()
-    # Print the final score
-    print(f"EPISODE: {episode_num + 1} - FINAL SCORE: {score} - Temperature: {0}") # Print the final score
-
-env.close()
-
-plt.plot(plotting_rewards_final)
-plt.show()
+        plotting_rewards.append(score)
+        episode_scores.append(score)
+        plot_scores()
+        fig, axs = plt.subplots(2,1)
+        axs[0].plot(Orig_results["Time"],Orig_results["sensor_pT.T"], label = 'Original')
+        axs[0].plot(t1, temps, label = 'Optimised')
+        axs[0].set_xlim(0,max(t1))
+        axs[0].axhspan(666.15, 680.15, color='red', alpha=0.35)
+        axs[0].axhspan(671.15, 675.15, color='green', alpha=0.5)
+        #axs.set_xlim(0,200)
+        axs[0].legend(ncol=2)
+        axs[0].set(ylabel = 'Temperature / K')
+        axs[0].set_title('Temperature')
+        # axs[0, 1].plot(t1, mdots, 'tab:orange')
+        # axs[0, 1].set_title('Pump Mdot')
+        axs[1].plot(t1, feeds, 'tab:green')
+        axs[1].set_xlim(0,max(t1))
+        axs[1].set_title('FF Signal')
+        #yticks = np.arange(-2, 2, 0.5)
+        #axs[1].set_yticks(yticks)
+        # axs[1, 1].plot(t1, TCVdps, 'tab:red')
+        # axs[1, 1].set_title('TCV pressure drop')
+        fig.tight_layout()
+        axs[1].set(xlabel='Time / s')
+            
+        display.display(plt.gcf())
+        plt.close()
+        torch.save(policy_net, 'DQNOutputpk.pt')
+        # Print the final score
+        print(f"EPISODE: {episode_num + 1} - FINAL SCORE: {score} - Temperature: {tau}") # Print the final score
+        writefeeds = feeds
+        writefeeds.insert(0,episode_num)
+        writer_object.writerow(writefeeds)
+    env.close()
+    
+    plt.plot(plotting_rewards)
+    plt.show()
+    
+    # Initialize the Gym environment
+    env = gym.make(enviroment) 
+    observation, info = env.reset()
+    plotting_rewards_final = []
+    
+    
+    for episode_num in range(1):
+    
+        # Reset the environment and get the initial state
+        observation, info = env.reset()
+        # Reset the score. The final score will be the total amount of steps before the pole falls
+        score = 0
+        t = 0
+        temps = []
+        mdots = []
+        powers = []
+        TCVdps = []
+        feeds = []
+        t1 = []
+        terminated = False
+        truncated = False
+        
+        temps.append(observation[0]+673.15)
+        feeds.append(observation[3])
+        t1.append(t*3)
+    
+        # Go on until the pole falls off
+        while not (terminated or truncated):
+          t+=1
+    
+          # Choose the action following the policy
+          action, q_values = choose_action_softmax(policy_net, observation, temperature=0)
+          
+          #print(action, observation)
+          
+          # Apply the action and get the next state, the reward and a flag "done" that is True if the game is ended
+          next_observation, reward, terminated, truncated, info = env.step(action)
+          
+          temps.append(next_observation[0]+673.15)
+          feeds.append(next_observation[3])
+          t1.append(t*5)
+             
+          print(reward)
+    
+          # Update the final score (+1 for each step)
+          score += reward
+    
+          # Apply penalty for bad state
+          if terminated or truncated: # if the pole has fallen down 
+              reward += bad_state_penalty
+              next_observation = None
+          
+          observation = next_observation
+        
+        plotting_rewards_final.append(score)
+        episode_scores.append(score)
+        plot_scores()
+        fig, axs = plt.subplots(2,1)
+        axs[0].plot(Orig_results["Time"],Orig_results["sensor_pT.T"], label = 'Original')
+        axs[0].plot(t1, temps)
+        axs[0].axhspan(671.15, 675.15, color='green', alpha=0.5, label = "Temperature Band")
+        #axs.set_xlim(0,200)
+        axs[0].legend()
+        axs[0].set_title('Temperature')
+        # axs[0, 1].plot(t1, mdots, 'tab:orange')
+        # axs[0, 1].set_title('Pump Mdot')
+        axs[1].plot(t1, feeds, 'tab:green')
+        axs[1].set_title('FF Signal')
+        # axs[1, 1].plot(t1, TCVdps, 'tab:red')
+        # axs[1, 1].set_title('TCV pressure drop')
+        fig.tight_layout()
+        axs[1].set(xlabel='Time / s')
+            
+        display.display(plt.gcf())
+        plt.close()
+        # Print the final score
+        print(f"EPISODE: {episode_num + 1} - FINAL SCORE: {score} - Temperature: {0}") # Print the final score
+    
+    env.close()
+    
+    plt.plot(plotting_rewards_final)
+    plt.show()
+    f_object.close()

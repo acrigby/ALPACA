@@ -1,0 +1,83 @@
+Model: ControlTests.SteamTurbine_L2_OpenFeedHeat_Test2
+Integration started at 10800 using integration method:
+RK-method: esdirk45a
+Local extrapolation
+FSAL
+Continuous extension
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 10802.14583589188
+  Tag: simulation.nonlinear[3]
+  For debugging information enable
+  Simulation/Setup/Debug/Nonlinear solver diagnostics/Detailed logging of failed nonlinear solutions.
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 10801.7966929177
+  Tag: simulation.nonlinear[3]
+Error: The following error was detected at time: 11220.28681812866
+  IF97 medium function tsat called with too low pressure
+p = -94573.7 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.WaterIF97_ph.saturationTemperature_Unique19
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique18
+Modelica.Media.Water.WaterIF97_ph.setSat_p_Unique18(BOP.deaerator.mediaProps.p)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 1
+
+Error: The following error was detected at time: 11220.28681812866
+  Error in region computation of IF97 steam tables(p = 1.77084e+06, h = -4.46188e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflow, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique15(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflo...
+
+Error: The following error was detected at time: 11192.84399561479
+  Error in region computation of IF97 steam tables(p = 806655, h = -1.32524e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflow, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique15(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflo...
+
+Error: The following error was detected at time: 11179.12258435785
+  Error in region computation of IF97 steam tables(p = 463198, h = -2.05195e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflow, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique15(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflo...
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 11172.26187872938
+  Tag: simulation.nonlinear[3]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 11168.83152591515
+  Tag: simulation.nonlinear[3]
+
+Integration terminated successfully at T = 20000
+   CPU-time for integration                  : 1.192 seconds
+   CPU-time for initialization               : 0.002 seconds
+   Number of result points                   : 103
+   Number of grid points                     : 93
+   Number of accepted steps                  : 112
+   Number of rejected steps                  : 334
+   Number of f-evaluations (dynamics)        : 2811
+   Number of crossing function evaluations   : 405
+   Number of Jacobian-evaluations            : 52
+   Number of model time events               : 0
+   Number of state events                    : 5
+   Number of step events                     : 0
+
+SUCCESSFUL simulation of ControlTests.SteamTurbine_L2_OpenFeedHeat_Test2

@@ -175,7 +175,7 @@ min_samples_for_training = 1000   # Minimum samples in the replay memory to enab
 
 
 ### Create environment
-env = gym.make('Acrobot-v1') # Initialize the Gym environment
+env = gym.make('CartPole') # Initialize the Gym environment
 
 # Get the shapes of the state space (observation_space) and action space (action_space)
 state_space_dim = env.observation_space.shape[0]
@@ -203,7 +203,7 @@ optimizer = torch.optim.Adam(policy_net.parameters(), lr=lr) # The optimizer wil
 loss_fn = nn.SmoothL1Loss()
 
 # Initialize the Gym environment
-env = gym.make('Acrobot-v1', render_mode = None) 
+env = gym.make('CartPole', render_mode = None) 
 observation, info = env.reset()
 
 plotting_rewards=[]
@@ -258,7 +258,7 @@ plt.plot(plotting_rewards)
 plt.show()
 
 # Initialize the Gym environment
-env = gym.make('Acrobot-v1', render_mode = 'human') 
+env = gym.make('CartPole', render_mode = 'human') 
 observation, info = env.reset()
 plotting_rewards_final = []
 
