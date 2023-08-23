@@ -170,8 +170,8 @@ Orig_results = {}
 Orig_variables = ["Time","sensor_pT.T"]    
 for key in Orig_variables:
     Orig_results[key] = []
-Orig_trajsize = dymola2.readTrajectorySize("C:/Users/localuser/Documents/GitHub/ALPACA/Runscripts/Original_Temp_Profile.mat")
-Orig_signals = dymola2.readTrajectory("C:/Users/localuser/Documents/GitHub/ALPACA/Runscripts/Original_Temp_Profile.mat", Orig_variables, Orig_trajsize)
+Orig_trajsize = dymola2.readTrajectorySize("C:/Users/aidan/projects/ALPACA/Runscripts/Original_Temp_Profile.mat")
+Orig_signals = dymola2.readTrajectory("C:/Users/aidan/projects/ALPACA/Runscripts/Original_Temp_Profile.mat", Orig_variables, Orig_trajsize)
 
 for i in range(0,len(Orig_variables),1):
     Orig_results[Orig_variables[i]].extend(Orig_signals[i])

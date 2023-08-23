@@ -16,9 +16,18 @@ from dymola.dymola_interface import DymolaInterface
 from csv import writer
 import os
 from SolverClasses import *
+import logging
+
+print(os.path.abspath(os.curdir))
+os.chdir("..")
+print(os.path.abspath(os.curdir))
+ALPACApath = os.path.abspath(os.curdir)
+
+f = open("./Utilities/ALPACAASCII.txt", 'r')
+print(''.join([line for line in f]))
 
 #register new enviroments
-exec(open("C:/Users/localuser/Documents/GitHub/ALPACA/gymnasium/gymnasium/envs/classic_control/__init__.py").read())
+exec(open(str(ALPACApath)+"/gymnasium/gymnasium/envs/classic_control/__init__.py").read())
 
 #name enviroment
 enviroment = "Reactor-v3"
@@ -99,8 +108,8 @@ Orig_results = {}
 Orig_variables = ["Time","sensor_pT.T"]    
 for key in Orig_variables:
     Orig_results[key] = []
-Orig_trajsize = dymola2.readTrajectorySize("C:/Users/localuser/Documents/GitHub/ALPACA/Runscripts/Original_Temp_Profile.mat")
-Orig_signals = dymola2.readTrajectory("C:/Users/localuser/Documents/GitHub/ALPACA/Runscripts/Original_Temp_Profile.mat", Orig_variables, Orig_trajsize)
+Orig_trajsize = dymola2.readTrajectorySize(str(ALPACApath)+"/Runscripts/Original_Temp_Profile.mat")
+Orig_signals = dymola2.readTrajectory(str(ALPACApath)+"/Runscripts/Original_Temp_Profile.mat", Orig_variables, Orig_trajsize)
 
 for i in range(0,len(Orig_variables),1):
     Orig_results[Orig_variables[i]].extend(Orig_signals[i])
@@ -116,7 +125,7 @@ for i in range(0,len(Orig_results["Time"]),1):
         3. If terminated or truncated - update and plot results
 """
 #open csv to store feedforward results
-with open('feeds.csv', 'w', newline='') as f_object:
+with open('RunData/feeds.csv', 'w', newline='') as f_object:
     writer_object = writer(f_object)
     #loop over expoloration profile to learn
     for episode_num, tau in enumerate(tqdm(exploration_profile)):
@@ -209,7 +218,7 @@ with open('feeds.csv', 'w', newline='') as f_object:
             
         display.display(plt.gcf())
         plt.close()
-        torch.save(policy_net, 'DQNOutputpk.pt')
+        torch.save(policy_net, 'RunData/DQNOutputpk.pt')
         # Print the final score
         print(f"EPISODE: {episode_num + 1} - FINAL SCORE: {score} - Temperature: {tau}") # Print the final score
         
@@ -266,7 +275,7 @@ with open('feeds.csv', 'w', newline='') as f_object:
           feeds.append(next_observation[3])
           t1.append(t*5)
              
-          print(reward)
+          #print(reward)
     
           # Update the final score (+1 for each step)
           score += reward

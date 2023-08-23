@@ -169,12 +169,12 @@ def choose_action_softmax(net, state, temperature):
     # Sample the action using softmax output as mass pdf
     all_possible_actions = np.arange(0, softmax_out.shape[-1])
     
-    print(softmax_out)
+    #print(softmax_out)
     
     #print(all_possible_actions)
     
     # this samples a random element from "all_possible_actions" with the probability distribution p (softmax_out in this case)
     action = np.random.choice(all_possible_actions,p=softmax_out)
     
-    print(action)
+    #print(action)
     return action, net_out.cpu().numpy()
