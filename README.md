@@ -7,3 +7,6 @@ A library to perform reinforcement learning to generate complex control strategi
 To run the new gymasium enviroments clone the fork of gymnasium found as a submodule to this repository then run the command:
 <br>`pip install ~/ALPACA/gymnaisum`
 in the folder of ALPACA.
+
+## File Dependencies
+There exists a txt file in the ALPACA/Utilities folder. This should be updated with links to all dependent modelica packages
