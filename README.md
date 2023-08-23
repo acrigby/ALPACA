@@ -9,4 +9,4 @@ To run the new gymasium enviroments clone the fork of gymnasium found as a submo
 in the folder of ALPACA.
 
 ## File Dependencies
-There exists a txt file in the ALPACA/Utilities folder. This should be updated with links to all dependent modelica packages
+There exists a txt file in the ALPACA/Utilities folder called ModelicaPaths.txt. This should be updated with links to all dependent modelica packages
