@@ -37,26 +37,32 @@ openings = np.logspace(-2,0,10)
 powers = []
 mflows = []
 
+#generate dictionary to hold results
 results = {}
 for key in variables:
     results[key] = []
  
+#define timestepping interval
 timeinterval = 5
     
+#loop over time steps
 for t_end in range(0,300,timeinterval):
     
+    #define condensor pressure
     p_condensor = 1e4 + 9e4*(t_end/300)
     #change an input variable - ensure it can be changed by running a test command in the dymola command line
     var = "BOP.p_condenser ="+ str(p_condensor)
     print(var)
     dymola.ExecuteCommand(var)
     
-
+    #define start and end of simulation
     start = t_end
     stop = t_end+timeinterval
 
+    #simulate one time step
     result = dymola.simulateModel(model, startTime=start, stopTime=stop, numberOfIntervals=0, outputInterval=0.1, method="Esdirk45a", resultFile="PythonDymola")
 
+    #print log if error
     if not result:
         print("Simulation failed. Below is the translation log.")
         log = dymola.getLastErrorLog()
@@ -68,10 +74,10 @@ for t_end in range(0,300,timeinterval):
     trajsize = dymola.readTrajectorySize(WD + "/PythonDymola.mat")
     signals=dymola.readTrajectory(WD + "/PythonDymola.mat", variables, trajsize)
 
-    
     for i in range(0,len(variables),1):
         results[variables[i]].extend(signals[i])
         
+    #import final conditions of previous timestep prior to starting the new one
     dymola.ExecuteCommand('importInitial("'+ WD + '/dsfinal.txt")')
 
 
