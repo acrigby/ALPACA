@@ -1,6 +1,6 @@
 # ALPACA 
 
-![image](ALPACA/Utilities/ALPACA.jpeg)
+<img src="https://github.com/acrigby/ALPACA/blob/main/Utilities/ALPACA.jpeg" width="300"  class="center"/>
 
 
 ### Accelerated Learning Program for Advanced Control Algorithms 
