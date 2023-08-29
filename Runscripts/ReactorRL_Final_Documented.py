@@ -148,7 +148,7 @@ with open('RunData/feeds.csv', 'w', newline='') as f_object:
         
         temps.append(observation[0]+673.15)
         feeds.append(observation[3])
-        t1.append(t*5)
+        t1.append(t*3 )
     
         # Go on until the pole falls off
         while not (terminated or truncated):
@@ -164,7 +164,7 @@ with open('RunData/feeds.csv', 'w', newline='') as f_object:
           
           temps.append(next_observation[0]+673.15)
           feeds.append(next_observation[3])
-          t1.append(t*5)
+          t1.append(t*3)
              
           print(reward)
     
@@ -273,7 +273,7 @@ with open('RunData/feeds.csv', 'w', newline='') as f_object:
           
           temps.append(next_observation[0]+673.15)
           feeds.append(next_observation[3])
-          t1.append(t*5)
+          t1.append(t*3)
              
           #print(reward)
     
