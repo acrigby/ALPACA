@@ -1,7 +1,8 @@
-# ALPACA 
+<h1 style=font-size:200px align="center">ALPACA</h1>
 
-<img src="https://github.com/acrigby/ALPACA/blob/main/Utilities/ALPACA.jpeg" width="300"  class="center"/>
-
+<p align="center">
+  <img src="https://github.com/acrigby/ALPACA/blob/main/Utilities/ALPACA.jpeg" width="300"  class="center"/>
+</p>
 
 ### Accelerated Learning Program for Advanced Control Algorithms 
 
