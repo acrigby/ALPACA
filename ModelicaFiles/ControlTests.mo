@@ -358,8 +358,8 @@ package ControlTests
     connect(const.y, boundary.Q_flow_ext) annotation (Line(points={{-215,-8},{
             -102,-8},{-102,0},{-90,0}}, color={0,0,127}));
     connect(trapezoid.y, Pump_Speed.u_ff) annotation (Line(points={{-293,-30},{
-            -270,-30},{-270,-86},{-126,-86},{-126,-77.4},{-119.4,-77.4}}, color
-          ={0,0,127}));
+            -270,-30},{-270,-86},{-126,-86},{-126,-77.4},{-119.4,-77.4}}, color=
+           {0,0,127}));
     annotation (experiment(
         StopTime=10000,
         Interval=10,
@@ -1476,7 +1476,9 @@ package ControlTests
       annotation (Placement(transformation(extent={{0,70},{20,90}})));
     Modelica.Blocks.Sources.Constant const(k=140e6)
       annotation (Placement(transformation(extent={{-234,-18},{-214,2}})));
-    Modelica.Blocks.Sources.TimeTable FeedForward(table=[0,0; 9900,0; 9903,-0.03;
+    Modelica.Blocks.Sources.CombiTimeTable
+                                      FeedForward(
+      tableOnFile=true,                           table=[0,0; 9900,0; 9903,-0.03;
           9906,6.71e-10; 9909,6.71e-10; 9912,0.030000001; 9915,0.030000001;
           9918,0.030000001; 9921,0.030000001; 9924,0.030000001; 9927,
           0.030000001; 9930,0.030000001; 9933,0.030000001; 9936,0.030000001;
@@ -1580,7 +1582,9 @@ package ControlTests
           11088,-0.51000005; 11091,-0.51000005; 11094,-0.51000005; 11097,-0.51000005;
           11100,-0.51000005; 11103,-0.51000005; 11106,-0.51000005; 11109,-0.51000005;
           11112,-0.51000005; 11115,-0.51000005; 11118,-0.51000005; 11121,-0.51000005;
-          11124,-0.51000005; 11127,-0.51000005; 11130,-0.51000005; 20000,-0.51])
+          11124,-0.51000005; 11127,-0.51000005; 11130,-0.51000005; 20000,-0.51],
+      tableName="data",
+      fileName="feedforward.mat")
       annotation (Placement(transformation(extent={{-198,-46},{-178,-26}})));
   equation
 
@@ -1622,8 +1626,9 @@ package ControlTests
             127}));
     connect(const.y, boundary.Q_flow_ext) annotation (Line(points={{-213,-8},{
             -102,-8},{-102,0},{-90,0}}, color={0,0,127}));
-    connect(FeedForward.y, Pump_Speed.u_ff) annotation (Line(points={{-177,-36},
-            {-154,-36},{-154,-77.4},{-119.4,-77.4}}, color={0,0,127}));
+    connect(Pump_Speed.u_ff, FeedForward.y[1]) annotation (Line(points={{-119.4,
+            -77.4},{-119.4,-76},{-118,-76},{-118,-36},{-177,-36}}, color={0,0,
+            127}));
     annotation (experiment(
         StopTime=20000,
         Interval=1,
@@ -1632,5 +1637,5 @@ package ControlTests
   annotation (uses(
       TRANSFORM(version="0.5"),
       Modelica(version="4.0.0"),
-      NHES(version="2")));
+      NHES(version="3")));
 end ControlTests;

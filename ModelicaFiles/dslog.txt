@@ -1,0 +1,10 @@
+... loading "data" from "feedforward.mat"
+Error: The following error was detected at time: 0
+Not possible to open file "feedforward.mat": No such file or directory
+
+The stack of functions is:
+Modelica.Blocks.Types.ExternalCombiTimeTable
+Modelica.Blocks.Types.ExternalCombiTimeTable((if FeedForward.tableOnFile then FeedForward.tableName else "NoName"), (if FeedForward.tableOnFile and FeedForward.fileName <> "NoName" and  not Modelica.Utilities.Strings.isEmpty(FeedForward.fileName) then FeedForward.fileName else "NoName"), FeedForward.table, FeedForward.startTime/FeedForward.timeScale, FeedForward.columns, FeedForward.smoothness,...
+
+
+FixInitials:Init: Integrator failed to start model.
