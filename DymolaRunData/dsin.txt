@@ -9,7 +9,7 @@ Modelica experiment file
 double experiment(7,1)
     9900                   # StartTime    Time at which integration starts
                            #              (and linearization and trimming time)
-   13000                   # StopTime     Time at which integration stops
+   10500                   # StopTime     Time at which integration stops
        1                   # Increment    Communication step size, if > 0
        0                   # nInterval    Number of communication intervals, if > 0
   1.0000000000000000E-04   # Tolerance    Relative precision of signals for

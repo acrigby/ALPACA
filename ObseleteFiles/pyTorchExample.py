@@ -203,7 +203,7 @@ optimizer = torch.optim.Adam(policy_net.parameters(), lr=lr) # The optimizer wil
 loss_fn = nn.SmoothL1Loss()
 
 # Initialize the Gym environment
-env = gym.make('CartPole', render_mode = None) 
+env = gym.make('CartPole', render_mode = 'human') 
 observation, info = env.reset()
 
 plotting_rewards=[]
