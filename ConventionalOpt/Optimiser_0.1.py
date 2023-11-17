@@ -11,7 +11,7 @@ from dymola.dymola_interface import DymolaInterface
 import numpy as np
 import os
 from scipy.special import jv
-from scipy.optimize import minimize
+from scipy.optimize import minimize, basinhopping
 print(os.path.abspath(os.curdir))
 os.chdir("..")
 print(os.path.abspath(os.curdir))
@@ -100,14 +100,23 @@ origResults = getOrigResults()
 
 
 def funct(consts):
-    x = np.arange(0,500,0.1)
+    global n
+    P = 200
+    x = np.arange(0,500,1)
     FF = []
 
     for point in x:
         FFp = 0
-        for i in range(0,len(consts)-2,1):
-            FFp += consts[i]*jv(i,point/consts[len(consts)-2]) + consts[len(consts)-1]
-        FF.append(FFp)
+        if point < 0 :
+            FF.append(0)
+        elif point > P - 20: 
+            FF.append(-0.5)
+        else:
+            for i in range(1,int((len(consts)-1)/2)+1,1):
+                FFp += consts[i-1]*np.sin((2*np.pi*(point)*i)/P) + consts[i+int((len(consts)-1)/2)-1]*np.cos((2*np.pi*(point)*i)/P)
+            FFp += consts[(len(consts)-1)]
+            FF.append(FFp)
+
     
     x = x + 10000
     x = np.insert(x,0,0)
@@ -156,8 +165,9 @@ def funct(consts):
     return result
 
 
-consts = [1,1,1,100,-0.5]
-res = minimize(funct, consts, method='Powell', tol=1e-2, bounds = [(-20,20),(-20,20),(-20,20),(0,200),(-0.7,0)])
+consts = [ 0.63260814 , 0.39653506 , 0.43536441 , 0.38505467 , 0.34515559 , 0.24438598,  0.15266291 , 0.05394803 , 0.00770625 ,-0.24419224 ,-0.27886445, -0.17230944, -0.06944746,  0.03232572,  0.08985654,  0.121386, -0.18412674]
+n = 0
+res = basinhopping(funct, consts, niter=1,T=1000,minimizer_kwargs={"method":"Powell", "tol":1e-2})
 print(res.x)
 
 consts = res.x
@@ -165,11 +175,19 @@ consts = res.x
 x = np.arange(0,500,0.1)
 FF = []
 
+P = 200
+
 for point in x:
     FFp = 0
-    for i in range(0,len(consts)-2,1):
-        FFp += consts[i]*jv(i,point/consts[len(consts)-2]) + consts[len(consts)-1]
-    FF.append(FFp)
+    if point < 0 :
+        FF.append(0)
+    elif point > P - 20: 
+        FF.append(-0.5)
+    else:
+        for i in range(1,int((len(consts)-1)/2)+1,1):
+            FFp += consts[i-1]*np.sin((2*np.pi*(point)*i)/P) + consts[i+int((len(consts)-1)/2)-1]*np.cos((2*np.pi*(point)*i)/P)
+        FFp += consts[(len(consts)-1)]
+        FF.append(FFp)
 
 x = x + 10000
 x = np.insert(x,0,0)

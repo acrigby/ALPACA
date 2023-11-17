@@ -12,7 +12,7 @@ from scipy.optimize import minimize, basinhopping
 
 x = np.arange(0,100,0.01)
     
-consts = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.5]
+consts = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.5]
 FF = []
 n = 0
 
@@ -33,7 +33,7 @@ n = 0
 
 def funct(consts):
     global n
-    P = 15
+    P = 20
     x = np.arange(0,100,0.01)
     FF = []
 
@@ -42,10 +42,10 @@ def funct(consts):
         if point < 20 :
             FF.append(0)
         elif point > 20 + P: 
-            FF.append(consts[(len(consts)-1)])
+            FF.append(-0.5)
         else:
             for i in range(1,int((len(consts)-1)/2)+1,1):
-                FFp += consts[i-1]*np.sin((2*np.pi*(point-20)*i)/P) + consts[i+int((len(consts)-1)/2)]*np.cos((2*np.pi*(point-20)*i)/P)
+                FFp += consts[i-1]*np.sin((2*np.pi*(point-20)*i)/P) + consts[i+int((len(consts)-1)/2)-1]*np.cos((2*np.pi*(point-20)*i)/P)
             FFp += consts[(len(consts)-1)]
             FF.append(FFp)
 
@@ -63,7 +63,7 @@ def funct(consts):
     print(result)
     return result
 
-res = basinhopping(funct, consts, niter=10,T=1000,minimizer_kwargs={"method":"Powell", "tol":1e-2})
+res = basinhopping(funct, consts, niter=1,T=1000,minimizer_kwargs={"method":"Powell", "tol":1e-2})
 print(n)
 print(res.x)
 consts = res.x
@@ -73,15 +73,15 @@ score = funct(consts)
 print(score)
 
 for point in x:
-    P = 15
+    P = 20
     FFp = 0
     if point < 20 :
         FF.append(0)
     elif point > 20 + P: 
-        FF.append(consts[(len(consts)-1)])
+        FF.append(-0.5)
     else:
         for i in range(1,int((len(consts)-1)/2)+1,1):
-            FFp += consts[i-1]*np.sin((2*np.pi*(point-20)*i)/P) + consts[i+int((len(consts)-1)/2)]*np.cos((2*np.pi*(point-20)*i)/P)
+            FFp += consts[i-1]*np.sin((2*np.pi*(point-20)*i)/P) + consts[i+int((len(consts)-1)/2)-1]*np.cos((2*np.pi*(point-20)*i)/P)
         FFp += consts[(len(consts)-1)]
         FF.append(FFp)
 
