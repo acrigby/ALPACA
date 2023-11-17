@@ -7,10 +7,10 @@ Created on Tue Jul 18 13:29:29 2023
 
 import random
 import torch
+import sys
 import numpy as np
 import gymnasium as gym
 import matplotlib.pyplot as plt
-from tqdm.notebook import tqdm
 from torch import nn
 from collections import deque,namedtuple
 import glob
@@ -78,7 +78,7 @@ observation, info = env.reset()
 
 plotting_rewards=[]
 
-for episode_num, tau in enumerate(tqdm(exploration_profile)):
+for episode_num, tau in enumerate(exploration_profile):
 
     # Reset the environment and get the initial state
     observation, info = env.reset()
@@ -125,7 +125,7 @@ for episode_num, tau in enumerate(tqdm(exploration_profile)):
 env.close()
 
 plt.plot(plotting_rewards)
-plt.show()
+plt.savefig('learn.png')
 
 # Initialize the Gym environment
 env = gym.make('AcrobotCdyn') 
@@ -168,6 +168,6 @@ for episode_num in range(10):
 env.close()
 
 plt.plot(plotting_rewards_final)
-plt.show()
+plt.savefig('final.png')
 
 print("--- %s seconds ---" % (time.time() - start_time))
