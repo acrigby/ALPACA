@@ -45,7 +45,7 @@ min_samples_for_training = 1000   # Minimum samples in the replay memory to enab
 
 
 ### Create environment
-env = gym.make('AcrobotCdyn') # Initialize the Gym environment
+env = gym.make('Acrobot') # Initialize the Gym environment
 
 # Get the shapes of the state space (observation_space) and action space (action_space)
 state_space_dim = env.observation_space.shape[0]
@@ -73,7 +73,7 @@ optimizer = torch.optim.Adam(policy_net.parameters(), lr=lr) # The optimizer wil
 loss_fn = nn.SmoothL1Loss()
 
 # Initialize the Gym environment
-env = gym.make('AcrobotCdyn') 
+env = gym.make('Acrobot') 
 observation, info = env.reset()
 
 plotting_rewards=[]
@@ -108,8 +108,9 @@ for episode_num, tau in enumerate(exploration_profile):
       replay_mem.push(observation, action, next_observation, reward)
 
       # Update the network
-      if len(replay_mem) > min_samples_for_training: # we enable the training only if we have enough samples in the replay memory, otherwise the training will use the same samples too often
-          update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size, device)
+      if score % 5 == 1:
+        if len(replay_mem) > min_samples_for_training: # we enable the training only if we have enough samples in the replay memory, otherwise the training will use the same samples too often
+            update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size, device)
 
       observation = next_observation
 
@@ -128,7 +129,7 @@ plt.plot(plotting_rewards)
 plt.savefig('learn.png')
 
 # Initialize the Gym environment
-env = gym.make('AcrobotCdyn') 
+env = gym.make('Acrobot') 
 observation, info = env.reset()
 plotting_rewards_final = []
 
