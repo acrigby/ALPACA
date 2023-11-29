@@ -65,9 +65,6 @@ int main(int argc, char *argv[]) {
     double *k4 = new double[5];
 
     dsdt(&k1, y[0],               y[1],              y[2],              y[3],             y[4]);
-
-    cout << k1[0] <<','<< k1[1] << ','<< k1[2]<< ','<< k1[3] << ','<< k1[4]<< endl;
-
     dsdt(&k2, y[0] + dt2 * k1[0], y[1]+ dt2 * k1[1], y[2]+ dt2 * k1[2], y[3]+ dt2 * k1[3],y[4]+dt2 * k1[4]);
     dsdt(&k3, y[0] + dt2 * k2[0], y[1]+ dt2 * k2[1], y[2]+ dt2 * k2[2], y[3]+ dt2 * k2[3],y[4]+dt2 * k2[4]);
     dsdt(&k4, y[0] + dt * k3[0],  y[1]+ dt * k3[1],  y[2]+ dt * k3[2],  y[3]+ dt * k3[3], y[4]+dt * k3[4]);
