@@ -17,6 +17,7 @@ import glob
 import io
 import base64
 import os
+import multiprocessing
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 from SolverClasses import *
 import time
