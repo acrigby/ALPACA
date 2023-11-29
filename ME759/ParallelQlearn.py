@@ -137,6 +137,8 @@ max_workers=8
 
 pool = concurrent.futures.ThreadPoolExecutor(max_workers = 8)
 
+start_time = time.time()
+
 for episode_collection in range(len(exploration_profile)//max_workers):
     
     for episode in range(max_workers):
@@ -150,7 +152,12 @@ pool.shutdown(wait=True)
 
 env.close()
 
-plt.plot(plotting_rewards)
+fig = plt.figure()
+ax = fig.add_subplot()
+
+fig.suptitle('Parallel Plotting Rewards', fontsize=10, fontweight='bold')
+ax.set_title("--- %s seconds ---" % (time.time() - start_time))
+ax.plot(plotting_rewards)
 plt.savefig('learn.png')
 
 print("--- %s seconds ---" % (time.time() - start_time))
