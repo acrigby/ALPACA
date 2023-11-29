@@ -5,6 +5,12 @@ Created on Tue Jul 18 13:29:29 2023
 @author: aidan
 """
 
+import threading
+import time
+sem = threading.Semaphore()
+
+import concurrent.futures
+
 import random
 import torch
 import sys
@@ -21,6 +27,7 @@ import multiprocessing
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 from SolverClasses import *
 import time
+
 start_time = time.time()
      
 ### Define exploration profile
@@ -79,97 +86,71 @@ observation, info = env.reset()
 
 plotting_rewards=[]
 
-for episode_num, tau in enumerate(exploration_profile):
-
+def episode_func(episode_num, tau):
+    
     # Reset the environment and get the initial state
     observation, info = env.reset()
     # Reset the score. The final score will be the total amount of steps before the pole falls
     score = 0
     terminated = False
     truncated = False
-
+    
     # Go on until the pole falls off
     while not (terminated or truncated):
-
-      # Choose the action following the policy
-      action, q_values = choose_action_softmax(policy_net, observation, temperature=tau)
-      
-      # Apply the action and get the next state, the reward and a flag "done" that is True if the game is ended
-      next_observation, reward, terminated, truncated, info = env.step(action)
-
-      # Update the final score (+1 for each step)
-      score += reward
-
-      # Apply penalty for bad state
-      if terminated or truncated: # if the pole has fallen down 
-          reward += bad_state_penalty
-          next_observation = None
-      
-      # Update the replay memory
-      replay_mem.push(observation, action, next_observation, reward)
-
-      # Update the network
-      if score % 5 == 1:
-        if len(replay_mem) > min_samples_for_training: # we enable the training only if we have enough samples in the replay memory, otherwise the training will use the same samples too often
-            update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size, device)
-
-      observation = next_observation
-
-    # Update the target network every target_net_update_steps episodes
-    if episode_num % target_net_update_steps == 0:
-        print('Updating target network...')
-        target_net.load_state_dict(policy_net.state_dict()) # This will copy the weights of the policy network to the target network
     
+        # Choose the action following the policy
+        action, q_values = choose_action_softmax(policy_net, observation, temperature=tau)
+        
+        # Apply the action and get the next state, the reward and a flag "done" that is True if the game is ended
+        next_observation, reward, terminated, truncated, info = env.step(action)
+    
+        # Update the final score (+1 for each step)
+        score += reward
+    
+        # Apply penalty for bad state
+        if terminated or truncated: # if the pole has fallen down 
+            reward += bad_state_penalty
+            next_observation = None
+            
+        sem.acquire()
+        
+        # Update the replay memory
+        replay_mem.push(observation, action, next_observation, reward)
+        
+        sem.release()
+        
+        if score % 8 == 1:
+            sem.acquire()
+            # Update the network
+            if len(replay_mem) > min_samples_for_training: # we enable the training only if we have enough samples in the replay memory, otherwise the training will use the same samples too often
+                  update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size, device)
+                  
+            sem.release()
+        
+        observation = next_observation
+        
     plotting_rewards.append(score)
     # Print the final score
     print(f"EPISODE: {episode_num + 1} - FINAL SCORE: {score} - Temperature: {tau}") # Print the final score
+    
+max_workers=8
+
+pool = concurrent.futures.ThreadPoolExecutor(max_workers = 8)
+
+for episode_collection in range(len(exploration_profile)//max_workers):
+    
+    for episode in range(max_workers):
+        pool.submit(episode_func(episode_collection*max_workers + episode, exploration_profile[episode_collection*max_workers + episode]))
+       
+    print('Updating target network...')
+    target_net.load_state_dict(policy_net.state_dict()) # This will copy the weights of the policy network to the target network
+    
+pool.shutdown(wait=True)
+    
 
 env.close()
 
 plt.plot(plotting_rewards)
 plt.savefig('learn.png')
-
-# Initialize the Gym environment
-env = gym.make('Acrobot') 
-observation, info = env.reset()
-plotting_rewards_final = []
-
-for episode_num in range(10):
-
-    # Reset the environment and get the initial state
-    observation, info = env.reset()
-    # Reset the score. The final score will be the total amount of steps before the pole falls
-    score = 0
-    terminated = False
-    truncated = False
-
-    # Go on until the pole falls off
-    while not (terminated or truncated):
-
-      # Choose the action following the policy
-      action, q_values = choose_action_softmax(policy_net, observation, temperature=0)
-      
-      # Apply the action and get the next state, the reward and a flag "done" that is True if the game is ended
-      next_observation, reward, terminated, truncated, info = env.step(action)
-
-      # Update the final score (+1 for each step)
-      score += reward
-
-      # Apply penalty for bad state
-      if terminated or truncated: # if the pole has fallen down 
-          reward += bad_state_penalty
-          next_observation = None
-      
-
-      observation = next_observation
-
-    plotting_rewards_final.append(score)
-    # Print the final score
-    print(f"EPISODE: {episode_num + 1} - FINAL SCORE: {score} - Temperature: {tau}") # Print the final score
-
-env.close()
-
-plt.plot(plotting_rewards_final)
-plt.savefig('final.png')
 
 print("--- %s seconds ---" % (time.time() - start_time))
