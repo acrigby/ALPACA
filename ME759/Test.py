@@ -5,8 +5,13 @@ Created on Fri Nov 17 11:19:01 2023
 @author: aidan
 """
 
-import subprocess
+from subprocess import Popen, PIPE
 
-s = subprocess.check_output(["echo", "Hello World!"])
-
-print(s)
+p = Popen('Subprocess.exe', shell=True, stdout=PIPE, stdin=PIPE)
+for ii in range(10):
+    value = str(ii) + '\n'
+    value = bytes(value, 'UTF-8')  # Needed in Python 3.
+    p.stdin.write(value)
+    p.stdin.flush()
+    result = p.stdout.readline().strip()
+    print(result)

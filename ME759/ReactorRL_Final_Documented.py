@@ -148,7 +148,8 @@ with open('RunData/feeds.csv', 'w', newline='') as f_object:
         
         temps.append(observation[0]+673.15)
         feeds.append(observation[3])
-        t1.append(t*3 )
+        powers.append(10)
+        t1.append(t*5 )
     
         # Go on until the pole falls off
         while not (terminated or truncated):
@@ -164,7 +165,8 @@ with open('RunData/feeds.csv', 'w', newline='') as f_object:
           
           temps.append(next_observation[0]+673.15)
           feeds.append(next_observation[3])
-          t1.append(t*3)
+          powers.append(next_observation[2])
+          t1.append(t*5)
              
           print(reward)
     
@@ -194,7 +196,7 @@ with open('RunData/feeds.csv', 'w', newline='') as f_object:
         plotting_rewards.append(score)
         episode_scores.append(score)
         plot_scores(episode_scores)
-        fig, axs = plt.subplots(2,1)
+        fig, axs = plt.subplots(3,1)
         axs[0].plot(Orig_results["Time"],Orig_results["sensor_pT.T"], label = 'Original')
         axs[0].plot(t1, temps, label = 'Optimised')
         axs[0].set_xlim(0,max(t1))
@@ -209,12 +211,16 @@ with open('RunData/feeds.csv', 'w', newline='') as f_object:
         axs[1].plot(t1, feeds, 'tab:green')
         axs[1].set_xlim(0,max(t1))
         axs[1].set_title('FF Signal')
+        
+        axs[2].plot(t1, powers, 'tab:red')
+        axs[2].set_xlim(0,max(t1))
+        axs[2].set_title('Power Demand')
         #yticks = np.arange(-2, 2, 0.5)
         #axs[1].set_yticks(yticks)
         # axs[1, 1].plot(t1, TCVdps, 'tab:red')
         # axs[1, 1].set_title('TCV pressure drop')
         fig.tight_layout()
-        axs[1].set(xlabel='Time / s')
+        axs[2].set(xlabel='Time / s')
             
         display.display(plt.gcf())
         plt.close()
@@ -257,7 +263,7 @@ with open('RunData/feeds.csv', 'w', newline='') as f_object:
         
         temps.append(observation[0]+673.15)
         feeds.append(observation[3])
-        t1.append(t*3)
+        t1.append(t*5)
     
         # Go on until the pole falls off
         while not (terminated or truncated):
@@ -273,7 +279,7 @@ with open('RunData/feeds.csv', 'w', newline='') as f_object:
           
           temps.append(next_observation[0]+673.15)
           feeds.append(next_observation[3])
-          t1.append(t*3)
+          t1.append(t*5)
              
           #print(reward)
     
@@ -290,7 +296,7 @@ with open('RunData/feeds.csv', 'w', newline='') as f_object:
         plotting_rewards_final.append(score)
         episode_scores.append(score)
         plot_scores(episode_scores)
-        fig, axs = plt.subplots(2,1)
+        fig, axs = plt.subplots(3,1)
         axs[0].plot(Orig_results["Time"],Orig_results["sensor_pT.T"], label = 'Original')
         axs[0].plot(t1, temps)
         axs[0].axhspan(671.15, 675.15, color='green', alpha=0.5, label = "Temperature Band")
