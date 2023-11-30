@@ -55,7 +55,6 @@ def update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, b
     # Sample the data from the replay memory
     batch = replay_mem.sample(batch_size)
     batch_size = len(batch)
-
     # Create tensors for each element of the batch
     states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
     actions     = torch.tensor([s[1] for s in batch], dtype=torch.int64, device=device)

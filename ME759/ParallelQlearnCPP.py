@@ -20,14 +20,18 @@ import io
 import base64
 import os
 import multiprocessing
-from multiprocessing import Process, Manager, Lock
+from multiprocessing import Process, Manager, Lock, Queue
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 from SolverClasses import *
 import time
 
 semaphore = multiprocessing.Semaphore(1)
 
-def episode_func(episode_num, tau, plotting_rewards):
+### Initialize the replay memory
+replay_memory_capacity = 10000   # Replay memory capacity
+replay_mem = ReplayMemory(replay_memory_capacity)   
+
+def episode_func(episode_num, tau, plotting_rewards, replay_mem, policy_net, target_net):
     print(f"Process={os.getpid()}")
     print(episode_num, tau)
     # Reset the environment and get the initial state
@@ -52,37 +56,38 @@ def episode_func(episode_num, tau, plotting_rewards):
         # Apply penalty for bad state
         if terminated or truncated: # if the pole has fallen down 
             next_observation = None
-            
-        semaphore.acquire()
+
+        item = [observation, action, next_observation, reward]
         
+        semaphore.acquire() 
+        observation_list.append(observation)
+        action_list.append(action)
+        next_observation_list.append(next_observation)
+        reward_list.append(reward)
+
         # Update the replay memory
         replay_mem.push(observation, action, next_observation, reward)
-        
         semaphore.release()
         
         if score % 8 == 1:
-            semaphore.acquire()
             # Update the network
             if len(replay_mem) > min_samples_for_training: # we enable the training only if we have enough samples in the replay memory, otherwise the training will use the same samples too often
                   update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size, device)
-                  
-            semaphore.release()
         
         observation = next_observation
-        
+
+    semaphore.acquire()    
     # Print the final score
     print(f"EPISODE: {episode_num + 1} - FINAL SCORE: {score} - Temperature: {tau}") # Print the final score
     
-    print(plotting_rewards)
+    #print(plotting_rewards)
     plotting_rewards.append(score)
+    semaphore.release()
     
-    if episode_num % target_net_update_steps == 0:
-        print('Updating target network...')
-        target_net.load_state_dict(policy_net.state_dict()) # This will copy the weights of the policy network to the target network
 
-def main(plotting_rewards):
+def main(plotting_rewards,observation_list, action_list, next_observation_list, reward_list):
     global start_time,target_net_update_steps
-    global policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size, device, min_samples_for_training
+    global gamma, optimizer, loss_fn, batch_size, device, min_samples_for_training
     start_time = time.time()
      
     ### Define exploration profile
@@ -97,7 +102,6 @@ def main(plotting_rewards):
 
     ### PARAMETERS
     gamma = 0.99   # gamma parameter for the long term reward
-    replay_memory_capacity = 10000   # Replay memory capacity
     #lr = 1e-2   # Optimizer learning rate
     #lr = 1e-4
     lr = 1e-3
@@ -119,9 +123,6 @@ def main(plotting_rewards):
     print(f"STATE SPACE SIZE: {state_space_dim}")
     print(f"ACTION SPACE SIZE: {action_space_dim}")
 
-    ### Initialize the replay memory
-    replay_mem = ReplayMemory(replay_memory_capacity)    
-
     ### Initialize the policy network
     policy_net = DQN(state_space_dim, action_space_dim).to(device)
 
@@ -139,24 +140,47 @@ def main(plotting_rewards):
 
     env = gym.make('AcrobotCdyn') 
     observation, info = env.reset()
-    max_workers=6
+    max_workers=8
     start_time = time.time()
 
-    pool = multiprocessing.Pool(max_workers)
-
     for episode_collection in range(len(exploration_profile)//max_workers):
+
+        processes = []
+        while len(observation_list)>1:
+            print(len(observation_list))
+            observation = observation_list.pop(0)
+            action = action_list.pop(0)
+            next_observation = next_observation_list.pop(0)
+            reward = reward_list.pop(0)
+            
+            replay_mem.push(observation, action, next_observation, reward)
+
         for episode in range(max_workers):
-            pool.apply_async(episode_func,[episode_collection*max_workers + episode, exploration_profile[episode_collection*max_workers + episode], plotting_rewards])
+            # Launch the first round of tasks, building a list of ApplyResult objects
+            process = multiprocessing.Process(target = episode_func,args = (episode_collection*max_workers + episode, exploration_profile[episode_collection*max_workers + episode], plotting_rewards, replay_mem,policy_net, target_net))
+            processes.append(process)
+            
+        for p in processes:
+            p.start()
         
-    pool.close()
-    pool.join()
-        
+        for p in processes:
+            p.join()
+
+        # report
+        # all done
+    
     env.close()
 
 if __name__ == "__main__":
     with Manager() as manager:
         plotting_rewards = manager.list([])
-        main(plotting_rewards)
+
+        observation_list = manager.list([])
+        action_list = manager.list([])
+        next_observation_list = manager.list([])
+        reward_list = manager.list([])
+
+        main(plotting_rewards,observation_list, action_list, next_observation_list, reward_list)
         fig = plt.figure()
         ax = fig.add_subplot()
 
