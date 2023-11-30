@@ -44,7 +44,7 @@ min_samples_for_training = 1000   # Minimum samples in the replay memory to enab
 
 
 ### Create environment
-env = gym.make('AcrobotCdyn', render_mode="human") # Initialize the Gym environment
+env = gym.make('AcrobotCdyn') # Initialize the Gym environment
 
 # Get the shapes of the state space (observation_space) and action space (action_space)
 state_space_dim = env.observation_space.shape[0]
@@ -72,7 +72,7 @@ optimizer = torch.optim.Adam(policy_net.parameters(), lr=lr) # The optimizer wil
 loss_fn = nn.SmoothL1Loss()
 
 # Initialize the Gym environment
-env = gym.make('AcrobotCdyn', render_mode="human") 
+env = gym.make('AcrobotCdyn') 
 observation, info = env.reset()
 
 plotting_rewards=[]
@@ -129,9 +129,9 @@ env.close()
 fig = plt.figure()
 ax = fig.add_subplot()
 
-fig.suptitle('Sequential Plotting Rewards', fontsize=10, fontweight='bold')
+fig.suptitle('Sequential Plotting Rewards CPP', fontsize=10, fontweight='bold')
 ax.set_title("--- %s seconds ---" % (time.time() - start_time))
 ax.plot(plotting_rewards)
-plt.savefig('learn.png')
+plt.savefig('SeqCPP.png')
 
 print("--- %s seconds ---" % (time.time() - start_time))
