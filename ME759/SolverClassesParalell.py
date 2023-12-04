@@ -11,7 +11,30 @@ import matplotlib.pyplot as plt
 import matplotlib
 from torch import nn
 from collections import deque
+from multiprocessing.managers import BaseManager
 from IPython import display
+import collections
+
+class DequeManager(BaseManager):
+    pass
+
+class DequeProxy(object):
+    def __init__(self, capacity):
+        self.deque = collections.deque(maxlen=capacity)
+    def __len__(self):
+        return self.deque.__len__()
+    def appendleft(self, x):
+        self.deque.appendleft(x)
+    def append(self, x):
+        self.deque.append(x)
+    def pop(self):
+        return self.deque.pop()
+    def popleft(self):
+        return self.deque.popleft()
+    def sample(self,batch_size):
+        batch_size = min(batch_size, len(self))
+        return random.sample(self.deque,batch_size)
+    
     
 class DQN(nn.Module):
     

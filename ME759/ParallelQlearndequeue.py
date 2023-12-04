@@ -69,6 +69,8 @@ def episode_func(episode_num, tau, plotting_rewards, replay_mem, policy_net, tar
         if terminated or truncated: # if the pole has fallen down 
             next_observation = None
 
+        item = [observation, action, next_observation, reward]
+
         #print(replay_mem)
         # Update the replay memory
         semaphore.acquire()
@@ -117,7 +119,7 @@ def main(plotting_rewards, replay_mem):
 
     global env
     ### Create environment
-    env = gym.make('AcrobotCdyn') # Initialize the Gym environment
+    env = gym.make('Acrobot') # Initialize the Gym environment
 
     # Get the shapes of the state space (observation_space) and action space (action_space)
     state_space_dim = env.observation_space.shape[0]
@@ -147,7 +149,7 @@ def main(plotting_rewards, replay_mem):
 
     # Initialize the Gym environment
 
-    env = gym.make('AcrobotCdyn') 
+    env = gym.make('Acrobot') 
     observation, info = env.reset()
     max_workers=8
     start_time = time.time()
@@ -171,7 +173,6 @@ def main(plotting_rewards, replay_mem):
         # all done
         print('Updating target network main')
         target_net.load_state_dict(policy_net.state_dict()) # This will copy the weights of the policy network to the target network
-        print('Updating Finished')
 
 if __name__ == "__main__":
     with Manager() as manager:
@@ -183,9 +184,9 @@ if __name__ == "__main__":
         fig = plt.figure()
         ax = fig.add_subplot()
 
-        fig.suptitle('Parallel Plotting Rewards CPP', fontsize=10, fontweight='bold')
+        fig.suptitle('Parallel Plotting Rewards', fontsize=10, fontweight='bold')
         ax.set_title("--- %s seconds ---" % (time.time() - start_time))
         ax.plot(plotting_rewards)
-        plt.savefig('ParCPP.png')
+        plt.savefig('ParPyt.png')
 
         print("--- %s seconds ---" % (time.time() - start_time))
