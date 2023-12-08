@@ -18,7 +18,9 @@ conda install pytorch
 cd ..
 pwd
 
-conda install ~/ALPACA/gymnasium
+conda install ./gymnasium
+
+cd ./ME759
 
 python SequentionalQlearnCPP.py
 python ParallelQlearnCPP.py
