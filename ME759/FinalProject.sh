@@ -13,8 +13,11 @@ bootstrap_conda
 conda create --name final_project
 conda activate final_project
 
-source env/bin/activate
 conda install pytorch
+
+cd ..
+pwd
+
 conda install ~/ALPACA/gymnasium
 
 python SequentionalQlearnCPP.py
