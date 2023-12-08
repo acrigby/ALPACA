@@ -15,7 +15,7 @@ conda activate final_project
 
 conda install pytorch
 
-conda install srv/home/cjdunbar/ALPACA/gymnasium
+pip install srv/home/cjdunbar/ALPACA/gymnasium
 
 python SequentionalQlearnCPP.py
 python ParallelQlearnCPP.py
