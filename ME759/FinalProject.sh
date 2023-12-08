@@ -15,7 +15,7 @@ conda activate final_project
 
 source env/bin/activate
 conda install pytorch
-conda install ../gymnasium
+conda install ~/ALPACA/gymnasium
 
 python SequentionalQlearnCPP.py
 python ParallelQlearnCPP.py
