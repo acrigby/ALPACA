@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 #SBATCH -p instruction
-#SBATCH -J pythonTestRun
-#SBATCH -o pythonTestRun.out
-#SBATCH -e pythonTestRun.err
+#SBATCH -J finalProject
+#SBATCH -o finalProject.out
+#SBATCH -e finalProject.err
 #SBATCH -t 0-12:00:00
 #SBATCH -c 1
 
