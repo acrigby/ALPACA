@@ -16,6 +16,7 @@ conda activate final_project
 conda install pytorch matplotlib IPython
 
 cd ..
+ls
 pip install ./gymnasium
 cd ME759
 
