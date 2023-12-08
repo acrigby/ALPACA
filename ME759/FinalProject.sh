@@ -16,7 +16,7 @@ conda activate final_project
 conda install pytorch matplotlib IPython
 
 cd ..
-pip install gymnasium
+pip install ./gymnasium
 cd ME759
 
 python SequentionalQlearnCPP.py
