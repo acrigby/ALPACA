@@ -15,7 +15,9 @@ conda activate final_project
 
 conda install pytorch
 
-pip install srv/home/cjdunbar/ALPACA/gymnasium
+cd ..
+pip install gymnasium
+cd ME759
 
 python SequentionalQlearnCPP.py
 python ParallelQlearnCPP.py
