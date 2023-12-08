@@ -14,7 +14,7 @@ conda create --name final_project
 conda activate final_project
 
 source env/bin/activate
-conda install torch
+conda install pytorch
 conda install ../gymnasium
 
 python SequentionalQlearnCPP.py
