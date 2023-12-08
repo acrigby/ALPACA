@@ -13,7 +13,7 @@ bootstrap_conda
 conda create --name final_project
 conda activate final_project
 
-conda install pytorch matplotlib
+conda install pytorch matplotlib IPython
 
 cd ..
 pip install gymnasium
