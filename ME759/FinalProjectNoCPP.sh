@@ -2,7 +2,7 @@
 #SBATCH -p instruction
 #SBATCH -J finalProjectNoCPP
 #SBATCH -o finalProjectNoCPP.out
-#SBATCH -e finalProfinalProjectNoCPPject.err
+#SBATCH -e finalProjectNoCPPject.err
 #SBATCH -t 0-12:00:00
 #SBATCH -c 1
 
