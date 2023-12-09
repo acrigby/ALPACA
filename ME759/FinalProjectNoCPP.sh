@@ -2,7 +2,7 @@
 #SBATCH -p instruction
 #SBATCH -J finalProjectNoCPP
 #SBATCH -o finalProjectNoCPP.out
-#SBATCH -e finalProjectNoCPPject.err
+#SBATCH -e finalProjectNoCPP.err
 #SBATCH -t 0-12:00:00
 #SBATCH -c 1
 
@@ -16,7 +16,6 @@ conda activate final_project_nocpp
 conda install pytorch matplotlib IPython
 
 cd ..
-ls
 pip install ./gymnasium
 cd ME759
 
