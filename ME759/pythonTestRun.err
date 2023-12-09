@@ -1,15 +1,1 @@
-
-
-==> WARNING: A newer version of conda exists. <==
-  current version: 4.10.1
-  latest version: 23.11.0
-
-Please update conda by running
-
-    $ conda update -n base -c defaults conda
-
-
-
-CondaSystemExit: Exiting.
-
-Matplotlib is building the font cache; this may take a moment.
+slurmstepd: error: *** JOB 482354 ON euler05 CANCELLED AT 2023-12-08T20:52:34 ***

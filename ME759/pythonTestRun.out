@@ -1,11 +1,2 @@
 Collecting package metadata (current_repodata.json): ...working... done
 Solving environment: ...working... done
-
-# All requested packages already installed.
-
-WARNING: A directory already exists at the target location '/srv/home/cjdunbar/.conda/envs/test_env'
-but it is not a conda environment.
-Continue creating environment (y/[n])? 
-1st array:  [1 2 3]
-2nd array:  [4 5 6]
-added array:  [5 7 9]
