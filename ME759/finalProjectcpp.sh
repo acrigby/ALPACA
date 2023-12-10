@@ -22,5 +22,4 @@ cd ME759
 g++ rk4.cpp -Wall -O3 -std=c++17 -o rk4
 
 python SequentionalQlearnCPP.py
-python ParallelQlearnCPP.py
 
