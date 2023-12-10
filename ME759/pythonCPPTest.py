@@ -4,3 +4,10 @@ test = Popen(["./rk4 1 2 3 4 5 6"], shell=True, stdout=PIPE, stdin=PIPE).communi
 
 print(test)
 
+test = test.decode('utf-8')
+
+print(test)
+
+test = test.split(',')
+
+print(test)
