@@ -4,7 +4,7 @@
 #SBATCH -o finalProjectCPP.out
 #SBATCH -e finalProjectCPP.err
 #SBATCH -t 0-12:00:00
-#SBATCH -c 1
+#SBATCH -c 5
 
 cd $SLURM_SUBMIT_DIR
 
