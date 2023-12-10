@@ -11,3 +11,7 @@ print(test)
 test = test.split(',')
 
 print(test)
+
+output = [float(n) for n in test]
+
+print(output)
