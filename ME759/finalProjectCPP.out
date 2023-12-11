@@ -1,10 +1,4 @@
-WARNING: A conda environment already exists at '/srv/home/cjdunbar/.conda/envs/final_project_cpp'
-Remove existing environment (y/[n])? 
-Collecting package metadata (current_repodata.json): ...working... done
-Solving environment: ...working... done
-
-# All requested packages already installed.
-
+Submodule path 'gymnasium': checked out '1b9364dea06254d1c1464d6bdd8ff2dfce3783c9'
 Processing ./gymnasium
   Installing build dependencies: started
   Installing build dependencies: finished with status 'done'
@@ -14,21 +8,2026 @@ Processing ./gymnasium
   Installing backend dependencies: finished with status 'done'
   Preparing metadata (pyproject.toml): started
   Preparing metadata (pyproject.toml): finished with status 'done'
-Requirement already satisfied: numpy>=1.21.0 in /srv/home/cjdunbar/.conda/envs/final_project_cpp/lib/python3.11/site-packages (from gymnasium==0.28.1) (1.26.2)
-Requirement already satisfied: cloudpickle>=1.2.0 in /srv/home/cjdunbar/.conda/envs/final_project_cpp/lib/python3.11/site-packages (from gymnasium==0.28.1) (3.0.0)
-Requirement already satisfied: typing-extensions>=4.3.0 in /srv/home/cjdunbar/.conda/envs/final_project_cpp/lib/python3.11/site-packages (from gymnasium==0.28.1) (4.7.1)
-Requirement already satisfied: farama-notifications>=0.0.1 in /srv/home/cjdunbar/.conda/envs/final_project_cpp/lib/python3.11/site-packages (from gymnasium==0.28.1) (0.0.4)
+Collecting numpy>=1.21.0
+  Using cached numpy-1.26.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+Collecting cloudpickle>=1.2.0
+  Using cached cloudpickle-3.0.0-py3-none-any.whl (20 kB)
+Collecting typing-extensions>=4.3.0
+  Using cached typing_extensions-4.9.0-py3-none-any.whl (32 kB)
+Collecting farama-notifications>=0.0.1
+  Using cached Farama_Notifications-0.0.4-py3-none-any.whl (2.5 kB)
 Building wheels for collected packages: gymnasium
   Building wheel for gymnasium (pyproject.toml): started
   Building wheel for gymnasium (pyproject.toml): finished with status 'done'
-  Created wheel for gymnasium: filename=gymnasium-0.28.1-py3-none-any.whl size=981198 sha256=bfb978248bfd3971e6459eb92fd005e2c9e4379c71cc2ef2eff5187f279773c2
-  Stored in directory: /tmp/pip-ephem-wheel-cache-7sbekgo2/wheels/e2/58/78/4ca74fcce7cf31c0a0f0be18e7c92dc2601751f288b6929e72
+  Created wheel for gymnasium: filename=gymnasium-0.28.1-py3-none-any.whl size=981172 sha256=405e7e110790d0715410fd401fc8f2874d73536c9410ec15e02c7a74e3d36172
+  Stored in directory: /tmp/pip-ephem-wheel-cache-vc_a1lbn/wheels/e2/58/78/4ca74fcce7cf31c0a0f0be18e7c92dc2601751f288b6929e72
 Successfully built gymnasium
-Installing collected packages: gymnasium
-  Attempting uninstall: gymnasium
-    Found existing installation: gymnasium 0.28.1
-    Uninstalling gymnasium-0.28.1:
-      Successfully uninstalled gymnasium-0.28.1
-Successfully installed gymnasium-0.28.1
+Installing collected packages: farama-notifications, typing-extensions, numpy, cloudpickle, gymnasium
+Successfully installed cloudpickle-3.0.0 farama-notifications-0.0.4 gymnasium-0.28.1 numpy-1.26.2 typing-extensions-4.9.0
+Collecting torch
+  Using cached torch-2.1.1-cp311-cp311-manylinux1_x86_64.whl (670.2 MB)
+Collecting matplotlib
+  Using cached matplotlib-3.8.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
+Collecting IPython
+  Using cached ipython-8.18.1-py3-none-any.whl (808 kB)
+Collecting filelock
+  Using cached filelock-3.13.1-py3-none-any.whl (11 kB)
+Requirement already satisfied: typing-extensions in /srv/home/cjdunbar/env-01/lib64/python3.11/site-packages (from torch) (4.9.0)
+Collecting sympy
+  Using cached sympy-1.12-py3-none-any.whl (5.7 MB)
+Collecting networkx
+  Using cached networkx-3.2.1-py3-none-any.whl (1.6 MB)
+Collecting jinja2
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting fsspec
+  Downloading fsspec-2023.12.2-py3-none-any.whl (168 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 169.0/169.0 kB 2.1 MB/s eta 0:00:00
+Collecting nvidia-cuda-nvrtc-cu12==12.1.105
+  Using cached nvidia_cuda_nvrtc_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (23.7 MB)
+Collecting nvidia-cuda-runtime-cu12==12.1.105
+  Using cached nvidia_cuda_runtime_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (823 kB)
+Collecting nvidia-cuda-cupti-cu12==12.1.105
+  Using cached nvidia_cuda_cupti_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (14.1 MB)
+Collecting nvidia-cudnn-cu12==8.9.2.26
+  Using cached nvidia_cudnn_cu12-8.9.2.26-py3-none-manylinux1_x86_64.whl (731.7 MB)
+Collecting nvidia-cublas-cu12==12.1.3.1
+  Using cached nvidia_cublas_cu12-12.1.3.1-py3-none-manylinux1_x86_64.whl (410.6 MB)
+Collecting nvidia-cufft-cu12==11.0.2.54
+  Using cached nvidia_cufft_cu12-11.0.2.54-py3-none-manylinux1_x86_64.whl (121.6 MB)
+Collecting nvidia-curand-cu12==10.3.2.106
+  Using cached nvidia_curand_cu12-10.3.2.106-py3-none-manylinux1_x86_64.whl (56.5 MB)
+Collecting nvidia-cusolver-cu12==11.4.5.107
+  Using cached nvidia_cusolver_cu12-11.4.5.107-py3-none-manylinux1_x86_64.whl (124.2 MB)
+Collecting nvidia-cusparse-cu12==12.1.0.106
+  Using cached nvidia_cusparse_cu12-12.1.0.106-py3-none-manylinux1_x86_64.whl (196.0 MB)
+Collecting nvidia-nccl-cu12==2.18.1
+  Using cached nvidia_nccl_cu12-2.18.1-py3-none-manylinux1_x86_64.whl (209.8 MB)
+Collecting nvidia-nvtx-cu12==12.1.105
+  Using cached nvidia_nvtx_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (99 kB)
+Collecting triton==2.1.0
+  Using cached triton-2.1.0-0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89.2 MB)
+Collecting nvidia-nvjitlink-cu12
+  Using cached nvidia_nvjitlink_cu12-12.3.101-py3-none-manylinux1_x86_64.whl (20.5 MB)
+Collecting contourpy>=1.0.1
+  Using cached contourpy-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (313 kB)
+Collecting cycler>=0.10
+  Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Collecting fonttools>=4.22.0
+  Using cached fonttools-4.46.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.9 MB)
+Collecting kiwisolver>=1.3.1
+  Using cached kiwisolver-1.4.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.4 MB)
+Requirement already satisfied: numpy<2,>=1.21 in /srv/home/cjdunbar/env-01/lib64/python3.11/site-packages (from matplotlib) (1.26.2)
+Collecting packaging>=20.0
+  Using cached packaging-23.2-py3-none-any.whl (53 kB)
+Collecting pillow>=8
+  Using cached Pillow-10.1.0-cp311-cp311-manylinux_2_28_x86_64.whl (3.6 MB)
+Collecting pyparsing>=2.3.1
+  Using cached pyparsing-3.1.1-py3-none-any.whl (103 kB)
+Collecting python-dateutil>=2.7
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting decorator
+  Using cached decorator-5.1.1-py3-none-any.whl (9.1 kB)
+Collecting jedi>=0.16
+  Using cached jedi-0.19.1-py2.py3-none-any.whl (1.6 MB)
+Collecting matplotlib-inline
+  Using cached matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Collecting prompt-toolkit<3.1.0,>=3.0.41
+  Using cached prompt_toolkit-3.0.41-py3-none-any.whl (385 kB)
+Collecting pygments>=2.4.0
+  Using cached pygments-2.17.2-py3-none-any.whl (1.2 MB)
+Collecting stack-data
+  Using cached stack_data-0.6.3-py3-none-any.whl (24 kB)
+Collecting traitlets>=5
+  Using cached traitlets-5.14.0-py3-none-any.whl (85 kB)
+Collecting pexpect>4.3
+  Using cached pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+Collecting parso<0.9.0,>=0.8.3
+  Using cached parso-0.8.3-py2.py3-none-any.whl (100 kB)
+Collecting ptyprocess>=0.5
+  Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Collecting wcwidth
+  Using cached wcwidth-0.2.12-py2.py3-none-any.whl (34 kB)
+Collecting six>=1.5
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting MarkupSafe>=2.0
+  Using cached MarkupSafe-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (28 kB)
+Collecting executing>=1.2.0
+  Using cached executing-2.0.1-py2.py3-none-any.whl (24 kB)
+Collecting asttokens>=2.1.0
+  Using cached asttokens-2.4.1-py2.py3-none-any.whl (27 kB)
+Collecting pure-eval
+  Using cached pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Collecting mpmath>=0.19
+  Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Installing collected packages: wcwidth, pure-eval, ptyprocess, mpmath, traitlets, sympy, six, pyparsing, pygments, prompt-toolkit, pillow, pexpect, parso, packaging, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, networkx, MarkupSafe, kiwisolver, fsspec, fonttools, filelock, executing, decorator, cycler, contourpy, triton, python-dateutil, nvidia-cusparse-cu12, nvidia-cudnn-cu12, matplotlib-inline, jinja2, jedi, asttokens, stack-data, nvidia-cusolver-cu12, matplotlib, torch, IPython
+Successfully installed IPython-8.18.1 MarkupSafe-2.1.3 asttokens-2.4.1 contourpy-1.2.0 cycler-0.12.1 decorator-5.1.1 executing-2.0.1 filelock-3.13.1 fonttools-4.46.0 fsspec-2023.12.2 jedi-0.19.1 jinja2-3.1.2 kiwisolver-1.4.5 matplotlib-3.8.2 matplotlib-inline-0.1.6 mpmath-1.3.0 networkx-3.2.1 nvidia-cublas-cu12-12.1.3.1 nvidia-cuda-cupti-cu12-12.1.105 nvidia-cuda-nvrtc-cu12-12.1.105 nvidia-cuda-runtime-cu12-12.1.105 nvidia-cudnn-cu12-8.9.2.26 nvidia-cufft-cu12-11.0.2.54 nvidia-curand-cu12-10.3.2.106 nvidia-cusolver-cu12-11.4.5.107 nvidia-cusparse-cu12-12.1.0.106 nvidia-nccl-cu12-2.18.1 nvidia-nvjitlink-cu12-12.3.101 nvidia-nvtx-cu12-12.1.105 packaging-23.2 parso-0.8.3 pexpect-4.9.0 pillow-10.1.0 prompt-toolkit-3.0.41 ptyprocess-0.7.0 pure-eval-0.2.2 pygments-2.17.2 pyparsing-3.1.1 python-dateutil-2.8.2 six-1.16.0 stack-data-0.6.3 sympy-1.12 torch-2.1.1 traitlets-5.14.0 triton-2.1.0 wcwidth-0.2.12
+got here
+got here
+got here
+got here
 STATE SPACE SIZE: 6
 ACTION SPACE SIZE: 5
+Updating target network...
+EPISODE: 1 - FINAL SCORE: -200.0 - Temperature: 5.0
+EPISODE: 2 - FINAL SCORE: -200.0 - Temperature: 4.940008876649582
+EPISODE: 3 - FINAL SCORE: -200.0 - Temperature: 4.880737540275333
+EPISODE: 4 - FINAL SCORE: -200.0 - Temperature: 4.822177354711398
+EPISODE: 5 - FINAL SCORE: -200.0 - Temperature: 4.764319787410582
+EPISODE: 6 - FINAL SCORE: -200.0 - Temperature: 4.707156408201104
+EPISODE: 7 - FINAL SCORE: -200.0 - Temperature: 4.650678888058284
+EPISODE: 8 - FINAL SCORE: -200.0 - Temperature: 4.594878997890946
+Updating target network...
+EPISODE: 9 - FINAL SCORE: -200.0 - Temperature: 4.539748607342402
+EPISODE: 10 - FINAL SCORE: -200.0 - Temperature: 4.485279683605809
+EPISODE: 11 - FINAL SCORE: -200.0 - Temperature: 4.431464290253745
+EPISODE: 12 - FINAL SCORE: -200.0 - Temperature: 4.378294586081827
+EPISODE: 13 - FINAL SCORE: -200.0 - Temperature: 4.325762823966207
+EPISODE: 14 - FINAL SCORE: -200.0 - Temperature: 4.273861349734766
+EPISODE: 15 - FINAL SCORE: -200.0 - Temperature: 4.222582601051861
+EPISODE: 16 - FINAL SCORE: -200.0 - Temperature: 4.171919106316454
+Updating target network...
+EPISODE: 17 - FINAL SCORE: -200.0 - Temperature: 4.121863483573455
+EPISODE: 18 - FINAL SCORE: -200.0 - Temperature: 4.072408439438128
+EPISODE: 19 - FINAL SCORE: -200.0 - Temperature: 4.0235467680334045
+EPISODE: 20 - FINAL SCORE: -200.0 - Temperature: 3.975271349939951
+EPISODE: 21 - FINAL SCORE: -200.0 - Temperature: 3.9275751511588246
+EPISODE: 22 - FINAL SCORE: -200.0 - Temperature: 3.8804512220865837
+EPISODE: 23 - FINAL SCORE: -200.0 - Temperature: 3.833892696502688
+EPISODE: 24 - FINAL SCORE: -186.0 - Temperature: 3.7878927905690563
+Updating target network...
+EPISODE: 25 - FINAL SCORE: -200.0 - Temperature: 3.7424448018416188
+EPISODE: 26 - FINAL SCORE: -200.0 - Temperature: 3.6975421082937365
+EPISODE: 27 - FINAL SCORE: -200.0 - Temperature: 3.653178167351334
+EPISODE: 28 - FINAL SCORE: -200.0 - Temperature: 3.6093465149396082
+EPISODE: 29 - FINAL SCORE: -200.0 - Temperature: 3.56604076454118
+EPISODE: 30 - FINAL SCORE: -200.0 - Temperature: 3.523254606265538
+EPISODE: 31 - FINAL SCORE: -200.0 - Temperature: 3.480981805929657
+EPISODE: 32 - FINAL SCORE: -200.0 - Temperature: 3.4392162041496395
+Updating target network...
+EPISODE: 33 - FINAL SCORE: -200.0 - Temperature: 3.39795171544326
+EPISODE: 34 - FINAL SCORE: -200.0 - Temperature: 3.357182327343276
+EPISODE: 35 - FINAL SCORE: -200.0 - Temperature: 3.316902099521377
+EPISODE: 36 - FINAL SCORE: -200.0 - Temperature: 3.2771051629226475
+EPISODE: 37 - FINAL SCORE: -200.0 - Temperature: 3.237785718910411
+EPISODE: 38 - FINAL SCORE: -200.0 - Temperature: 3.1989380384213355
+EPISODE: 39 - FINAL SCORE: -200.0 - Temperature: 3.1605564611306796
+EPISODE: 40 - FINAL SCORE: -200.0 - Temperature: 3.12263539462755
+Updating target network...
+EPISODE: 41 - FINAL SCORE: -200.0 - Temperature: 3.085169313600053
+EPISODE: 42 - FINAL SCORE: -200.0 - Temperature: 3.048152759030232
+EPISODE: 43 - FINAL SCORE: -200.0 - Temperature: 3.011580337398652
+EPISODE: 44 - FINAL SCORE: -200.0 - Temperature: 2.975446719898537
+EPISODE: 45 - FINAL SCORE: -200.0 - Temperature: 2.939746641659331
+EPISODE: 46 - FINAL SCORE: -200.0 - Temperature: 2.9044749009795785
+EPISODE: 47 - FINAL SCORE: -200.0 - Temperature: 2.8696263585690067
+EPISODE: 48 - FINAL SCORE: -200.0 - Temperature: 2.835195936799702
+Updating target network...
+EPISODE: 49 - FINAL SCORE: -200.0 - Temperature: 2.801178618966271
+EPISODE: 50 - FINAL SCORE: -200.0 - Temperature: 2.767569448554879
+EPISODE: 51 - FINAL SCORE: -200.0 - Temperature: 2.734363528521058
+EPISODE: 52 - FINAL SCORE: -200.0 - Temperature: 2.70155602057618
+EPISODE: 53 - FINAL SCORE: -200.0 - Temperature: 2.6691421444824903
+EPISODE: 54 - FINAL SCORE: -200.0 - Temperature: 2.6371171773566005
+EPISODE: 55 - FINAL SCORE: -200.0 - Temperature: 2.605476452981339
+EPISODE: 56 - FINAL SCORE: -200.0 - Temperature: 2.574215361125857
+Updating target network...
+EPISODE: 57 - FINAL SCORE: -200.0 - Temperature: 2.5433293468738882
+EPISODE: 58 - FINAL SCORE: -200.0 - Temperature: 2.5128139099600784
+EPISODE: 59 - FINAL SCORE: -200.0 - Temperature: 2.482664604114266
+EPISODE: 60 - FINAL SCORE: -200.0 - Temperature: 2.452877036413639
+EPISODE: 61 - FINAL SCORE: -200.0 - Temperature: 2.423446866642659
+EPISODE: 62 - FINAL SCORE: -200.0 - Temperature: 2.3943698066606705
+EPISODE: 63 - FINAL SCORE: -200.0 - Temperature: 2.365641619777091
+EPISODE: 64 - FINAL SCORE: -200.0 - Temperature: 2.337258120134105
+Updating target network...
+EPISODE: 65 - FINAL SCORE: -200.0 - Temperature: 2.3092151720967586
+EPISODE: 66 - FINAL SCORE: -200.0 - Temperature: 2.281508689650376
+EPISODE: 67 - FINAL SCORE: -200.0 - Temperature: 2.254134635805203
+EPISODE: 68 - FINAL SCORE: -200.0 - Temperature: 2.227089022008195
+EPISODE: 69 - FINAL SCORE: -200.0 - Temperature: 2.200367907561864
+EPISODE: 70 - FINAL SCORE: -200.0 - Temperature: 2.173967399050095
+EPISODE: 71 - FINAL SCORE: -200.0 - Temperature: 2.1478836497708547
+EPISODE: 72 - FINAL SCORE: -200.0 - Temperature: 2.122112859175705
+Updating target network...
+EPISODE: 73 - FINAL SCORE: -192.0 - Temperature: 2.096651272316041
+EPISODE: 74 - FINAL SCORE: -200.0 - Temperature: 2.0714951792959764
+EPISODE: 75 - FINAL SCORE: -200.0 - Temperature: 2.0466409147317886
+EPISODE: 76 - FINAL SCORE: -200.0 - Temperature: 2.022084857217851
+EPISODE: 77 - FINAL SCORE: -200.0 - Temperature: 1.9978234287989773
+EPISODE: 78 - FINAL SCORE: -200.0 - Temperature: 1.9738530944490904
+EPISODE: 79 - FINAL SCORE: -200.0 - Temperature: 1.9501703615561505
+EPISODE: 80 - FINAL SCORE: -200.0 - Temperature: 1.9267717794132615
+Updating target network...
+EPISODE: 81 - FINAL SCORE: -200.0 - Temperature: 1.9036539387158846
+EPISODE: 82 - FINAL SCORE: -200.0 - Temperature: 1.8808134710650817
+EPISODE: 83 - FINAL SCORE: -200.0 - Temperature: 1.8582470484767233
+EPISODE: 84 - FINAL SCORE: -200.0 - Temperature: 1.8359513828965799
+EPISODE: 85 - FINAL SCORE: -200.0 - Temperature: 1.8139232257212359
+EPISODE: 86 - FINAL SCORE: -200.0 - Temperature: 1.7921593673247496
+EPISODE: 87 - FINAL SCORE: -200.0 - Temperature: 1.7706566365909926
+EPISODE: 88 - FINAL SCORE: -200.0 - Temperature: 1.7494119004515993
+Updating target network...
+EPISODE: 89 - FINAL SCORE: -200.0 - Temperature: 1.7284220634294631
+EPISODE: 90 - FINAL SCORE: -200.0 - Temperature: 1.7076840671877067
+EPISODE: 91 - FINAL SCORE: -200.0 - Temperature: 1.6871948900840668
+EPISODE: 92 - FINAL SCORE: -200.0 - Temperature: 1.6669515467306208
+EPISODE: 93 - FINAL SCORE: -200.0 - Temperature: 1.6469510875588036
+EPISODE: 94 - FINAL SCORE: -200.0 - Temperature: 1.6271905983896344
+EPISODE: 95 - FINAL SCORE: -200.0 - Temperature: 1.6076672000091077
+EPISODE: 96 - FINAL SCORE: -200.0 - Temperature: 1.5883780477486744
+Updating target network...
+EPISODE: 97 - FINAL SCORE: -200.0 - Temperature: 1.569320331070757
+EPISODE: 98 - FINAL SCORE: -200.0 - Temperature: 1.5504912731592402
+EPISODE: 99 - FINAL SCORE: -200.0 - Temperature: 1.5318881305148715
+EPISODE: 100 - FINAL SCORE: -200.0 - Temperature: 1.5135081925555196
+EPISODE: 101 - FINAL SCORE: -200.0 - Temperature: 1.4953487812212265
+EPISODE: 102 - FINAL SCORE: -200.0 - Temperature: 1.4774072505839986
+EPISODE: 103 - FINAL SCORE: -200.0 - Temperature: 1.4596809864622813
+EPISODE: 104 - FINAL SCORE: -200.0 - Temperature: 1.4421674060400576
+Updating target network...
+EPISODE: 105 - FINAL SCORE: -200.0 - Temperature: 1.4248639574905173
+EPISODE: 106 - FINAL SCORE: -200.0 - Temperature: 1.4077681196042415
+EPISODE: 107 - FINAL SCORE: -155.0 - Temperature: 1.3908774014218486
+EPISODE: 108 - FINAL SCORE: -200.0 - Temperature: 1.3741893418710474
+EPISODE: 109 - FINAL SCORE: -200.0 - Temperature: 1.3577015094080442
+EPISODE: 110 - FINAL SCORE: -200.0 - Temperature: 1.3414115016632548
+EPISODE: 111 - FINAL SCORE: -200.0 - Temperature: 1.325316945091265
+EPISODE: 112 - FINAL SCORE: -200.0 - Temperature: 1.3094154946249912
+Updating target network...
+EPISODE: 113 - FINAL SCORE: -200.0 - Temperature: 1.2937048333339918
+EPISODE: 114 - FINAL SCORE: -200.0 - Temperature: 1.2781826720868774
+EPISODE: 115 - FINAL SCORE: -200.0 - Temperature: 1.2628467492177715
+EPISODE: 116 - FINAL SCORE: -200.0 - Temperature: 1.2476948301967719
+EPISODE: 117 - FINAL SCORE: -200.0 - Temperature: 1.232724707304369
+EPISODE: 118 - FINAL SCORE: -200.0 - Temperature: 1.2179341993097683
+EPISODE: 119 - FINAL SCORE: -200.0 - Temperature: 1.2033211511530713
+EPISODE: 120 - FINAL SCORE: -200.0 - Temperature: 1.188883433631273
+Updating target network...
+EPISODE: 121 - FINAL SCORE: -200.0 - Temperature: 1.1746189430880247
+EPISODE: 122 - FINAL SCORE: -200.0 - Temperature: 1.1605256011071183
+EPISODE: 123 - FINAL SCORE: -200.0 - Temperature: 1.1466013542096514
+EPISODE: 124 - FINAL SCORE: -200.0 - Temperature: 1.1328441735548218
+EPISODE: 125 - FINAL SCORE: -200.0 - Temperature: 1.1192520546443159
+EPISODE: 126 - FINAL SCORE: -200.0 - Temperature: 1.1058230170302406
+EPISODE: 127 - FINAL SCORE: -200.0 - Temperature: 1.0925551040265622
+EPISODE: 128 - FINAL SCORE: -200.0 - Temperature: 1.079446382424005
+Updating target network...
+EPISODE: 129 - FINAL SCORE: -200.0 - Temperature: 1.0664949422083727
+EPISODE: 130 - FINAL SCORE: -200.0 - Temperature: 1.0536988962822489
+EPISODE: 131 - FINAL SCORE: -200.0 - Temperature: 1.0410563801900354
+EPISODE: 132 - FINAL SCORE: -200.0 - Temperature: 1.0285655518462913
+EPISODE: 133 - FINAL SCORE: -200.0 - Temperature: 1.016224591267331
+EPISODE: 134 - FINAL SCORE: -200.0 - Temperature: 1.0040317003060417
+EPISODE: 135 - FINAL SCORE: -200.0 - Temperature: 0.9919851023898838
+EPISODE: 136 - FINAL SCORE: -200.0 - Temperature: 0.9800830422620341
+Updating target network...
+EPISODE: 137 - FINAL SCORE: -200.0 - Temperature: 0.968323785725635
+EPISODE: 138 - FINAL SCORE: -200.0 - Temperature: 0.956705619391113
+EPISODE: 139 - FINAL SCORE: -200.0 - Temperature: 0.945226850426527
+EPISODE: 140 - FINAL SCORE: -200.0 - Temperature: 0.933885806310914
+EPISODE: 141 - FINAL SCORE: -200.0 - Temperature: 0.9226808345905935
+EPISODE: 142 - FINAL SCORE: -200.0 - Temperature: 0.9116103026383953
+EPISODE: 143 - FINAL SCORE: -200.0 - Temperature: 0.9006725974157769
+EPISODE: 144 - FINAL SCORE: -200.0 - Temperature: 0.8898661252377947
+Updating target network...
+EPISODE: 145 - FINAL SCORE: -185.0 - Temperature: 0.8791893115408949
+EPISODE: 146 - FINAL SCORE: -200.0 - Temperature: 0.868640600653491
+EPISODE: 147 - FINAL SCORE: -200.0 - Temperature: 0.8582184555692941
+EPISODE: 148 - FINAL SCORE: -200.0 - Temperature: 0.8479213577233615
+EPISODE: 149 - FINAL SCORE: -200.0 - Temperature: 0.8377478067708344
+EPISODE: 150 - FINAL SCORE: -200.0 - Temperature: 0.8276963203683281
+EPISODE: 151 - FINAL SCORE: -200.0 - Temperature: 0.8177654339579474
+EPISODE: 152 - FINAL SCORE: -200.0 - Temperature: 0.8079537005538916
+Updating target network...
+EPISODE: 153 - FINAL SCORE: -157.0 - Temperature: 0.7982596905316204
+EPISODE: 154 - FINAL SCORE: -200.0 - Temperature: 0.7886819914195508
+EPISODE: 155 - FINAL SCORE: -200.0 - Temperature: 0.77921920769325
+EPISODE: 156 - FINAL SCORE: -200.0 - Temperature: 0.7698699605721018
+EPISODE: 157 - FINAL SCORE: -200.0 - Temperature: 0.7606328878184093
+EPISODE: 158 - FINAL SCORE: -200.0 - Temperature: 0.7515066435389095
+EPISODE: 159 - FINAL SCORE: -181.0 - Temperature: 0.7424898979886694
+EPISODE: 160 - FINAL SCORE: -200.0 - Temperature: 0.7335813373773338
+Updating target network...
+EPISODE: 161 - FINAL SCORE: -200.0 - Temperature: 0.7247796636777002
+EPISODE: 162 - FINAL SCORE: -200.0 - Temperature: 0.7160835944365874
+EPISODE: 163 - FINAL SCORE: -148.0 - Temperature: 0.7074918625879763
+EPISODE: 164 - FINAL SCORE: -200.0 - Temperature: 0.6990032162683899
+EPISODE: 165 - FINAL SCORE: -200.0 - Temperature: 0.6906164186344907
+EPISODE: 166 - FINAL SCORE: -200.0 - Temperature: 0.6823302476828654
+EPISODE: 167 - FINAL SCORE: -200.0 - Temperature: 0.6741434960719727
+EPISODE: 168 - FINAL SCORE: -200.0 - Temperature: 0.6660549709462256
+Updating target network...
+EPISODE: 169 - FINAL SCORE: -200.0 - Temperature: 0.6580634937621866
+EPISODE: 170 - FINAL SCORE: -200.0 - Temperature: 0.6501679001168479
+EPISODE: 171 - FINAL SCORE: -200.0 - Temperature: 0.6423670395779695
+EPISODE: 172 - FINAL SCORE: -200.0 - Temperature: 0.6346597755164565
+EPISODE: 173 - FINAL SCORE: -200.0 - Temperature: 0.6270449849407451
+EPISODE: 174 - FINAL SCORE: -200.0 - Temperature: 0.6195215583331769
+EPISODE: 175 - FINAL SCORE: -200.0 - Temperature: 0.6120883994883352
+EPISODE: 176 - FINAL SCORE: -200.0 - Temperature: 0.6047444253533223
+Updating target network...
+EPISODE: 177 - FINAL SCORE: -200.0 - Temperature: 0.5974885658699525
+EPISODE: 178 - FINAL SCORE: -200.0 - Temperature: 0.5903197638188388
+EPISODE: 179 - FINAL SCORE: -200.0 - Temperature: 0.5832369746653496
+EPISODE: 180 - FINAL SCORE: -200.0 - Temperature: 0.5762391664074149
+EPISODE: 181 - FINAL SCORE: -200.0 - Temperature: 0.5693253194251571
+EPISODE: 182 - FINAL SCORE: -147.0 - Temperature: 0.5624944263323269
+EPISODE: 183 - FINAL SCORE: -200.0 - Temperature: 0.5557454918295219
+EPISODE: 184 - FINAL SCORE: -101.0 - Temperature: 0.5490775325591651
+Updating target network...
+EPISODE: 185 - FINAL SCORE: -200.0 - Temperature: 0.5424895769622252
+EPISODE: 186 - FINAL SCORE: -200.0 - Temperature: 0.5359806651366538
+EPISODE: 187 - FINAL SCORE: -200.0 - Temperature: 0.5295498486975234
+EPISODE: 188 - FINAL SCORE: -200.0 - Temperature: 0.5231961906388417
+EPISODE: 189 - FINAL SCORE: -200.0 - Temperature: 0.516918765197025
+EPISODE: 190 - FINAL SCORE: -200.0 - Temperature: 0.5107166577160089
+EPISODE: 191 - FINAL SCORE: -200.0 - Temperature: 0.504588964513978
+EPISODE: 192 - FINAL SCORE: -200.0 - Temperature: 0.4985347927516945
+Updating target network...
+EPISODE: 193 - FINAL SCORE: -137.0 - Temperature: 0.49255326030240604
+EPISODE: 194 - FINAL SCORE: -200.0 - Temperature: 0.48664349562331566
+EPISODE: 195 - FINAL SCORE: -200.0 - Temperature: 0.48080463762859227
+EPISODE: 196 - FINAL SCORE: -200.0 - Temperature: 0.4750358355639062
+EPISODE: 197 - FINAL SCORE: -175.0 - Temperature: 0.4693362488824696
+EPISODE: 198 - FINAL SCORE: -200.0 - Temperature: 0.4637050471225635
+EPISODE: 199 - FINAL SCORE: -200.0 - Temperature: 0.4581414097865352
+EPISODE: 200 - FINAL SCORE: -191.0 - Temperature: 0.45264452622124757
+Updating target network...
+EPISODE: 201 - FINAL SCORE: -200.0 - Temperature: 0.4472135954999615
+EPISODE: 202 - FINAL SCORE: -118.0 - Temperature: 0.441847826305637
+EPISODE: 203 - FINAL SCORE: -200.0 - Temperature: 0.436546436815634
+EPISODE: 204 - FINAL SCORE: -97.0 - Temperature: 0.43130865458779555
+EPISODE: 205 - FINAL SCORE: -200.0 - Temperature: 0.42613371644789966
+EPISODE: 206 - FINAL SCORE: -158.0 - Temperature: 0.42102086837846003
+EPISODE: 207 - FINAL SCORE: -173.0 - Temperature: 0.41596936540886165
+EPISODE: 208 - FINAL SCORE: -169.0 - Temperature: 0.410978471506814
+Updating target network...
+EPISODE: 209 - FINAL SCORE: -184.0 - Temperature: 0.4060474594711077
+EPISODE: 210 - FINAL SCORE: -200.0 - Temperature: 0.40117561082565667
+EPISODE: 211 - FINAL SCORE: -200.0 - Temperature: 0.39636221571481245
+EPISODE: 212 - FINAL SCORE: -109.0 - Temperature: 0.391606572799934
+EPISODE: 213 - FINAL SCORE: -167.0 - Temperature: 0.3869079891571989
+EPISODE: 214 - FINAL SCORE: -200.0 - Temperature: 0.38226578017664053
+EPISODE: 215 - FINAL SCORE: -183.0 - Temperature: 0.37767926946239644
+EPISODE: 216 - FINAL SCORE: -186.0 - Temperature: 0.37314778873415355
+Updating target network...
+EPISODE: 217 - FINAL SCORE: -129.0 - Temperature: 0.3686706777297763
+EPISODE: 218 - FINAL SCORE: -177.0 - Temperature: 0.36424728410910245
+EPISODE: 219 - FINAL SCORE: -200.0 - Temperature: 0.35987696335889363
+EPISODE: 220 - FINAL SCORE: -157.0 - Temperature: 0.3555590786989262
+EPISODE: 221 - FINAL SCORE: -118.0 - Temperature: 0.3512930009892085
+EPISODE: 222 - FINAL SCORE: -167.0 - Temperature: 0.3470781086383121
+EPISODE: 223 - FINAL SCORE: -135.0 - Temperature: 0.34291378751280194
+EPISODE: 224 - FINAL SCORE: -154.0 - Temperature: 0.33879943084775405
+Updating target network...
+EPISODE: 225 - FINAL SCORE: -190.0 - Temperature: 0.3347344391583463
+EPISODE: 226 - FINAL SCORE: -97.0 - Temperature: 0.33071822015251
+EPISODE: 227 - FINAL SCORE: -200.0 - Temperature: 0.32675018864463
+EPISODE: 228 - FINAL SCORE: -162.0 - Temperature: 0.32282976647027956
+EPISODE: 229 - FINAL SCORE: -189.0 - Temperature: 0.31895638240197854
+EPISODE: 230 - FINAL SCORE: -200.0 - Temperature: 0.3151294720659625
+EPISODE: 231 - FINAL SCORE: -171.0 - Temperature: 0.31134847785995023
+EPISODE: 232 - FINAL SCORE: -190.0 - Temperature: 0.307612848871898
+Updating target network...
+EPISODE: 233 - FINAL SCORE: -120.0 - Temperature: 0.30392204079972845
+EPISODE: 234 - FINAL SCORE: -118.0 - Temperature: 0.30027551587202306
+EPISODE: 235 - FINAL SCORE: -163.0 - Temperature: 0.2966727427696652
+EPISODE: 236 - FINAL SCORE: -122.0 - Temperature: 0.2931131965484249
+EPISODE: 237 - FINAL SCORE: -90.0 - Temperature: 0.2895963585624705
+EPISODE: 238 - FINAL SCORE: -113.0 - Temperature: 0.2861217163887999
+EPISODE: 239 - FINAL SCORE: -100.0 - Temperature: 0.2826887637525771
+EPISODE: 240 - FINAL SCORE: -129.0 - Temperature: 0.27929700045336553
+Updating target network...
+EPISODE: 241 - FINAL SCORE: -153.0 - Temperature: 0.2759459322922456
+EPISODE: 242 - FINAL SCORE: -83.0 - Temperature: 0.27263507099980755
+EPISODE: 243 - FINAL SCORE: -177.0 - Temperature: 0.2693639341650077
+EPISODE: 244 - FINAL SCORE: -120.0 - Temperature: 0.2661320451648783
+EPISODE: 245 - FINAL SCORE: -123.0 - Temperature: 0.26293893309508126
+EPISODE: 246 - FINAL SCORE: -129.0 - Temperature: 0.2597841327012944
+EPISODE: 247 - FINAL SCORE: -103.0 - Temperature: 0.25666718431142144
+EPISODE: 248 - FINAL SCORE: -176.0 - Temperature: 0.25358763376861526
+Updating target network...
+EPISODE: 249 - FINAL SCORE: -96.0 - Temperature: 0.2505450323651045
+EPISODE: 250 - FINAL SCORE: -110.0 - Temperature: 0.24753893677681466
+EPISODE: 251 - FINAL SCORE: -137.0 - Temperature: 0.2445689089987728
+EPISODE: 252 - FINAL SCORE: -86.0 - Temperature: 0.2416345162812883
+EPISODE: 253 - FINAL SCORE: -91.0 - Temperature: 0.23873533106689843
+EPISODE: 254 - FINAL SCORE: -97.0 - Temperature: 0.235870930928071
+EPISODE: 255 - FINAL SCORE: -97.0 - Temperature: 0.2330408985056542
+EPISODE: 256 - FINAL SCORE: -91.0 - Temperature: 0.23024482144806524
+Updating target network...
+EPISODE: 257 - FINAL SCORE: -55.0 - Temperature: 0.22748229235120807
+EPISODE: 258 - FINAL SCORE: -115.0 - Temperature: 0.22475290869911263
+EPISODE: 259 - FINAL SCORE: -99.0 - Temperature: 0.2220562728052859
+EPISODE: 260 - FINAL SCORE: -71.0 - Temperature: 0.21939199175476667
+EPISODE: 261 - FINAL SCORE: -123.0 - Temperature: 0.21675967734687585
+EPISODE: 262 - FINAL SCORE: -123.0 - Temperature: 0.21415894603865324
+EPISODE: 263 - FINAL SCORE: -154.0 - Temperature: 0.21158941888897315
+EPISODE: 264 - FINAL SCORE: -76.0 - Temperature: 0.20905072150333082
+Updating target network...
+EPISODE: 265 - FINAL SCORE: -183.0 - Temperature: 0.2065424839792908
+EPISODE: 266 - FINAL SCORE: -92.0 - Temperature: 0.2040643408525901
+EPISODE: 267 - FINAL SCORE: -123.0 - Temperature: 0.20161593104388822
+EPISODE: 268 - FINAL SCORE: -93.0 - Temperature: 0.19919689780615557
+EPISODE: 269 - FINAL SCORE: -100.0 - Temperature: 0.19680688867269364
+EPISODE: 270 - FINAL SCORE: -95.0 - Temperature: 0.19444555540577851
+EPISODE: 271 - FINAL SCORE: -83.0 - Temperature: 0.19211255394592078
+EPISODE: 272 - FINAL SCORE: -60.0 - Temperature: 0.18980754436173408
+Updating target network...
+EPISODE: 273 - FINAL SCORE: -78.0 - Temperature: 0.18753019080040512
+EPISODE: 274 - FINAL SCORE: -74.0 - Temperature: 0.18528016143875822
+EPISODE: 275 - FINAL SCORE: -77.0 - Temperature: 0.18305712843490665
+EPISODE: 276 - FINAL SCORE: -134.0 - Temperature: 0.18086076788048427
+EPISODE: 277 - FINAL SCORE: -68.0 - Temperature: 0.1786907597534504
+EPISODE: 278 - FINAL SCORE: -89.0 - Temperature: 0.17654678787146055
+EPISODE: 279 - FINAL SCORE: -83.0 - Temperature: 0.17442853984579718
+EPISODE: 280 - FINAL SCORE: -82.0 - Temperature: 0.17233570703585266
+Updating target network...
+EPISODE: 281 - FINAL SCORE: -93.0 - Temperature: 0.1702679845041588
+EPISODE: 282 - FINAL SCORE: -60.0 - Temperature: 0.1682250709719556
+EPISODE: 283 - FINAL SCORE: -96.0 - Temperature: 0.16620666877529333
+EPISODE: 284 - FINAL SCORE: -69.0 - Temperature: 0.16421248382166118
+EPISODE: 285 - FINAL SCORE: -59.0 - Temperature: 0.16224222554713644
+EPISODE: 286 - FINAL SCORE: -77.0 - Temperature: 0.16029560687404748
+EPISODE: 287 - FINAL SCORE: -100.0 - Temperature: 0.1583723441691453
+EPISODE: 288 - FINAL SCORE: -80.0 - Temperature: 0.15647215720227609
+Updating target network...
+EPISODE: 289 - FINAL SCORE: -78.0 - Temperature: 0.15459476910555053
+EPISODE: 290 - FINAL SCORE: -67.0 - Temperature: 0.15273990633300244
+EPISODE: 291 - FINAL SCORE: -128.0 - Temperature: 0.15090729862073154
+EPISODE: 292 - FINAL SCORE: -65.0 - Temperature: 0.1490966789475246
+EPISODE: 293 - FINAL SCORE: -91.0 - Temperature: 0.1473077834959489
+EPISODE: 294 - FINAL SCORE: -45.0 - Temperature: 0.14554035161391246
+EPISODE: 295 - FINAL SCORE: -55.0 - Temperature: 0.14379412577668577
+EPISODE: 296 - FINAL SCORE: -91.0 - Temperature: 0.14206885154937884
+Updating target network...
+EPISODE: 297 - FINAL SCORE: -172.0 - Temperature: 0.14036427754986863
+EPISODE: 298 - FINAL SCORE: -80.0 - Temperature: 0.13868015541217135
+EPISODE: 299 - FINAL SCORE: -92.0 - Temperature: 0.137016239750254
+EPISODE: 300 - FINAL SCORE: -64.0 - Temperature: 0.13537228812228042
+EPISODE: 301 - FINAL SCORE: -83.0 - Temperature: 0.133748060995286
+EPISODE: 302 - FINAL SCORE: -62.0 - Temperature: 0.1321433217102765
+EPISODE: 303 - FINAL SCORE: -59.0 - Temperature: 0.1305578364477455
+EPISODE: 304 - FINAL SCORE: -82.0 - Temperature: 0.1289913741936054
+Updating target network...
+EPISODE: 305 - FINAL SCORE: -70.0 - Temperature: 0.12744370670552768
+EPISODE: 306 - FINAL SCORE: -89.0 - Temperature: 0.12591460847968655
+EPISODE: 307 - FINAL SCORE: -68.0 - Temperature: 0.12440385671790165
+EPISODE: 308 - FINAL SCORE: -58.0 - Temperature: 0.12291123129517537
+EPISODE: 309 - FINAL SCORE: -65.0 - Temperature: 0.12143651472761925
+EPISODE: 310 - FINAL SCORE: -119.0 - Temperature: 0.11997949214076535
+EPISODE: 311 - FINAL SCORE: -60.0 - Temperature: 0.11853995123825792
+EPISODE: 312 - FINAL SCORE: -54.0 - Temperature: 0.11711768227092054
+Updating target network...
+EPISODE: 313 - FINAL SCORE: -76.0 - Temperature: 0.11571247800619458
+EPISODE: 314 - FINAL SCORE: -74.0 - Temperature: 0.11432413369794414
+EPISODE: 315 - FINAL SCORE: -72.0 - Temperature: 0.11295244705662355
+EPISODE: 316 - FINAL SCORE: -200.0 - Temperature: 0.11159721821980245
+EPISODE: 317 - FINAL SCORE: -57.0 - Temperature: 0.1102582497230449
+EPISODE: 318 - FINAL SCORE: -81.0 - Temperature: 0.10893534647113763
+EPISODE: 319 - FINAL SCORE: -73.0 - Temperature: 0.10762831570966352
+EPISODE: 320 - FINAL SCORE: -92.0 - Temperature: 0.10633696699691629
+Updating target network...
+EPISODE: 321 - FINAL SCORE: -98.0 - Temperature: 0.10506111217615202
+EPISODE: 322 - FINAL SCORE: -76.0 - Temperature: 0.1038005653481737
+EPISODE: 323 - FINAL SCORE: -63.0 - Temperature: 0.10255514284424462
+EPISODE: 324 - FINAL SCORE: -67.0 - Temperature: 0.10132466319932686
+EPISODE: 325 - FINAL SCORE: -49.0 - Temperature: 0.10010894712564078
+EPISODE: 326 - FINAL SCORE: -69.0 - Temperature: 0.09890781748654182
+EPISODE: 327 - FINAL SCORE: -65.0 - Temperature: 0.09772109927071067
+EPISODE: 328 - FINAL SCORE: -105.0 - Temperature: 0.09654861956665314
+Updating target network...
+EPISODE: 329 - FINAL SCORE: -47.0 - Temperature: 0.095390207537506
+EPISODE: 330 - FINAL SCORE: -46.0 - Temperature: 0.09424569439614511
+EPISODE: 331 - FINAL SCORE: -51.0 - Temperature: 0.09311491338059211
+EPISODE: 332 - FINAL SCORE: -44.0 - Temperature: 0.09199769972971639
+EPISODE: 333 - FINAL SCORE: -83.0 - Temperature: 0.09089389065922837
+EPISODE: 334 - FINAL SCORE: -151.0 - Temperature: 0.08980332533796093
+EPISODE: 335 - FINAL SCORE: -49.0 - Temperature: 0.08872584486443547
+EPISODE: 336 - FINAL SCORE: -110.0 - Temperature: 0.087661292243709
+Updating target network...
+EPISODE: 337 - FINAL SCORE: -51.0 - Temperature: 0.08660951236449912
+EPISODE: 338 - FINAL SCORE: -61.0 - Temperature: 0.08557035197658347
+EPISODE: 339 - FINAL SCORE: -62.0 - Temperature: 0.08454365966847027
+EPISODE: 340 - FINAL SCORE: -92.0 - Temperature: 0.08352928584533689
+EPISODE: 341 - FINAL SCORE: -55.0 - Temperature: 0.0825270827072329
+EPISODE: 342 - FINAL SCORE: -54.0 - Temperature: 0.08153690422754496
+EPISODE: 343 - FINAL SCORE: -43.0 - Temperature: 0.08055860613171978
+EPISODE: 344 - FINAL SCORE: -132.0 - Temperature: 0.07959204587624263
+Updating target network...
+EPISODE: 345 - FINAL SCORE: -83.0 - Temperature: 0.07863708262786788
+EPISODE: 346 - FINAL SCORE: -73.0 - Temperature: 0.07769357724309879
+EPISODE: 347 - FINAL SCORE: -84.0 - Temperature: 0.07676139224791359
+EPISODE: 348 - FINAL SCORE: -43.0 - Temperature: 0.0758403918177347
+EPISODE: 349 - FINAL SCORE: -53.0 - Temperature: 0.07493044175763836
+EPISODE: 350 - FINAL SCORE: -81.0 - Temperature: 0.0740314094828016
+EPISODE: 351 - FINAL SCORE: -59.0 - Temperature: 0.073143163999184
+EPISODE: 352 - FINAL SCORE: -49.0 - Temperature: 0.07226557588444102
+Updating target network...
+EPISODE: 353 - FINAL SCORE: -51.0 - Temperature: 0.07139851726906651
+EPISODE: 354 - FINAL SCORE: -52.0 - Temperature: 0.07054186181776141
+EPISODE: 355 - FINAL SCORE: -45.0 - Temperature: 0.06969548471102592
+EPISODE: 356 - FINAL SCORE: -53.0 - Temperature: 0.06885926262697264
+EPISODE: 357 - FINAL SCORE: -63.0 - Temperature: 0.06803307372335794
+EPISODE: 358 - FINAL SCORE: -52.0 - Temperature: 0.06721679761982872
+EPISODE: 359 - FINAL SCORE: -45.0 - Temperature: 0.06641031538038249
+EPISODE: 360 - FINAL SCORE: -57.0 - Temperature: 0.06561350949603754
+Updating target network...
+EPISODE: 361 - FINAL SCORE: -39.0 - Temperature: 0.06482626386771143
+EPISODE: 362 - FINAL SCORE: -49.0 - Temperature: 0.0640484637893045
+EPISODE: 363 - FINAL SCORE: -57.0 - Temperature: 0.06327999593098671
+EPISODE: 364 - FINAL SCORE: -39.0 - Temperature: 0.06252074832268475
+EPISODE: 365 - FINAL SCORE: -52.0 - Temperature: 0.06177061033776743
+EPISODE: 366 - FINAL SCORE: -51.0 - Temperature: 0.06102947267692671
+EPISODE: 367 - FINAL SCORE: -72.0 - Temperature: 0.060297227352252215
+EPISODE: 368 - FINAL SCORE: -42.0 - Temperature: 0.05957376767149678
+Updating target network...
+EPISODE: 369 - FINAL SCORE: -43.0 - Temperature: 0.0588589882225308
+EPISODE: 370 - FINAL SCORE: -50.0 - Temperature: 0.05815278485798307
+EPISODE: 371 - FINAL SCORE: -44.0 - Temperature: 0.05745505468006596
+EPISODE: 372 - FINAL SCORE: -45.0 - Temperature: 0.05676569602558259
+EPISODE: 373 - FINAL SCORE: -62.0 - Temperature: 0.056084608451113974
+EPISODE: 374 - FINAL SCORE: -76.0 - Temperature: 0.05541169271838384
+EPISODE: 375 - FINAL SCORE: -39.0 - Temperature: 0.05474685077979904
+EPISODE: 376 - FINAL SCORE: -42.0 - Temperature: 0.05408998576416346
+Updating target network...
+EPISODE: 377 - FINAL SCORE: -47.0 - Temperature: 0.053441001962563406
+EPISODE: 378 - FINAL SCORE: -48.0 - Temperature: 0.052799804814422195
+EPISODE: 379 - FINAL SCORE: -45.0 - Temperature: 0.05216630089372219
+EPISODE: 380 - FINAL SCORE: -51.0 - Temperature: 0.05154039789539214
+EPISODE: 381 - FINAL SCORE: -38.0 - Temperature: 0.05092200462185771
+EPISODE: 382 - FINAL SCORE: -62.0 - Temperature: 0.05031103096975363
+EPISODE: 383 - FINAL SCORE: -94.0 - Temperature: 0.049707387916794986
+EPISODE: 384 - FINAL SCORE: -54.0 - Temperature: 0.049110987508806284
+Updating target network...
+EPISODE: 385 - FINAL SCORE: -125.0 - Temperature: 0.048521742846905955
+EPISODE: 386 - FINAL SCORE: -50.0 - Temperature: 0.04793956807484476
+EPISODE: 387 - FINAL SCORE: -120.0 - Temperature: 0.047364378366496006
+EPISODE: 388 - FINAL SCORE: -100.0 - Temperature: 0.04679608991349594
+EPISODE: 389 - FINAL SCORE: -62.0 - Temperature: 0.046234619913032377
+EPISODE: 390 - FINAL SCORE: -52.0 - Temperature: 0.0456798865557799
+EPISODE: 391 - FINAL SCORE: -40.0 - Temperature: 0.045131809013979715
+EPISODE: 392 - FINAL SCORE: -111.0 - Temperature: 0.04459030742966268
+Updating target network...
+EPISODE: 393 - FINAL SCORE: -56.0 - Temperature: 0.044055302903013495
+EPISODE: 394 - FINAL SCORE: -61.0 - Temperature: 0.043526717480874555
+EPISODE: 395 - FINAL SCORE: -91.0 - Temperature: 0.043004474145387765
+EPISODE: 396 - FINAL SCORE: -44.0 - Temperature: 0.0424884968027726
+EPISODE: 397 - FINAL SCORE: -53.0 - Temperature: 0.04197871027223881
+EPISODE: 398 - FINAL SCORE: -40.0 - Temperature: 0.04147504027503214
+EPISODE: 399 - FINAL SCORE: -38.0 - Temperature: 0.04097741342361154
+EPISODE: 400 - FINAL SCORE: -44.0 - Temperature: 0.04048575721095614
+Updating target network...
+EPISODE: 401 - FINAL SCORE: -58.0 - Temperature: 0.04000000000000063
+EPISODE: 402 - FINAL SCORE: -47.0 - Temperature: 0.03952007101319728
+EPISODE: 403 - FINAL SCORE: -38.0 - Temperature: 0.039045900322203286
+EPISODE: 404 - FINAL SCORE: -52.0 - Temperature: 0.0385774188376918
+EPISODE: 405 - FINAL SCORE: -68.0 - Temperature: 0.038114558299285256
+EPISODE: 406 - FINAL SCORE: -44.0 - Temperature: 0.03765725126560943
+EPISODE: 407 - FINAL SCORE: -59.0 - Temperature: 0.03720543110446686
+EPISODE: 408 - FINAL SCORE: -62.0 - Temperature: 0.03675903198312815
+Updating target network...
+EPISODE: 409 - FINAL SCORE: -62.0 - Temperature: 0.03631798885873979
+EPISODE: 410 - FINAL SCORE: -41.0 - Temperature: 0.03588223746884704
+EPISODE: 411 - FINAL SCORE: -39.0 - Temperature: 0.03545171432203052
+EPISODE: 412 - FINAL SCORE: -49.0 - Temperature: 0.035026356688655176
+EPISODE: 413 - FINAL SCORE: -39.0 - Temperature: 0.034606102591730206
+EPISODE: 414 - FINAL SCORE: -44.0 - Temperature: 0.03419089079787867
+EPISODE: 415 - FINAL SCORE: -40.0 - Temperature: 0.03378066080841542
+EPISODE: 416 - FINAL SCORE: -150.0 - Temperature: 0.03337535285053217
+Updating target network...
+EPISODE: 417 - FINAL SCORE: -57.0 - Temperature: 0.032974907868588164
+EPISODE: 418 - FINAL SCORE: -51.0 - Temperature: 0.032579267515505536
+EPISODE: 419 - FINAL SCORE: -56.0 - Temperature: 0.03218837414426774
+EPISODE: 420 - FINAL SCORE: -46.0 - Temperature: 0.03180217079952011
+EPISODE: 421 - FINAL SCORE: -51.0 - Temperature: 0.0314206012092711
+EPISODE: 422 - FINAL SCORE: -37.0 - Temperature: 0.03104360977669316
+EPISODE: 423 - FINAL SCORE: -39.0 - Temperature: 0.03067114157202199
+EPISODE: 424 - FINAL SCORE: -79.0 - Temperature: 0.030303142324552935
+Updating target network...
+EPISODE: 425 - FINAL SCORE: -50.0 - Temperature: 0.029939558414733426
+EPISODE: 426 - FINAL SCORE: -47.0 - Temperature: 0.02958033686635036
+EPISODE: 427 - FINAL SCORE: -40.0 - Temperature: 0.029225425338811135
+EPISODE: 428 - FINAL SCORE: -46.0 - Temperature: 0.028874772119517327
+EPISODE: 429 - FINAL SCORE: -46.0 - Temperature: 0.02852832611632989
+EPISODE: 430 - FINAL SCORE: -47.0 - Temperature: 0.02818603685012475
+EPISODE: 431 - FINAL SCORE: -58.0 - Temperature: 0.027847854447437696
+EPISODE: 432 - FINAL SCORE: -123.0 - Temperature: 0.027513729633197554
+Updating target network...
+EPISODE: 433 - FINAL SCORE: -55.0 - Temperature: 0.027183613723546513
+EPISODE: 434 - FINAL SCORE: -52.0 - Temperature: 0.026857458618746635
+EPISODE: 435 - FINAL SCORE: -43.0 - Temperature: 0.02653521679617144
+EPISODE: 436 - FINAL SCORE: -47.0 - Temperature: 0.0262168413033816
+EPISODE: 437 - FINAL SCORE: -44.0 - Temperature: 0.0259022857512837
+EPISODE: 438 - FINAL SCORE: -50.0 - Temperature: 0.02559150430737109
+EPISODE: 439 - FINAL SCORE: -45.0 - Temperature: 0.02528445168904584
+EPISODE: 440 - FINAL SCORE: -63.0 - Temperature: 0.024981083157020793
+Updating target network...
+EPISODE: 441 - FINAL SCORE: -41.0 - Temperature: 0.024681354508800817
+EPISODE: 442 - FINAL SCORE: -43.0 - Temperature: 0.024385222072242245
+EPISODE: 443 - FINAL SCORE: -58.0 - Temperature: 0.0240926426991896
+EPISODE: 444 - FINAL SCORE: -55.0 - Temperature: 0.023803573759188672
+EPISODE: 445 - FINAL SCORE: -50.0 - Temperature: 0.02351797313327502
+EPISODE: 446 - FINAL SCORE: -39.0 - Temperature: 0.023235799207837
+EPISODE: 447 - FINAL SCORE: -45.0 - Temperature: 0.02295701086855242
+EPISODE: 448 - FINAL SCORE: -62.0 - Temperature: 0.022681567494397974
+Updating target network...
+EPISODE: 449 - FINAL SCORE: -48.0 - Temperature: 0.022409428951730526
+EPISODE: 450 - FINAL SCORE: -54.0 - Temperature: 0.022140555588439387
+EPISODE: 451 - FINAL SCORE: -65.0 - Temperature: 0.021874908228168812
+EPISODE: 452 - FINAL SCORE: -59.0 - Temperature: 0.021612448164609784
+EPISODE: 453 - FINAL SCORE: -46.0 - Temperature: 0.02135313715586026
+EPISODE: 454 - FINAL SCORE: -111.0 - Temperature: 0.021096937418853136
+EPISODE: 455 - FINAL SCORE: -58.0 - Temperature: 0.020843811623851047
+EPISODE: 456 - FINAL SCORE: -75.0 - Temperature: 0.02059372288900718
+Updating target network...
+EPISODE: 457 - FINAL SCORE: -150.0 - Temperature: 0.02034663477499143
+EPISODE: 458 - FINAL SCORE: -77.0 - Temperature: 0.02010251127968095
+EPISODE: 459 - FINAL SCORE: -69.0 - Temperature: 0.019861316832914446
+EPISODE: 460 - FINAL SCORE: -138.0 - Temperature: 0.01962301629130942
+EPISODE: 461 - FINAL SCORE: -49.0 - Temperature: 0.019387574933141583
+EPISODE: 462 - FINAL SCORE: -83.0 - Temperature: 0.01915495845328567
+EPISODE: 463 - FINAL SCORE: -57.0 - Temperature: 0.01892513295821703
+EPISODE: 464 - FINAL SCORE: -51.0 - Temperature: 0.018698064961073138
+Updating target network...
+EPISODE: 465 - FINAL SCORE: -56.0 - Temperature: 0.018473721376774364
+EPISODE: 466 - FINAL SCORE: -64.0 - Temperature: 0.0182520695172033
+EPISODE: 467 - FINAL SCORE: -72.0 - Temperature: 0.01803307708644191
+EPISODE: 468 - FINAL SCORE: -50.0 - Temperature: 0.017816712176065844
+EPISODE: 469 - FINAL SCORE: -122.0 - Temperature: 0.01760294326049519
+EPISODE: 470 - FINAL SCORE: -104.0 - Temperature: 0.017391739192401036
+EPISODE: 471 - FINAL SCORE: -55.0 - Temperature: 0.01718306919816711
+EPISODE: 472 - FINAL SCORE: -84.0 - Temperature: 0.01697690287340591
+Updating target network...
+EPISODE: 473 - FINAL SCORE: -42.0 - Temperature: 0.0167732101785286
+EPISODE: 474 - FINAL SCORE: -120.0 - Temperature: 0.016571961434368076
+EPISODE: 475 - FINAL SCORE: -65.0 - Temperature: 0.016373127317854567
+EPISODE: 476 - FINAL SCORE: -68.0 - Temperature: 0.016176678857743064
+EPISODE: 477 - FINAL SCORE: -143.0 - Temperature: 0.015982587430392072
+EPISODE: 478 - FINAL SCORE: -69.0 - Temperature: 0.015790824755592972
+EPISODE: 479 - FINAL SCORE: -65.0 - Temperature: 0.015601362892449452
+EPISODE: 480 - FINAL SCORE: -78.0 - Temperature: 0.015414174235306338
+Updating target network...
+EPISODE: 481 - FINAL SCORE: -127.0 - Temperature: 0.015229231509727317
+EPISODE: 482 - FINAL SCORE: -87.0 - Temperature: 0.015046507768520893
+EPISODE: 483 - FINAL SCORE: -147.0 - Temperature: 0.014865976387814022
+EPISODE: 484 - FINAL SCORE: -51.0 - Temperature: 0.014687611063172871
+EPISODE: 485 - FINAL SCORE: -65.0 - Temperature: 0.014511385805770119
+EPISODE: 486 - FINAL SCORE: -45.0 - Temperature: 0.014337274938598224
+EPISODE: 487 - FINAL SCORE: -127.0 - Temperature: 0.014165253092728165
+EPISODE: 488 - FINAL SCORE: -36.0 - Temperature: 0.013995295203613017
+Updating target network...
+EPISODE: 489 - FINAL SCORE: -59.0 - Temperature: 0.013827376507435922
+EPISODE: 490 - FINAL SCORE: -40.0 - Temperature: 0.013661472537501872
+EPISODE: 491 - FINAL SCORE: -54.0 - Temperature: 0.013497559120672745
+EPISODE: 492 - FINAL SCORE: -71.0 - Temperature: 0.013335612373845179
+EPISODE: 493 - FINAL SCORE: -52.0 - Temperature: 0.013175608700470638
+EPISODE: 494 - FINAL SCORE: -48.0 - Temperature: 0.013017524787117282
+EPISODE: 495 - FINAL SCORE: -73.0 - Temperature: 0.012861337600073068
+EPISODE: 496 - FINAL SCORE: -105.0 - Temperature: 0.012707024381989597
+Updating target network...
+EPISODE: 497 - FINAL SCORE: -97.0 - Temperature: 0.012554562648566256
+EPISODE: 498 - FINAL SCORE: -40.0 - Temperature: 0.012403930185274118
+EPISODE: 499 - FINAL SCORE: -40.0 - Temperature: 0.012255105044119167
+EPISODE: 500 - FINAL SCORE: -98.0 - Temperature: 0.012108065540444352
+EPISODE: 501 - FINAL SCORE: -49.0 - Temperature: 0.011962790249770002
+EPISODE: 502 - FINAL SCORE: -39.0 - Temperature: 0.011819258004672175
+EPISODE: 503 - FINAL SCORE: -66.0 - Temperature: 0.011677447891698434
+EPISODE: 504 - FINAL SCORE: -58.0 - Temperature: 0.011537339248320642
+Updating target network...
+EPISODE: 505 - FINAL SCORE: -66.0 - Temperature: 0.01139891165992432
+EPISODE: 506 - FINAL SCORE: -44.0 - Temperature: 0.011262144956834112
+EPISODE: 507 - FINAL SCORE: -75.0 - Temperature: 0.011127019211374966
+EPISODE: 508 - FINAL SCORE: -39.0 - Temperature: 0.010993514734968554
+EPISODE: 509 - FINAL SCORE: -39.0 - Temperature: 0.010861612075264527
+EPISODE: 510 - FINAL SCORE: -87.0 - Temperature: 0.01073129201330621
+EPISODE: 511 - FINAL SCORE: -46.0 - Temperature: 0.010602535560730287
+EPISODE: 512 - FINAL SCORE: -39.0 - Temperature: 0.010475323957000095
+Updating target network...
+EPISODE: 513 - FINAL SCORE: -41.0 - Temperature: 0.010349638666672099
+EPISODE: 514 - FINAL SCORE: -37.0 - Temperature: 0.010225461376695182
+EPISODE: 515 - FINAL SCORE: -41.0 - Temperature: 0.01010277399374233
+EPISODE: 516 - FINAL SCORE: -55.0 - Temperature: 0.009981558641574333
+EPISODE: 517 - FINAL SCORE: -41.0 - Temperature: 0.00986179765843511
+EPISODE: 518 - FINAL SCORE: -41.0 - Temperature: 0.0097434735944783
+EPISODE: 519 - FINAL SCORE: -41.0 - Temperature: 0.009626569209224722
+EPISODE: 520 - FINAL SCORE: -109.0 - Temperature: 0.009511067469050335
+Updating target network...
+EPISODE: 521 - FINAL SCORE: -42.0 - Temperature: 0.009396951544704346
+EPISODE: 522 - FINAL SCORE: -39.0 - Temperature: 0.009284204808857093
+EPISODE: 523 - FINAL SCORE: -51.0 - Temperature: 0.009172810833677356
+EPISODE: 524 - FINAL SCORE: -42.0 - Temperature: 0.009062753388438718
+EPISODE: 525 - FINAL SCORE: -41.0 - Temperature: 0.00895401643715467
+EPISODE: 526 - FINAL SCORE: -65.0 - Temperature: 0.008846584136242066
+EPISODE: 527 - FINAL SCORE: -53.0 - Temperature: 0.008740440832212638
+EPISODE: 528 - FINAL SCORE: -34.0 - Temperature: 0.008635571059392177
+Updating target network...
+EPISODE: 529 - FINAL SCORE: -53.0 - Temperature: 0.008531959537667118
+EPISODE: 530 - FINAL SCORE: -41.0 - Temperature: 0.008429591170258124
+EPISODE: 531 - FINAL SCORE: -54.0 - Temperature: 0.008328451041520414
+EPISODE: 532 - FINAL SCORE: -44.0 - Temperature: 0.008228524414770462
+EPISODE: 533 - FINAL SCORE: -92.0 - Temperature: 0.008129796730138777
+EPISODE: 534 - FINAL SCORE: -48.0 - Temperature: 0.00803225360244846
+EPISODE: 535 - FINAL SCORE: -42.0 - Temperature: 0.007935880819119195
+EPISODE: 536 - FINAL SCORE: -65.0 - Temperature: 0.007840664338096395
+Updating target network...
+EPISODE: 537 - FINAL SCORE: -41.0 - Temperature: 0.0077465902858052035
+EPISODE: 538 - FINAL SCORE: -47.0 - Temperature: 0.007653644955129026
+EPISODE: 539 - FINAL SCORE: -41.0 - Temperature: 0.007561814803412336
+EPISODE: 540 - FINAL SCORE: -44.0 - Temperature: 0.00747108645048743
+EPISODE: 541 - FINAL SCORE: -40.0 - Temperature: 0.007381446676724864
+EPISODE: 542 - FINAL SCORE: -48.0 - Temperature: 0.007292882421107278
+EPISODE: 543 - FINAL SCORE: -40.0 - Temperature: 0.00720538077932633
+EPISODE: 544 - FINAL SCORE: -41.0 - Temperature: 0.00711892900190247
+Updating target network...
+EPISODE: 545 - FINAL SCORE: -56.0 - Temperature: 0.00703351449232727
+EPISODE: 546 - FINAL SCORE: -98.0 - Temperature: 0.006949124805228038
+EPISODE: 547 - FINAL SCORE: -59.0 - Temperature: 0.006865747644554462
+EPISODE: 548 - FINAL SCORE: -40.0 - Temperature: 0.006783370861787
+EPISODE: 549 - FINAL SCORE: -86.0 - Temperature: 0.006701982454166781
+EPISODE: 550 - FINAL SCORE: -40.0 - Temperature: 0.006621570562946729
+EPISODE: 551 - FINAL SCORE: -41.0 - Temperature: 0.0065421234716636825
+EPISODE: 552 - FINAL SCORE: -48.0 - Temperature: 0.006463629604431235
+Updating target network...
+EPISODE: 553 - FINAL SCORE: -43.0 - Temperature: 0.006386077524253065
+EPISODE: 554 - FINAL SCORE: -40.0 - Temperature: 0.006309455931356506
+EPISODE: 555 - FINAL SCORE: -40.0 - Temperature: 0.006233753661546099
+EPISODE: 556 - FINAL SCORE: -46.0 - Temperature: 0.006158959684576912
+EPISODE: 557 - FINAL SCORE: -53.0 - Temperature: 0.0060850631025473716
+EPISODE: 558 - FINAL SCORE: -46.0 - Temperature: 0.006012053148311373
+EPISODE: 559 - FINAL SCORE: -41.0 - Temperature: 0.0059399191839094485
+EPISODE: 560 - FINAL SCORE: -46.0 - Temperature: 0.005868650699018764
+Updating target network...
+EPISODE: 561 - FINAL SCORE: -41.0 - Temperature: 0.0057982373094216935
+EPISODE: 562 - FINAL SCORE: -40.0 - Temperature: 0.005728668755492791
+EPISODE: 563 - FINAL SCORE: -39.0 - Temperature: 0.0056599349007039
+EPISODE: 564 - FINAL SCORE: -49.0 - Temperature: 0.005592025730147207
+EPISODE: 565 - FINAL SCORE: -73.0 - Temperature: 0.005524931349076013
+EPISODE: 566 - FINAL SCORE: -41.0 - Temperature: 0.005458641981463011
+EPISODE: 567 - FINAL SCORE: -73.0 - Temperature: 0.005393147968575867
+EPISODE: 568 - FINAL SCORE: -56.0 - Temperature: 0.0053284397675698895
+Updating target network...
+EPISODE: 569 - FINAL SCORE: -71.0 - Temperature: 0.005264507950097577
+EPISODE: 570 - FINAL SCORE: -67.0 - Temperature: 0.005201343200934866
+EPISODE: 571 - FINAL SCORE: -48.0 - Temperature: 0.005138936316623837
+EPISODE: 572 - FINAL SCORE: -40.0 - Temperature: 0.005077278204131733
+EPISODE: 573 - FINAL SCORE: -40.0 - Temperature: 0.005016359879526041
+EPISODE: 574 - FINAL SCORE: -40.0 - Temperature: 0.0049561724666654944
+EPISODE: 575 - FINAL SCORE: -40.0 - Temperature: 0.004896707195906759
+EPISODE: 576 - FINAL SCORE: -39.0 - Temperature: 0.0048379554028266545
+Updating target network...
+EPISODE: 577 - FINAL SCORE: -47.0 - Temperature: 0.004779908526959696
+EPISODE: 578 - FINAL SCORE: -42.0 - Temperature: 0.004722558110550785
+EPISODE: 579 - FINAL SCORE: -40.0 - Temperature: 0.0046658957973228716
+EPISODE: 580 - FINAL SCORE: -64.0 - Temperature: 0.0046099133312593925
+EPISODE: 581 - FINAL SCORE: -41.0 - Temperature: 0.004554602555401329
+EPISODE: 582 - FINAL SCORE: -41.0 - Temperature: 0.004499955410658687
+EPISODE: 583 - FINAL SCORE: -39.0 - Temperature: 0.004445963934636246
+EPISODE: 584 - FINAL SCORE: -88.0 - Temperature: 0.004392620260473391
+Updating target network...
+EPISODE: 585 - FINAL SCORE: -39.0 - Temperature: 0.00433991661569787
+EPISODE: 586 - FINAL SCORE: -73.0 - Temperature: 0.004287845321093298
+EPISODE: 587 - FINAL SCORE: -48.0 - Temperature: 0.004236398789580254
+EPISODE: 588 - FINAL SCORE: -64.0 - Temperature: 0.0041855695251107996
+EPISODE: 589 - FINAL SCORE: -44.0 - Temperature: 0.004135350121576266
+EPISODE: 590 - FINAL SCORE: -37.0 - Temperature: 0.004085733261728136
+EPISODE: 591 - FINAL SCORE: -50.0 - Temperature: 0.004036711716111889
+EPISODE: 592 - FINAL SCORE: -44.0 - Temperature: 0.003988278342013618
+Updating target network...
+EPISODE: 593 - FINAL SCORE: -76.0 - Temperature: 0.003940426082419311
+EPISODE: 594 - FINAL SCORE: -48.0 - Temperature: 0.0038931479649865867
+EPISODE: 595 - FINAL SCORE: -46.0 - Temperature: 0.0038464371010287993
+EPISODE: 596 - FINAL SCORE: -46.0 - Temperature: 0.0038002866845113104
+EPISODE: 597 - FINAL SCORE: -36.0 - Temperature: 0.0037546899910598165
+EPISODE: 598 - FINAL SCORE: -40.0 - Temperature: 0.0037096403769805667
+EPISODE: 599 - FINAL SCORE: -41.0 - Temperature: 0.00366513127829234
+EPISODE: 600 - FINAL SCORE: -44.0 - Temperature: 0.003621156209770038
+Updating target network...
+EPISODE: 601 - FINAL SCORE: -44.0 - Temperature: 0.0035777087639997486
+EPISODE: 602 - FINAL SCORE: -40.0 - Temperature: 0.003534782610445153
+EPISODE: 603 - FINAL SCORE: -41.0 - Temperature: 0.003492371494525127
+EPISODE: 604 - FINAL SCORE: -36.0 - Temperature: 0.0034504692367024192
+EPISODE: 605 - FINAL SCORE: -37.0 - Temperature: 0.0034090697315832517
+EPISODE: 606 - FINAL SCORE: -43.0 - Temperature: 0.003368166947027734
+EPISODE: 607 - FINAL SCORE: -58.0 - Temperature: 0.0033277549232709454
+EPISODE: 608 - FINAL SCORE: -94.0 - Temperature: 0.003287827772054564
+Updating target network...
+EPISODE: 609 - FINAL SCORE: -46.0 - Temperature: 0.003248379675768913
+EPISODE: 610 - FINAL SCORE: -40.0 - Temperature: 0.0032094048866053043
+EPISODE: 611 - FINAL SCORE: -40.0 - Temperature: 0.0031708977257185497
+EPISODE: 612 - FINAL SCORE: -40.0 - Temperature: 0.0031328525823995216
+EPISODE: 613 - FINAL SCORE: -39.0 - Temperature: 0.00309526391325764
+EPISODE: 614 - FINAL SCORE: -46.0 - Temperature: 0.0030581262414131733
+EPISODE: 615 - FINAL SCORE: -41.0 - Temperature: 0.0030214341556992195
+EPISODE: 616 - FINAL SCORE: -55.0 - Temperature: 0.0029851823098732758
+Updating target network...
+EPISODE: 617 - FINAL SCORE: -40.0 - Temperature: 0.002949365421838257
+EPISODE: 618 - FINAL SCORE: -41.0 - Temperature: 0.0029139782728728656
+EPISODE: 619 - FINAL SCORE: -40.0 - Temperature: 0.002879015706871195
+EPISODE: 620 - FINAL SCORE: -41.0 - Temperature: 0.002844472629591455
+EPISODE: 621 - FINAL SCORE: -37.0 - Temperature: 0.0028103440079137133
+EPISODE: 622 - FINAL SCORE: -59.0 - Temperature: 0.002776624869106541
+EPISODE: 623 - FINAL SCORE: -71.0 - Temperature: 0.00274331030010246
+EPISODE: 624 - FINAL SCORE: -40.0 - Temperature: 0.0027103954467820757
+Updating target network...
+EPISODE: 625 - FINAL SCORE: -79.0 - Temperature: 0.0026778755132668124
+EPISODE: 626 - FINAL SCORE: -40.0 - Temperature: 0.002645745761220122
+EPISODE: 627 - FINAL SCORE: -40.0 - Temperature: 0.0026140015091570814
+EPISODE: 628 - FINAL SCORE: -40.0 - Temperature: 0.0025826381317622773
+EPISODE: 629 - FINAL SCORE: -40.0 - Temperature: 0.0025516510592158686
+EPISODE: 630 - FINAL SCORE: -40.0 - Temperature: 0.0025210357765277397
+EPISODE: 631 - FINAL SCORE: -40.0 - Temperature: 0.0024907878228796415
+EPISODE: 632 - FINAL SCORE: -40.0 - Temperature: 0.002460902790975223
+Updating target network...
+EPISODE: 633 - FINAL SCORE: -40.0 - Temperature: 0.0024313763263978665
+EPISODE: 634 - FINAL SCORE: -47.0 - Temperature: 0.0024022041269762223
+EPISODE: 635 - FINAL SCORE: -40.0 - Temperature: 0.00237338194215736
+EPISODE: 636 - FINAL SCORE: -40.0 - Temperature: 0.0023449055723874365
+EPISODE: 637 - FINAL SCORE: -48.0 - Temperature: 0.002316770868499801
+EPISODE: 638 - FINAL SCORE: -40.0 - Temperature: 0.0022889737311104353
+EPISODE: 639 - FINAL SCORE: -40.0 - Temperature: 0.0022615101100206527
+EPISODE: 640 - FINAL SCORE: -53.0 - Temperature: 0.0022343760036269596
+Updating target network...
+EPISODE: 641 - FINAL SCORE: -40.0 - Temperature: 0.0022075674583379996
+EPISODE: 642 - FINAL SCORE: -46.0 - Temperature: 0.002181080567998495
+EPISODE: 643 - FINAL SCORE: -40.0 - Temperature: 0.0021549114733200956
+EPISODE: 644 - FINAL SCORE: -39.0 - Temperature: 0.00212905636131906
+EPISODE: 645 - FINAL SCORE: -39.0 - Temperature: 0.0021035114647606832
+EPISODE: 646 - FINAL SCORE: -39.0 - Temperature: 0.002078273061610388
+EPISODE: 647 - FINAL SCORE: -40.0 - Temperature: 0.002053337474491404
+EPISODE: 648 - FINAL SCORE: -39.0 - Temperature: 0.0020287010701489543
+Updating target network...
+EPISODE: 649 - FINAL SCORE: -74.0 - Temperature: 0.002004360258920868
+EPISODE: 650 - FINAL SCORE: -37.0 - Temperature: 0.0019803114942145484
+EPISODE: 651 - FINAL SCORE: -54.0 - Temperature: 0.0019565512719902133
+EPISODE: 652 - FINAL SCORE: -40.0 - Temperature: 0.0019330761302503371
+EPISODE: 653 - FINAL SCORE: -40.0 - Temperature: 0.0019098826485352176
+EPISODE: 654 - FINAL SCORE: -41.0 - Temperature: 0.0018869674474245978
+EPISODE: 655 - FINAL SCORE: -39.0 - Temperature: 0.0018643271880452634
+EPISODE: 656 - FINAL SCORE: -39.0 - Temperature: 0.0018419585715845513
+Updating target network...
+EPISODE: 657 - FINAL SCORE: -39.0 - Temperature: 0.0018198583388096933
+EPISODE: 658 - FINAL SCORE: -39.0 - Temperature: 0.0017980232695929295
+EPISODE: 659 - FINAL SCORE: -40.0 - Temperature: 0.0017764501824423153
+EPISODE: 660 - FINAL SCORE: -39.0 - Temperature: 0.0017551359340381612
+EPISODE: 661 - FINAL SCORE: -39.0 - Temperature: 0.0017340774187750345
+EPISODE: 662 - FINAL SCORE: -40.0 - Temperature: 0.0017132715683092529
+EPISODE: 663 - FINAL SCORE: -39.0 - Temperature: 0.0016927153511118122
+EPISODE: 664 - FINAL SCORE: -39.0 - Temperature: 0.0016724057720266731
+Updating target network...
+EPISODE: 665 - FINAL SCORE: -39.0 - Temperature: 0.0016523398718343524
+EPISODE: 666 - FINAL SCORE: -35.0 - Temperature: 0.0016325147268207469
+EPISODE: 667 - FINAL SCORE: -35.0 - Temperature: 0.0016129274483511313
+EPISODE: 668 - FINAL SCORE: -39.0 - Temperature: 0.0015935751824492697
+EPISODE: 669 - FINAL SCORE: -39.0 - Temperature: 0.001574455109381574
+EPISODE: 670 - FINAL SCORE: -43.0 - Temperature: 0.0015555644432462528
+EPISODE: 671 - FINAL SCORE: -35.0 - Temperature: 0.0015369004315673907
+EPISODE: 672 - FINAL SCORE: -35.0 - Temperature: 0.0015184603548938965
+Updating target network...
+EPISODE: 673 - FINAL SCORE: -39.0 - Temperature: 0.001500241526403265
+EPISODE: 674 - FINAL SCORE: -88.0 - Temperature: 0.0014822412915100895
+EPISODE: 675 - FINAL SCORE: -36.0 - Temperature: 0.0014644570274792764
+EPISODE: 676 - FINAL SCORE: -39.0 - Temperature: 0.0014468861430438971
+EPISODE: 677 - FINAL SCORE: -40.0 - Temperature: 0.0014295260780276258
+EPISODE: 678 - FINAL SCORE: -44.0 - Temperature: 0.001412374302971707
+EPISODE: 679 - FINAL SCORE: -40.0 - Temperature: 0.0013954283187663996
+EPISODE: 680 - FINAL SCORE: -39.0 - Temperature: 0.0013786856562868432
+Updating target network...
+EPISODE: 681 - FINAL SCORE: -44.0 - Temperature: 0.001362143876033292
+EPISODE: 682 - FINAL SCORE: -40.0 - Temperature: 0.0013458005677756662
+EPISODE: 683 - FINAL SCORE: -40.0 - Temperature: 0.0013296533502023678
+EPISODE: 684 - FINAL SCORE: -47.0 - Temperature: 0.0013136998705733105
+EPISODE: 685 - FINAL SCORE: -40.0 - Temperature: 0.001297937804377112
+EPISODE: 686 - FINAL SCORE: -44.0 - Temperature: 0.0012823648549924005
+EPISODE: 687 - FINAL SCORE: -35.0 - Temperature: 0.0012669787533531826
+EPISODE: 688 - FINAL SCORE: -37.0 - Temperature: 0.0012517772576182283
+Updating target network...
+EPISODE: 689 - FINAL SCORE: -36.0 - Temperature: 0.0012367581528444239
+EPISODE: 690 - FINAL SCORE: -44.0 - Temperature: 0.001221919250664039
+EPISODE: 691 - FINAL SCORE: -36.0 - Temperature: 0.0012072583889658716
+EPISODE: 692 - FINAL SCORE: -36.0 - Temperature: 0.0011927734315802158
+EPISODE: 693 - FINAL SCORE: -44.0 - Temperature: 0.0011784622679676098
+EPISODE: 694 - FINAL SCORE: -33.0 - Temperature: 0.001164322812911318
+EPISODE: 695 - FINAL SCORE: -40.0 - Temperature: 0.0011503530062135043
+EPISODE: 696 - FINAL SCORE: -40.0 - Temperature: 0.0011365508123950489
+Updating target network...
+EPISODE: 697 - FINAL SCORE: -45.0 - Temperature: 0.001122914220398967
+EPISODE: 698 - FINAL SCORE: -46.0 - Temperature: 0.0011094412432973884
+EPISODE: 699 - FINAL SCORE: -40.0 - Temperature: 0.0010961299180020495
+EPISODE: 700 - FINAL SCORE: -39.0 - Temperature: 0.0010829783049782606
+EPISODE: 701 - FINAL SCORE: -44.0 - Temperature: 0.001069984487962305
+EPISODE: 702 - FINAL SCORE: -34.0 - Temperature: 0.001057146573682229
+EPISODE: 703 - FINAL SCORE: -34.0 - Temperature: 0.0010444626915819804
+EPISODE: 704 - FINAL SCORE: -43.0 - Temperature: 0.0010319309935488596
+Updating target network...
+EPISODE: 705 - FINAL SCORE: -37.0 - Temperature: 0.001019549653644238
+EPISODE: 706 - FINAL SCORE: -40.0 - Temperature: 0.0010073168678375083
+EPISODE: 707 - FINAL SCORE: -40.0 - Temperature: 0.000995230853743229
+EPISODE: 708 - FINAL SCORE: -41.0 - Temperature: 0.0009832898503614185
+EPISODE: 709 - FINAL SCORE: -39.0 - Temperature: 0.0009714921178209695
+EPISODE: 710 - FINAL SCORE: -40.0 - Temperature: 0.0009598359371261381
+EPISODE: 711 - FINAL SCORE: -40.0 - Temperature: 0.0009483196099060785
+EPISODE: 712 - FINAL SCORE: -37.0 - Temperature: 0.0009369414581673793
+Updating target network...
+EPISODE: 713 - FINAL SCORE: -42.0 - Temperature: 0.0009256998240495713
+EPISODE: 714 - FINAL SCORE: -40.0 - Temperature: 0.0009145930695835676
+EPISODE: 715 - FINAL SCORE: -40.0 - Temperature: 0.0009036195764530027
+EPISODE: 716 - FINAL SCORE: -56.0 - Temperature: 0.0008927777457584337
+EPISODE: 717 - FINAL SCORE: -35.0 - Temperature: 0.0008820659977843733
+EPISODE: 718 - FINAL SCORE: -39.0 - Temperature: 0.000871482771769115
+EPISODE: 719 - FINAL SCORE: -47.0 - Temperature: 0.0008610265256773219
+EPISODE: 720 - FINAL SCORE: -51.0 - Temperature: 0.0008506957359753439
+Updating target network...
+EPISODE: 721 - FINAL SCORE: -56.0 - Temperature: 0.0008404888974092295
+EPISODE: 722 - FINAL SCORE: -41.0 - Temperature: 0.0008304045227854028
+EPISODE: 723 - FINAL SCORE: -41.0 - Temperature: 0.00082044114275397
+EPISODE: 724 - FINAL SCORE: -39.0 - Temperature: 0.0008105973055946278
+EPISODE: 725 - FINAL SCORE: -40.0 - Temperature: 0.000800871577005139
+EPISODE: 726 - FINAL SCORE: -47.0 - Temperature: 0.0007912625398923471
+EPISODE: 727 - FINAL SCORE: -56.0 - Temperature: 0.0007817687941656978
+EPISODE: 728 - FINAL SCORE: -50.0 - Temperature: 0.0007723889565332373
+Updating target network...
+EPISODE: 729 - FINAL SCORE: -91.0 - Temperature: 0.0007631216603000601
+EPISODE: 730 - FINAL SCORE: -48.0 - Temperature: 0.0007539655551691728
+EPISODE: 731 - FINAL SCORE: -51.0 - Temperature: 0.0007449193070447487
+EPISODE: 732 - FINAL SCORE: -35.0 - Temperature: 0.0007359815978377429
+EPISODE: 733 - FINAL SCORE: -46.0 - Temperature: 0.0007271511252738385
+EPISODE: 734 - FINAL SCORE: -44.0 - Temperature: 0.0007184266027036989
+EPISODE: 735 - FINAL SCORE: -41.0 - Temperature: 0.000709806758915495
+EPISODE: 736 - FINAL SCORE: -39.0 - Temperature: 0.000701290337949683
+Updating target network...
+EPISODE: 737 - FINAL SCORE: -40.0 - Temperature: 0.0006928760989160039
+EPISODE: 738 - FINAL SCORE: -46.0 - Temperature: 0.0006845628158126786
+EPISODE: 739 - FINAL SCORE: -40.0 - Temperature: 0.000676349277347773
+EPISODE: 740 - FINAL SCORE: -47.0 - Temperature: 0.0006682342867627058
+EPISODE: 741 - FINAL SCORE: -47.0 - Temperature: 0.0006602166616578738
+EPISODE: 742 - FINAL SCORE: -46.0 - Temperature: 0.0006522952338203701
+EPISODE: 743 - FINAL SCORE: -45.0 - Temperature: 0.0006444688490537685
+EPISODE: 744 - FINAL SCORE: -45.0 - Temperature: 0.0006367363670099512
+Updating target network...
+EPISODE: 745 - FINAL SCORE: -46.0 - Temperature: 0.000629096661022953
+EPISODE: 746 - FINAL SCORE: -44.0 - Temperature: 0.0006215486179448001
+EPISODE: 747 - FINAL SCORE: -36.0 - Temperature: 0.0006140911379833186
+EPISODE: 748 - FINAL SCORE: -52.0 - Temperature: 0.0006067231345418874
+EPISODE: 749 - FINAL SCORE: -51.0 - Temperature: 0.0005994435340611164
+EPISODE: 750 - FINAL SCORE: -40.0 - Temperature: 0.0005922512758624222
+EPISODE: 751 - FINAL SCORE: -43.0 - Temperature: 0.0005851453119934812
+EPISODE: 752 - FINAL SCORE: -55.0 - Temperature: 0.0005781246070755373
+Updating target network...
+EPISODE: 753 - FINAL SCORE: -40.0 - Temperature: 0.0005711881381525412
+EPISODE: 754 - FINAL SCORE: -44.0 - Temperature: 0.0005643348945421002
+EPISODE: 755 - FINAL SCORE: -40.0 - Temperature: 0.0005575638776882161
+EPISODE: 756 - FINAL SCORE: -40.0 - Temperature: 0.0005508741010157899
+EPISODE: 757 - FINAL SCORE: -40.0 - Temperature: 0.0005442645897868722
+EPISODE: 758 - FINAL SCORE: -40.0 - Temperature: 0.0005377343809586384
+EPISODE: 759 - FINAL SCORE: -39.0 - Temperature: 0.0005312825230430683
+EPISODE: 760 - FINAL SCORE: -40.0 - Temperature: 0.0005249080759683087
+Updating target network...
+EPISODE: 761 - FINAL SCORE: -40.0 - Temperature: 0.0005186101109416997
+EPISODE: 762 - FINAL SCORE: -51.0 - Temperature: 0.0005123877103144441
+EPISODE: 763 - FINAL SCORE: -41.0 - Temperature: 0.0005062399674479018
+EPISODE: 764 - FINAL SCORE: -72.0 - Temperature: 0.000500165986581486
+EPISODE: 765 - FINAL SCORE: -40.0 - Temperature: 0.0004941648827021473
+EPISODE: 766 - FINAL SCORE: -51.0 - Temperature: 0.00048823578141542147
+EPISODE: 767 - FINAL SCORE: -40.0 - Temperature: 0.0004823778188180254
+EPISODE: 768 - FINAL SCORE: -37.0 - Temperature: 0.00047659014137198187
+Updating target network...
+EPISODE: 769 - FINAL SCORE: -37.0 - Temperature: 0.0004708719057802539
+EPISODE: 770 - FINAL SCORE: -40.0 - Temperature: 0.00046522227886387193
+EPISODE: 771 - FINAL SCORE: -45.0 - Temperature: 0.00045964043744053495
+EPISODE: 772 - FINAL SCORE: -41.0 - Temperature: 0.0004541255682046679
+EPISODE: 773 - FINAL SCORE: -40.0 - Temperature: 0.0004486768676089189
+EPISODE: 774 - FINAL SCORE: -44.0 - Temperature: 0.00044329354174707774
+EPISODE: 775 - FINAL SCORE: -54.0 - Temperature: 0.0004379748062383992
+EPISODE: 776 - FINAL SCORE: -39.0 - Temperature: 0.0004327198861133146
+Updating target network...
+EPISODE: 777 - FINAL SCORE: -40.0 - Temperature: 0.000427528015700514
+EPISODE: 778 - FINAL SCORE: -46.0 - Temperature: 0.0004223984385153842
+EPISODE: 779 - FINAL SCORE: -47.0 - Temperature: 0.00041733040714978415
+EPISODE: 780 - FINAL SCORE: -40.0 - Temperature: 0.00041232318316314364
+EPISODE: 781 - FINAL SCORE: -54.0 - Temperature: 0.00040737603697486814
+EPISODE: 782 - FINAL SCORE: -47.0 - Temperature: 0.0004024882477580354
+EPISODE: 783 - FINAL SCORE: -35.0 - Temperature: 0.00039765910333436626
+EPISODE: 784 - FINAL SCORE: -44.0 - Temperature: 0.00039288790007045656
+Updating target network...
+EPISODE: 785 - FINAL SCORE: -63.0 - Temperature: 0.0003881739427752538
+EPISODE: 786 - FINAL SCORE: -35.0 - Temperature: 0.0003835165445987642
+EPISODE: 787 - FINAL SCORE: -51.0 - Temperature: 0.0003789150269319741
+EPISODE: 788 - FINAL SCORE: -68.0 - Temperature: 0.00037436871930797346
+EPISODE: 789 - FINAL SCORE: -40.0 - Temperature: 0.0003698769593042649
+EPISODE: 790 - FINAL SCORE: -45.0 - Temperature: 0.00036543909244624495
+EPISODE: 791 - FINAL SCORE: -40.0 - Temperature: 0.00036105447211184346
+EPISODE: 792 - FINAL SCORE: -35.0 - Temperature: 0.0003567224594373071
+Updating target network...
+EPISODE: 793 - FINAL SCORE: -58.0 - Temperature: 0.00035244242322411354
+EPISODE: 794 - FINAL SCORE: -51.0 - Temperature: 0.0003482137398470019
+EPISODE: 795 - FINAL SCORE: -40.0 - Temperature: 0.0003440357931631076
+EPISODE: 796 - FINAL SCORE: -40.0 - Temperature: 0.0003399079744221862
+EPISODE: 797 - FINAL SCORE: -35.0 - Temperature: 0.00033582968217791577
+EPISODE: 798 - FINAL SCORE: -46.0 - Temperature: 0.0003318003222002624
+EPISODE: 799 - FINAL SCORE: -35.0 - Temperature: 0.0003278193073888975
+EPISODE: 800 - FINAL SCORE: -40.0 - Temperature: 0.00032388605768765436
+--- 423.2733039855957 seconds ---
+STATE SPACE SIZE: 6
+ACTION SPACE SIZE: 5
+EPISODE: 1 - FINAL SCORE: -200.0 - Temperature: 5.0
+EPISODE: 2 - FINAL SCORE: -200.0 - Temperature: 4.940008876649582
+EPISODE: 3 - FINAL SCORE: -200.0 - Temperature: 4.880737540275333
+EPISODE: 5 - FINAL SCORE: -200.0 - Temperature: 4.764319787410582
+EPISODE: 4 - FINAL SCORE: -200.0 - Temperature: 4.822177354711398
+EPISODE: 6 - FINAL SCORE: -200.0 - Temperature: 4.707156408201104
+EPISODE: 7 - FINAL SCORE: -200.0 - Temperature: 4.650678888058284
+EPISODE: 8 - FINAL SCORE: -200.0 - Temperature: 4.594878997890946
+Updating target network main
+Updating Finished
+EPISODE: 9 - FINAL SCORE: -200.0 - Temperature: 4.539748607342402
+EPISODE: 10 - FINAL SCORE: -200.0 - Temperature: 4.485279683605809
+EPISODE: 16 - FINAL SCORE: -200.0 - Temperature: 4.171919106316454
+EPISODE: 14 - FINAL SCORE: -200.0 - Temperature: 4.273861349734766
+EPISODE: 12 - FINAL SCORE: -200.0 - Temperature: 4.378294586081827
+EPISODE: 11 - FINAL SCORE: -200.0 - Temperature: 4.431464290253745
+EPISODE: 15 - FINAL SCORE: -200.0 - Temperature: 4.222582601051861
+EPISODE: 13 - FINAL SCORE: -200.0 - Temperature: 4.325762823966207
+Updating target network main
+Updating Finished
+EPISODE: 18 - FINAL SCORE: -200.0 - Temperature: 4.072408439438128
+EPISODE: 17 - FINAL SCORE: -200.0 - Temperature: 4.121863483573455
+EPISODE: 19 - FINAL SCORE: -200.0 - Temperature: 4.0235467680334045
+EPISODE: 20 - FINAL SCORE: -200.0 - Temperature: 3.975271349939951
+EPISODE: 21 - FINAL SCORE: -200.0 - Temperature: 3.9275751511588246
+EPISODE: 23 - FINAL SCORE: -200.0 - Temperature: 3.833892696502688
+EPISODE: 22 - FINAL SCORE: -200.0 - Temperature: 3.8804512220865837
+EPISODE: 24 - FINAL SCORE: -200.0 - Temperature: 3.7878927905690563
+Updating target network main
+Updating Finished
+EPISODE: 25 - FINAL SCORE: -200.0 - Temperature: 3.7424448018416188
+EPISODE: 27 - FINAL SCORE: -200.0 - Temperature: 3.653178167351334
+EPISODE: 28 - FINAL SCORE: -200.0 - Temperature: 3.6093465149396082
+EPISODE: 26 - FINAL SCORE: -200.0 - Temperature: 3.6975421082937365
+EPISODE: 31 - FINAL SCORE: -200.0 - Temperature: 3.480981805929657
+EPISODE: 29 - FINAL SCORE: -200.0 - Temperature: 3.56604076454118
+EPISODE: 30 - FINAL SCORE: -200.0 - Temperature: 3.523254606265538
+EPISODE: 32 - FINAL SCORE: -200.0 - Temperature: 3.4392162041496395
+Updating target network main
+Updating Finished
+EPISODE: 36 - FINAL SCORE: -200.0 - Temperature: 3.2771051629226475
+EPISODE: 34 - FINAL SCORE: -200.0 - Temperature: 3.357182327343276
+EPISODE: 39 - FINAL SCORE: -200.0 - Temperature: 3.1605564611306796
+EPISODE: 33 - FINAL SCORE: -200.0 - Temperature: 3.39795171544326
+EPISODE: 35 - FINAL SCORE: -200.0 - Temperature: 3.316902099521377
+EPISODE: 40 - FINAL SCORE: -200.0 - Temperature: 3.12263539462755
+EPISODE: 38 - FINAL SCORE: -200.0 - Temperature: 3.1989380384213355
+EPISODE: 37 - FINAL SCORE: -200.0 - Temperature: 3.237785718910411
+Updating target network main
+Updating Finished
+EPISODE: 43 - FINAL SCORE: -200.0 - Temperature: 3.011580337398652
+EPISODE: 41 - FINAL SCORE: -200.0 - Temperature: 3.085169313600053
+EPISODE: 42 - FINAL SCORE: -200.0 - Temperature: 3.048152759030232
+EPISODE: 44 - FINAL SCORE: -200.0 - Temperature: 2.975446719898537
+EPISODE: 47 - FINAL SCORE: -200.0 - Temperature: 2.8696263585690067
+EPISODE: 45 - FINAL SCORE: -200.0 - Temperature: 2.939746641659331
+EPISODE: 48 - FINAL SCORE: -200.0 - Temperature: 2.835195936799702
+EPISODE: 46 - FINAL SCORE: -200.0 - Temperature: 2.9044749009795785
+Updating target network main
+Updating Finished
+EPISODE: 49 - FINAL SCORE: -200.0 - Temperature: 2.801178618966271
+EPISODE: 50 - FINAL SCORE: -200.0 - Temperature: 2.767569448554879
+EPISODE: 56 - FINAL SCORE: -200.0 - Temperature: 2.574215361125857
+EPISODE: 51 - FINAL SCORE: -200.0 - Temperature: 2.734363528521058
+EPISODE: 54 - FINAL SCORE: -200.0 - Temperature: 2.6371171773566005
+EPISODE: 53 - FINAL SCORE: -200.0 - Temperature: 2.6691421444824903
+EPISODE: 55 - FINAL SCORE: -200.0 - Temperature: 2.605476452981339
+EPISODE: 52 - FINAL SCORE: -200.0 - Temperature: 2.70155602057618
+Updating target network main
+Updating Finished
+EPISODE: 57 - FINAL SCORE: -200.0 - Temperature: 2.5433293468738882
+EPISODE: 60 - FINAL SCORE: -200.0 - Temperature: 2.452877036413639
+EPISODE: 58 - FINAL SCORE: -200.0 - Temperature: 2.5128139099600784
+EPISODE: 59 - FINAL SCORE: -200.0 - Temperature: 2.482664604114266
+EPISODE: 63 - FINAL SCORE: -200.0 - Temperature: 2.365641619777091
+EPISODE: 62 - FINAL SCORE: -200.0 - Temperature: 2.3943698066606705
+EPISODE: 64 - FINAL SCORE: -200.0 - Temperature: 2.337258120134105
+EPISODE: 61 - FINAL SCORE: -200.0 - Temperature: 2.423446866642659
+Updating target network main
+Updating Finished
+EPISODE: 65 - FINAL SCORE: -200.0 - Temperature: 2.3092151720967586
+EPISODE: 67 - FINAL SCORE: -200.0 - Temperature: 2.254134635805203
+EPISODE: 66 - FINAL SCORE: -200.0 - Temperature: 2.281508689650376
+EPISODE: 72 - FINAL SCORE: -200.0 - Temperature: 2.122112859175705
+EPISODE: 71 - FINAL SCORE: -200.0 - Temperature: 2.1478836497708547
+EPISODE: 69 - FINAL SCORE: -200.0 - Temperature: 2.200367907561864
+EPISODE: 68 - FINAL SCORE: -200.0 - Temperature: 2.227089022008195
+EPISODE: 70 - FINAL SCORE: -200.0 - Temperature: 2.173967399050095
+Updating target network main
+Updating Finished
+EPISODE: 73 - FINAL SCORE: -200.0 - Temperature: 2.096651272316041
+EPISODE: 75 - FINAL SCORE: -200.0 - Temperature: 2.0466409147317886
+EPISODE: 77 - FINAL SCORE: -200.0 - Temperature: 1.9978234287989773
+EPISODE: 74 - FINAL SCORE: -200.0 - Temperature: 2.0714951792959764
+EPISODE: 76 - FINAL SCORE: -200.0 - Temperature: 2.022084857217851
+EPISODE: 78 - FINAL SCORE: -200.0 - Temperature: 1.9738530944490904
+EPISODE: 80 - FINAL SCORE: -200.0 - Temperature: 1.9267717794132615
+EPISODE: 79 - FINAL SCORE: -200.0 - Temperature: 1.9501703615561505
+Updating target network main
+Updating Finished
+EPISODE: 84 - FINAL SCORE: -191.0 - Temperature: 1.8359513828965799
+EPISODE: 81 - FINAL SCORE: -200.0 - Temperature: 1.9036539387158846
+EPISODE: 83 - FINAL SCORE: -200.0 - Temperature: 1.8582470484767233
+EPISODE: 82 - FINAL SCORE: -200.0 - Temperature: 1.8808134710650817
+EPISODE: 85 - FINAL SCORE: -200.0 - Temperature: 1.8139232257212359
+EPISODE: 87 - FINAL SCORE: -200.0 - Temperature: 1.7706566365909926
+EPISODE: 86 - FINAL SCORE: -200.0 - Temperature: 1.7921593673247496
+EPISODE: 88 - FINAL SCORE: -200.0 - Temperature: 1.7494119004515993
+Updating target network main
+Updating Finished
+EPISODE: 96 - FINAL SCORE: -189.0 - Temperature: 1.5883780477486744
+EPISODE: 94 - FINAL SCORE: -189.0 - Temperature: 1.6271905983896344
+EPISODE: 95 - FINAL SCORE: -189.0 - Temperature: 1.6076672000091077
+EPISODE: 89 - FINAL SCORE: -200.0 - Temperature: 1.7284220634294631
+EPISODE: 90 - FINAL SCORE: -200.0 - Temperature: 1.7076840671877067
+EPISODE: 91 - FINAL SCORE: -200.0 - Temperature: 1.6871948900840668
+EPISODE: 92 - FINAL SCORE: -200.0 - Temperature: 1.6669515467306208
+EPISODE: 93 - FINAL SCORE: -200.0 - Temperature: 1.6469510875588036
+Updating target network main
+Updating Finished
+EPISODE: 101 - FINAL SCORE: -167.0 - Temperature: 1.4953487812212265
+EPISODE: 103 - FINAL SCORE: -179.0 - Temperature: 1.4596809864622813
+EPISODE: 104 - FINAL SCORE: -187.0 - Temperature: 1.4421674060400576
+EPISODE: 102 - FINAL SCORE: -189.0 - Temperature: 1.4774072505839986
+EPISODE: 98 - FINAL SCORE: -200.0 - Temperature: 1.5504912731592402
+EPISODE: 97 - FINAL SCORE: -200.0 - Temperature: 1.569320331070757
+EPISODE: 99 - FINAL SCORE: -200.0 - Temperature: 1.5318881305148715
+EPISODE: 100 - FINAL SCORE: -200.0 - Temperature: 1.5135081925555196
+Updating target network main
+Updating Finished
+EPISODE: 106 - FINAL SCORE: -200.0 - Temperature: 1.4077681196042415
+EPISODE: 111 - FINAL SCORE: -200.0 - Temperature: 1.325316945091265
+EPISODE: 109 - FINAL SCORE: -200.0 - Temperature: 1.3577015094080442
+EPISODE: 105 - FINAL SCORE: -200.0 - Temperature: 1.4248639574905173
+EPISODE: 108 - FINAL SCORE: -200.0 - Temperature: 1.3741893418710474
+EPISODE: 107 - FINAL SCORE: -200.0 - Temperature: 1.3908774014218486
+EPISODE: 110 - FINAL SCORE: -200.0 - Temperature: 1.3414115016632548
+EPISODE: 112 - FINAL SCORE: -200.0 - Temperature: 1.3094154946249912
+Updating target network main
+Updating Finished
+EPISODE: 119 - FINAL SCORE: -187.0 - Temperature: 1.2033211511530713
+EPISODE: 113 - FINAL SCORE: -200.0 - Temperature: 1.2937048333339918
+EPISODE: 114 - FINAL SCORE: -200.0 - Temperature: 1.2781826720868774
+EPISODE: 115 - FINAL SCORE: -200.0 - Temperature: 1.2628467492177715
+EPISODE: 117 - FINAL SCORE: -200.0 - Temperature: 1.232724707304369
+EPISODE: 118 - FINAL SCORE: -200.0 - Temperature: 1.2179341993097683
+EPISODE: 116 - FINAL SCORE: -200.0 - Temperature: 1.2476948301967719
+EPISODE: 120 - FINAL SCORE: -200.0 - Temperature: 1.188883433631273
+Updating target network main
+Updating Finished
+EPISODE: 128 - FINAL SCORE: -163.0 - Temperature: 1.079446382424005
+EPISODE: 125 - FINAL SCORE: -188.0 - Temperature: 1.1192520546443159
+EPISODE: 126 - FINAL SCORE: -188.0 - Temperature: 1.1058230170302406
+EPISODE: 127 - FINAL SCORE: -188.0 - Temperature: 1.0925551040265622
+EPISODE: 122 - FINAL SCORE: -200.0 - Temperature: 1.1605256011071183
+EPISODE: 121 - FINAL SCORE: -200.0 - Temperature: 1.1746189430880247
+EPISODE: 123 - FINAL SCORE: -200.0 - Temperature: 1.1466013542096514
+EPISODE: 124 - FINAL SCORE: -200.0 - Temperature: 1.1328441735548218
+Updating target network main
+Updating Finished
+EPISODE: 136 - FINAL SCORE: -135.0 - Temperature: 0.9800830422620341
+EPISODE: 129 - FINAL SCORE: -147.0 - Temperature: 1.0664949422083727
+EPISODE: 134 - FINAL SCORE: -167.0 - Temperature: 1.0040317003060417
+EPISODE: 131 - FINAL SCORE: -173.0 - Temperature: 1.0410563801900354
+EPISODE: 132 - FINAL SCORE: -186.0 - Temperature: 1.0285655518462913
+EPISODE: 133 - FINAL SCORE: -186.0 - Temperature: 1.016224591267331
+EPISODE: 130 - FINAL SCORE: -200.0 - Temperature: 1.0536988962822489
+EPISODE: 135 - FINAL SCORE: -200.0 - Temperature: 0.9919851023898838
+Updating target network main
+Updating Finished
+EPISODE: 140 - FINAL SCORE: -111.0 - Temperature: 0.933885806310914
+EPISODE: 141 - FINAL SCORE: -121.0 - Temperature: 0.9226808345905935
+EPISODE: 138 - FINAL SCORE: -126.0 - Temperature: 0.956705619391113
+EPISODE: 144 - FINAL SCORE: -121.0 - Temperature: 0.8898661252377947
+EPISODE: 143 - FINAL SCORE: -121.0 - Temperature: 0.9006725974157769
+EPISODE: 142 - FINAL SCORE: -159.0 - Temperature: 0.9116103026383953
+EPISODE: 139 - FINAL SCORE: -181.0 - Temperature: 0.945226850426527
+EPISODE: 137 - FINAL SCORE: -193.0 - Temperature: 0.968323785725635
+Updating target network main
+Updating Finished
+EPISODE: 149 - FINAL SCORE: -88.0 - Temperature: 0.8377478067708344
+EPISODE: 145 - FINAL SCORE: -95.0 - Temperature: 0.8791893115408949
+EPISODE: 146 - FINAL SCORE: -97.0 - Temperature: 0.868640600653491
+EPISODE: 150 - FINAL SCORE: -108.0 - Temperature: 0.8276963203683281
+EPISODE: 152 - FINAL SCORE: -113.0 - Temperature: 0.8079537005538916
+EPISODE: 148 - FINAL SCORE: -114.0 - Temperature: 0.8479213577233615
+EPISODE: 151 - FINAL SCORE: -113.0 - Temperature: 0.8177654339579474
+EPISODE: 147 - FINAL SCORE: -167.0 - Temperature: 0.8582184555692941
+Updating target network main
+Updating Finished
+EPISODE: 157 - FINAL SCORE: -88.0 - Temperature: 0.7606328878184093
+EPISODE: 156 - FINAL SCORE: -96.0 - Temperature: 0.7698699605721018
+EPISODE: 155 - FINAL SCORE: -110.0 - Temperature: 0.77921920769325
+EPISODE: 153 - FINAL SCORE: -127.0 - Temperature: 0.7982596905316204
+EPISODE: 154 - FINAL SCORE: -127.0 - Temperature: 0.7886819914195508
+EPISODE: 158 - FINAL SCORE: -163.0 - Temperature: 0.7515066435389095
+EPISODE: 159 - FINAL SCORE: -163.0 - Temperature: 0.7424898979886694
+EPISODE: 160 - FINAL SCORE: -163.0 - Temperature: 0.7335813373773338
+Updating target network main
+Updating Finished
+EPISODE: 163 - FINAL SCORE: -89.0 - Temperature: 0.7074918625879763
+EPISODE: 165 - FINAL SCORE: -89.0 - Temperature: 0.6906164186344907
+EPISODE: 168 - FINAL SCORE: -89.0 - Temperature: 0.6660549709462256
+EPISODE: 167 - FINAL SCORE: -89.0 - Temperature: 0.6741434960719727
+EPISODE: 161 - FINAL SCORE: -120.0 - Temperature: 0.7247796636777002
+EPISODE: 164 - FINAL SCORE: -120.0 - Temperature: 0.6990032162683899
+EPISODE: 166 - FINAL SCORE: -120.0 - Temperature: 0.6823302476828654
+EPISODE: 162 - FINAL SCORE: -151.0 - Temperature: 0.7160835944365874
+Updating target network main
+Updating Finished
+EPISODE: 170 - FINAL SCORE: -101.0 - Temperature: 0.6501679001168479
+EPISODE: 171 - FINAL SCORE: -101.0 - Temperature: 0.6423670395779695
+EPISODE: 172 - FINAL SCORE: -105.0 - Temperature: 0.6346597755164565
+EPISODE: 176 - FINAL SCORE: -112.0 - Temperature: 0.6047444253533223
+EPISODE: 175 - FINAL SCORE: -112.0 - Temperature: 0.6120883994883352
+EPISODE: 173 - FINAL SCORE: -120.0 - Temperature: 0.6270449849407451
+EPISODE: 174 - FINAL SCORE: -119.0 - Temperature: 0.6195215583331769
+EPISODE: 169 - FINAL SCORE: -200.0 - Temperature: 0.6580634937621866
+Updating target network main
+Updating Finished
+EPISODE: 182 - FINAL SCORE: -84.0 - Temperature: 0.5624944263323269
+EPISODE: 177 - FINAL SCORE: -96.0 - Temperature: 0.5974885658699525
+EPISODE: 181 - FINAL SCORE: -94.0 - Temperature: 0.5693253194251571
+EPISODE: 183 - FINAL SCORE: -99.0 - Temperature: 0.5557454918295219
+EPISODE: 179 - FINAL SCORE: -105.0 - Temperature: 0.5832369746653496
+EPISODE: 178 - FINAL SCORE: -114.0 - Temperature: 0.5903197638188388
+EPISODE: 180 - FINAL SCORE: -112.0 - Temperature: 0.5762391664074149
+EPISODE: 184 - FINAL SCORE: -120.0 - Temperature: 0.5490775325591651
+Updating target network main
+Updating Finished
+EPISODE: 189 - FINAL SCORE: -82.0 - Temperature: 0.516918765197025
+EPISODE: 186 - FINAL SCORE: -98.0 - Temperature: 0.5359806651366538
+EPISODE: 192 - FINAL SCORE: -138.0 - Temperature: 0.4985347927516945
+EPISODE: 190 - FINAL SCORE: -145.0 - Temperature: 0.5107166577160089
+EPISODE: 191 - FINAL SCORE: -155.0 - Temperature: 0.504588964513978
+EPISODE: 187 - FINAL SCORE: -160.0 - Temperature: 0.5295498486975234
+EPISODE: 188 - FINAL SCORE: -189.0 - Temperature: 0.5231961906388417
+EPISODE: 185 - FINAL SCORE: -200.0 - Temperature: 0.5424895769622252
+Updating target network main
+Updating Finished
+EPISODE: 200 - FINAL SCORE: -121.0 - Temperature: 0.45264452622124757
+EPISODE: 197 - FINAL SCORE: -121.0 - Temperature: 0.4693362488824696
+EPISODE: 195 - FINAL SCORE: -130.0 - Temperature: 0.48080463762859227
+EPISODE: 194 - FINAL SCORE: -133.0 - Temperature: 0.48664349562331566
+EPISODE: 196 - FINAL SCORE: -131.0 - Temperature: 0.4750358355639062
+EPISODE: 198 - FINAL SCORE: -131.0 - Temperature: 0.4637050471225635
+EPISODE: 193 - FINAL SCORE: -144.0 - Temperature: 0.49255326030240604
+EPISODE: 199 - FINAL SCORE: -142.0 - Temperature: 0.4581414097865352
+Updating target network main
+Updating Finished
+EPISODE: 206 - FINAL SCORE: -87.0 - Temperature: 0.42102086837846003
+EPISODE: 201 - FINAL SCORE: -126.0 - Temperature: 0.4472135954999615
+EPISODE: 202 - FINAL SCORE: -132.0 - Temperature: 0.441847826305637
+EPISODE: 204 - FINAL SCORE: -130.0 - Temperature: 0.43130865458779555
+EPISODE: 208 - FINAL SCORE: -130.0 - Temperature: 0.410978471506814
+EPISODE: 203 - FINAL SCORE: -143.0 - Temperature: 0.436546436815634
+EPISODE: 205 - FINAL SCORE: -200.0 - Temperature: 0.42613371644789966
+EPISODE: 207 - FINAL SCORE: -200.0 - Temperature: 0.41596936540886165
+Updating target network main
+Updating Finished
+EPISODE: 210 - FINAL SCORE: -67.0 - Temperature: 0.40117561082565667
+EPISODE: 209 - FINAL SCORE: -93.0 - Temperature: 0.4060474594711077
+EPISODE: 211 - FINAL SCORE: -97.0 - Temperature: 0.39636221571481245
+EPISODE: 212 - FINAL SCORE: -97.0 - Temperature: 0.391606572799934
+EPISODE: 213 - FINAL SCORE: -97.0 - Temperature: 0.3869079891571989
+EPISODE: 215 - FINAL SCORE: -195.0 - Temperature: 0.37767926946239644
+EPISODE: 214 - FINAL SCORE: -200.0 - Temperature: 0.38226578017664053
+EPISODE: 216 - FINAL SCORE: -200.0 - Temperature: 0.37314778873415355
+Updating target network main
+Updating Finished
+EPISODE: 223 - FINAL SCORE: -73.0 - Temperature: 0.34291378751280194
+EPISODE: 224 - FINAL SCORE: -75.0 - Temperature: 0.33879943084775405
+EPISODE: 221 - FINAL SCORE: -77.0 - Temperature: 0.3512930009892085
+EPISODE: 222 - FINAL SCORE: -77.0 - Temperature: 0.3470781086383121
+EPISODE: 218 - FINAL SCORE: -85.0 - Temperature: 0.36424728410910245
+EPISODE: 220 - FINAL SCORE: -85.0 - Temperature: 0.3555590786989262
+EPISODE: 217 - FINAL SCORE: -106.0 - Temperature: 0.3686706777297763
+EPISODE: 219 - FINAL SCORE: -108.0 - Temperature: 0.35987696335889363
+Updating target network main
+Updating Finished
+EPISODE: 229 - FINAL SCORE: -80.0 - Temperature: 0.31895638240197854
+EPISODE: 228 - FINAL SCORE: -101.0 - Temperature: 0.32282976647027956
+EPISODE: 225 - FINAL SCORE: -119.0 - Temperature: 0.3347344391583463
+EPISODE: 227 - FINAL SCORE: -114.0 - Temperature: 0.32675018864463
+EPISODE: 230 - FINAL SCORE: -126.0 - Temperature: 0.3151294720659625
+EPISODE: 232 - FINAL SCORE: -128.0 - Temperature: 0.307612848871898
+EPISODE: 226 - FINAL SCORE: -200.0 - Temperature: 0.33071822015251
+EPISODE: 231 - FINAL SCORE: -198.0 - Temperature: 0.31134847785995023
+Updating target network main
+Updating Finished
+EPISODE: 237 - FINAL SCORE: -86.0 - Temperature: 0.2895963585624705
+EPISODE: 238 - FINAL SCORE: -96.0 - Temperature: 0.2861217163887999
+EPISODE: 233 - FINAL SCORE: -104.0 - Temperature: 0.30392204079972845
+EPISODE: 236 - FINAL SCORE: -109.0 - Temperature: 0.2931131965484249
+EPISODE: 235 - FINAL SCORE: -114.0 - Temperature: 0.2966727427696652
+EPISODE: 240 - FINAL SCORE: -125.0 - Temperature: 0.27929700045336553
+EPISODE: 239 - FINAL SCORE: -125.0 - Temperature: 0.2826887637525771
+EPISODE: 234 - FINAL SCORE: -142.0 - Temperature: 0.30027551587202306
+Updating target network main
+Updating Finished
+EPISODE: 241 - FINAL SCORE: -100.0 - Temperature: 0.2759459322922456
+EPISODE: 246 - FINAL SCORE: -98.0 - Temperature: 0.2597841327012944
+EPISODE: 247 - FINAL SCORE: -115.0 - Temperature: 0.25666718431142144
+EPISODE: 244 - FINAL SCORE: -130.0 - Temperature: 0.2661320451648783
+EPISODE: 248 - FINAL SCORE: -129.0 - Temperature: 0.25358763376861526
+EPISODE: 243 - FINAL SCORE: -143.0 - Temperature: 0.2693639341650077
+EPISODE: 245 - FINAL SCORE: -142.0 - Temperature: 0.26293893309508126
+EPISODE: 242 - FINAL SCORE: -187.0 - Temperature: 0.27263507099980755
+Updating target network main
+Updating Finished
+EPISODE: 254 - FINAL SCORE: -99.0 - Temperature: 0.235870930928071
+EPISODE: 253 - FINAL SCORE: -102.0 - Temperature: 0.23873533106689843
+EPISODE: 250 - FINAL SCORE: -128.0 - Temperature: 0.24753893677681466
+EPISODE: 255 - FINAL SCORE: -127.0 - Temperature: 0.2330408985056542
+EPISODE: 256 - FINAL SCORE: -127.0 - Temperature: 0.23024482144806524
+EPISODE: 249 - FINAL SCORE: -139.0 - Temperature: 0.2505450323651045
+EPISODE: 251 - FINAL SCORE: -138.0 - Temperature: 0.2445689089987728
+EPISODE: 252 - FINAL SCORE: -142.0 - Temperature: 0.2416345162812883
+Updating target network main
+Updating Finished
+EPISODE: 259 - FINAL SCORE: -101.0 - Temperature: 0.2220562728052859
+EPISODE: 264 - FINAL SCORE: -105.0 - Temperature: 0.20905072150333082
+EPISODE: 257 - FINAL SCORE: -112.0 - Temperature: 0.22748229235120807
+EPISODE: 261 - FINAL SCORE: -112.0 - Temperature: 0.21675967734687585
+EPISODE: 258 - FINAL SCORE: -114.0 - Temperature: 0.22475290869911263
+EPISODE: 262 - FINAL SCORE: -115.0 - Temperature: 0.21415894603865324
+EPISODE: 263 - FINAL SCORE: -132.0 - Temperature: 0.21158941888897315
+EPISODE: 260 - FINAL SCORE: -200.0 - Temperature: 0.21939199175476667
+Updating target network main
+Updating Finished
+EPISODE: 270 - FINAL SCORE: -71.0 - Temperature: 0.19444555540577851
+EPISODE: 271 - FINAL SCORE: -72.0 - Temperature: 0.19211255394592078
+EPISODE: 272 - FINAL SCORE: -72.0 - Temperature: 0.18980754436173408
+EPISODE: 267 - FINAL SCORE: -100.0 - Temperature: 0.20161593104388822
+EPISODE: 269 - FINAL SCORE: -100.0 - Temperature: 0.19680688867269364
+EPISODE: 268 - FINAL SCORE: -101.0 - Temperature: 0.19919689780615557
+EPISODE: 265 - FINAL SCORE: -200.0 - Temperature: 0.2065424839792908
+EPISODE: 266 - FINAL SCORE: -200.0 - Temperature: 0.2040643408525901
+Updating target network main
+Updating Finished
+EPISODE: 273 - FINAL SCORE: -90.0 - Temperature: 0.18753019080040512
+EPISODE: 275 - FINAL SCORE: -88.0 - Temperature: 0.18305712843490665
+EPISODE: 278 - FINAL SCORE: -85.0 - Temperature: 0.17654678787146055
+EPISODE: 277 - FINAL SCORE: -86.0 - Temperature: 0.1786907597534504
+EPISODE: 280 - FINAL SCORE: -86.0 - Temperature: 0.17233570703585266
+EPISODE: 279 - FINAL SCORE: -90.0 - Temperature: 0.17442853984579718
+EPISODE: 276 - FINAL SCORE: -101.0 - Temperature: 0.18086076788048427
+EPISODE: 274 - FINAL SCORE: -118.0 - Temperature: 0.18528016143875822
+Updating target network main
+Updating Finished
+EPISODE: 287 - FINAL SCORE: -62.0 - Temperature: 0.1583723441691453
+EPISODE: 288 - FINAL SCORE: -66.0 - Temperature: 0.15647215720227609
+EPISODE: 286 - FINAL SCORE: -69.0 - Temperature: 0.16029560687404748
+EPISODE: 281 - FINAL SCORE: -78.0 - Temperature: 0.1702679845041588
+EPISODE: 285 - FINAL SCORE: -71.0 - Temperature: 0.16224222554713644
+EPISODE: 283 - FINAL SCORE: -77.0 - Temperature: 0.16620666877529333
+EPISODE: 282 - FINAL SCORE: -78.0 - Temperature: 0.1682250709719556
+EPISODE: 284 - FINAL SCORE: -86.0 - Temperature: 0.16421248382166118
+Updating target network main
+Updating Finished
+EPISODE: 290 - FINAL SCORE: -66.0 - Temperature: 0.15273990633300244
+EPISODE: 291 - FINAL SCORE: -66.0 - Temperature: 0.15090729862073154
+EPISODE: 296 - FINAL SCORE: -80.0 - Temperature: 0.14206885154937884
+EPISODE: 295 - FINAL SCORE: -80.0 - Temperature: 0.14379412577668577
+EPISODE: 292 - FINAL SCORE: -87.0 - Temperature: 0.1490966789475246
+EPISODE: 294 - FINAL SCORE: -88.0 - Temperature: 0.14554035161391246
+EPISODE: 289 - FINAL SCORE: -120.0 - Temperature: 0.15459476910555053
+EPISODE: 293 - FINAL SCORE: -128.0 - Temperature: 0.1473077834959489
+Updating target network main
+Updating Finished
+EPISODE: 304 - FINAL SCORE: -43.0 - Temperature: 0.1289913741936054
+EPISODE: 297 - FINAL SCORE: -59.0 - Temperature: 0.14036427754986863
+EPISODE: 299 - FINAL SCORE: -58.0 - Temperature: 0.137016239750254
+EPISODE: 298 - FINAL SCORE: -65.0 - Temperature: 0.13868015541217135
+EPISODE: 301 - FINAL SCORE: -62.0 - Temperature: 0.133748060995286
+EPISODE: 302 - FINAL SCORE: -65.0 - Temperature: 0.1321433217102765
+EPISODE: 303 - FINAL SCORE: -72.0 - Temperature: 0.1305578364477455
+EPISODE: 300 - FINAL SCORE: -77.0 - Temperature: 0.13537228812228042
+Updating target network main
+Updating Finished
+EPISODE: 307 - FINAL SCORE: -60.0 - Temperature: 0.12440385671790165
+EPISODE: 305 - FINAL SCORE: -66.0 - Temperature: 0.12744370670552768
+EPISODE: 309 - FINAL SCORE: -61.0 - Temperature: 0.12143651472761925
+EPISODE: 308 - FINAL SCORE: -65.0 - Temperature: 0.12291123129517537
+EPISODE: 310 - FINAL SCORE: -69.0 - Temperature: 0.11997949214076535
+EPISODE: 311 - FINAL SCORE: -74.0 - Temperature: 0.11853995123825792
+EPISODE: 312 - FINAL SCORE: -82.0 - Temperature: 0.11711768227092054
+EPISODE: 306 - FINAL SCORE: -111.0 - Temperature: 0.12591460847968655
+Updating target network main
+Updating Finished
+EPISODE: 320 - FINAL SCORE: -50.0 - Temperature: 0.10633696699691629
+EPISODE: 316 - FINAL SCORE: -57.0 - Temperature: 0.11159721821980245
+EPISODE: 318 - FINAL SCORE: -52.0 - Temperature: 0.10893534647113763
+EPISODE: 317 - FINAL SCORE: -55.0 - Temperature: 0.1102582497230449
+EPISODE: 319 - FINAL SCORE: -57.0 - Temperature: 0.10762831570966352
+EPISODE: 314 - FINAL SCORE: -65.0 - Temperature: 0.11432413369794414
+EPISODE: 313 - FINAL SCORE: -67.0 - Temperature: 0.11571247800619458
+EPISODE: 315 - FINAL SCORE: -89.0 - Temperature: 0.11295244705662355
+Updating target network main
+Updating Finished
+EPISODE: 327 - FINAL SCORE: -59.0 - Temperature: 0.09772109927071067
+EPISODE: 322 - FINAL SCORE: -67.0 - Temperature: 0.1038005653481737
+EPISODE: 325 - FINAL SCORE: -59.0 - Temperature: 0.10010894712564078
+EPISODE: 328 - FINAL SCORE: -59.0 - Temperature: 0.09654861956665314
+EPISODE: 323 - FINAL SCORE: -68.0 - Temperature: 0.10255514284424462
+EPISODE: 321 - FINAL SCORE: -72.0 - Temperature: 0.10506111217615202
+EPISODE: 326 - FINAL SCORE: -67.0 - Temperature: 0.09890781748654182
+EPISODE: 324 - FINAL SCORE: -73.0 - Temperature: 0.10132466319932686
+Updating target network main
+Updating Finished
+EPISODE: 334 - FINAL SCORE: -49.0 - Temperature: 0.08980332533796093
+EPISODE: 333 - FINAL SCORE: -49.0 - Temperature: 0.09089389065922837
+EPISODE: 330 - FINAL SCORE: -58.0 - Temperature: 0.09424569439614511
+EPISODE: 331 - FINAL SCORE: -59.0 - Temperature: 0.09311491338059211
+EPISODE: 329 - FINAL SCORE: -65.0 - Temperature: 0.095390207537506
+EPISODE: 336 - FINAL SCORE: -64.0 - Temperature: 0.087661292243709
+EPISODE: 335 - FINAL SCORE: -69.0 - Temperature: 0.08872584486443547
+EPISODE: 332 - FINAL SCORE: -78.0 - Temperature: 0.09199769972971639
+Updating target network main
+Updating Finished
+EPISODE: 337 - FINAL SCORE: -46.0 - Temperature: 0.08660951236449912
+EPISODE: 339 - FINAL SCORE: -45.0 - Temperature: 0.08454365966847027
+EPISODE: 338 - FINAL SCORE: -54.0 - Temperature: 0.08557035197658347
+EPISODE: 341 - FINAL SCORE: -55.0 - Temperature: 0.0825270827072329
+EPISODE: 344 - FINAL SCORE: -55.0 - Temperature: 0.07959204587624263
+EPISODE: 342 - FINAL SCORE: -55.0 - Temperature: 0.08153690422754496
+EPISODE: 343 - FINAL SCORE: -60.0 - Temperature: 0.08055860613171978
+EPISODE: 340 - FINAL SCORE: -68.0 - Temperature: 0.08352928584533689
+Updating target network main
+Updating Finished
+EPISODE: 350 - FINAL SCORE: -47.0 - Temperature: 0.0740314094828016
+EPISODE: 345 - FINAL SCORE: -59.0 - Temperature: 0.07863708262786788
+EPISODE: 346 - FINAL SCORE: -60.0 - Temperature: 0.07769357724309879
+EPISODE: 347 - FINAL SCORE: -63.0 - Temperature: 0.07676139224791359
+EPISODE: 352 - FINAL SCORE: -61.0 - Temperature: 0.07226557588444102
+EPISODE: 349 - FINAL SCORE: -66.0 - Temperature: 0.07493044175763836
+EPISODE: 348 - FINAL SCORE: -74.0 - Temperature: 0.0758403918177347
+EPISODE: 351 - FINAL SCORE: -77.0 - Temperature: 0.073143163999184
+Updating target network main
+Updating Finished
+EPISODE: 356 - FINAL SCORE: -48.0 - Temperature: 0.06885926262697264
+EPISODE: 355 - FINAL SCORE: -48.0 - Temperature: 0.06969548471102592
+EPISODE: 354 - FINAL SCORE: -56.0 - Temperature: 0.07054186181776141
+EPISODE: 360 - FINAL SCORE: -51.0 - Temperature: 0.06561350949603754
+EPISODE: 353 - FINAL SCORE: -60.0 - Temperature: 0.07139851726906651
+EPISODE: 359 - FINAL SCORE: -53.0 - Temperature: 0.06641031538038249
+EPISODE: 358 - FINAL SCORE: -62.0 - Temperature: 0.06721679761982872
+EPISODE: 357 - FINAL SCORE: -99.0 - Temperature: 0.06803307372335794
+Updating target network main
+Updating Finished
+EPISODE: 362 - FINAL SCORE: -46.0 - Temperature: 0.0640484637893045
+EPISODE: 363 - FINAL SCORE: -60.0 - Temperature: 0.06327999593098671
+EPISODE: 367 - FINAL SCORE: -60.0 - Temperature: 0.060297227352252215
+EPISODE: 365 - FINAL SCORE: -61.0 - Temperature: 0.06177061033776743
+EPISODE: 368 - FINAL SCORE: -61.0 - Temperature: 0.05957376767149678
+EPISODE: 366 - FINAL SCORE: -64.0 - Temperature: 0.06102947267692671
+EPISODE: 361 - FINAL SCORE: -73.0 - Temperature: 0.06482626386771143
+EPISODE: 364 - FINAL SCORE: -109.0 - Temperature: 0.06252074832268475
+Updating target network main
+Updating Finished
+EPISODE: 370 - FINAL SCORE: -47.0 - Temperature: 0.05815278485798307
+EPISODE: 375 - FINAL SCORE: -44.0 - Temperature: 0.05474685077979904
+EPISODE: 376 - FINAL SCORE: -43.0 - Temperature: 0.05408998576416346
+EPISODE: 374 - FINAL SCORE: -44.0 - Temperature: 0.05541169271838384
+EPISODE: 373 - FINAL SCORE: -44.0 - Temperature: 0.056084608451113974
+EPISODE: 371 - FINAL SCORE: -57.0 - Temperature: 0.05745505468006596
+EPISODE: 372 - FINAL SCORE: -59.0 - Temperature: 0.05676569602558259
+EPISODE: 369 - FINAL SCORE: -175.0 - Temperature: 0.0588589882225308
+Updating target network main
+Updating Finished
+EPISODE: 380 - FINAL SCORE: -46.0 - Temperature: 0.05154039789539214
+EPISODE: 377 - FINAL SCORE: -61.0 - Temperature: 0.053441001962563406
+EPISODE: 378 - FINAL SCORE: -62.0 - Temperature: 0.052799804814422195
+EPISODE: 379 - FINAL SCORE: -62.0 - Temperature: 0.05216630089372219
+EPISODE: 381 - FINAL SCORE: -69.0 - Temperature: 0.05092200462185771
+EPISODE: 384 - FINAL SCORE: -66.0 - Temperature: 0.049110987508806284
+EPISODE: 383 - FINAL SCORE: -71.0 - Temperature: 0.049707387916794986
+EPISODE: 382 - FINAL SCORE: -112.0 - Temperature: 0.05031103096975363
+Updating target network main
+Updating Finished
+EPISODE: 387 - FINAL SCORE: -45.0 - Temperature: 0.047364378366496006
+EPISODE: 391 - FINAL SCORE: -41.0 - Temperature: 0.045131809013979715
+EPISODE: 388 - FINAL SCORE: -44.0 - Temperature: 0.04679608991349594
+EPISODE: 392 - FINAL SCORE: -41.0 - Temperature: 0.04459030742966268
+EPISODE: 390 - FINAL SCORE: -42.0 - Temperature: 0.0456798865557799
+EPISODE: 385 - FINAL SCORE: -54.0 - Temperature: 0.048521742846905955
+EPISODE: 389 - FINAL SCORE: -50.0 - Temperature: 0.046234619913032377
+EPISODE: 386 - FINAL SCORE: -63.0 - Temperature: 0.04793956807484476
+Updating target network main
+Updating Finished
+EPISODE: 393 - FINAL SCORE: -54.0 - Temperature: 0.044055302903013495
+EPISODE: 395 - FINAL SCORE: -57.0 - Temperature: 0.043004474145387765
+EPISODE: 394 - FINAL SCORE: -62.0 - Temperature: 0.043526717480874555
+EPISODE: 400 - FINAL SCORE: -57.0 - Temperature: 0.04048575721095614
+EPISODE: 399 - FINAL SCORE: -58.0 - Temperature: 0.04097741342361154
+EPISODE: 398 - FINAL SCORE: -61.0 - Temperature: 0.04147504027503214
+EPISODE: 396 - FINAL SCORE: -64.0 - Temperature: 0.0424884968027726
+EPISODE: 397 - FINAL SCORE: -77.0 - Temperature: 0.04197871027223881
+Updating target network main
+Updating Finished
+EPISODE: 403 - FINAL SCORE: -36.0 - Temperature: 0.039045900322203286
+EPISODE: 406 - FINAL SCORE: -35.0 - Temperature: 0.03765725126560943
+EPISODE: 408 - FINAL SCORE: -36.0 - Temperature: 0.03675903198312815
+EPISODE: 402 - FINAL SCORE: -47.0 - Temperature: 0.03952007101319728
+EPISODE: 404 - FINAL SCORE: -45.0 - Temperature: 0.0385774188376918
+EPISODE: 407 - FINAL SCORE: -44.0 - Temperature: 0.03720543110446686
+EPISODE: 401 - FINAL SCORE: -57.0 - Temperature: 0.04000000000000063
+EPISODE: 405 - FINAL SCORE: -90.0 - Temperature: 0.038114558299285256
+Updating target network main
+Updating Finished
+EPISODE: 410 - FINAL SCORE: -51.0 - Temperature: 0.03588223746884704
+EPISODE: 413 - FINAL SCORE: -48.0 - Temperature: 0.034606102591730206
+EPISODE: 415 - FINAL SCORE: -56.0 - Temperature: 0.03378066080841542
+EPISODE: 414 - FINAL SCORE: -56.0 - Temperature: 0.03419089079787867
+EPISODE: 409 - FINAL SCORE: -64.0 - Temperature: 0.03631798885873979
+EPISODE: 416 - FINAL SCORE: -56.0 - Temperature: 0.03337535285053217
+EPISODE: 411 - FINAL SCORE: -85.0 - Temperature: 0.03545171432203052
+EPISODE: 412 - FINAL SCORE: -83.0 - Temperature: 0.035026356688655176
+Updating target network main
+Updating Finished
+EPISODE: 418 - FINAL SCORE: -50.0 - Temperature: 0.032579267515505536
+EPISODE: 417 - FINAL SCORE: -50.0 - Temperature: 0.032974907868588164
+EPISODE: 423 - FINAL SCORE: -44.0 - Temperature: 0.03067114157202199
+EPISODE: 424 - FINAL SCORE: -58.0 - Temperature: 0.030303142324552935
+EPISODE: 421 - FINAL SCORE: -64.0 - Temperature: 0.0314206012092711
+EPISODE: 422 - FINAL SCORE: -63.0 - Temperature: 0.03104360977669316
+EPISODE: 419 - FINAL SCORE: -77.0 - Temperature: 0.03218837414426774
+EPISODE: 420 - FINAL SCORE: -81.0 - Temperature: 0.03180217079952011
+Updating target network main
+Updating Finished
+EPISODE: 432 - FINAL SCORE: -45.0 - Temperature: 0.027513729633197554
+EPISODE: 429 - FINAL SCORE: -45.0 - Temperature: 0.02852832611632989
+EPISODE: 431 - FINAL SCORE: -46.0 - Temperature: 0.027847854447437696
+EPISODE: 430 - FINAL SCORE: -46.0 - Temperature: 0.02818603685012475
+EPISODE: 426 - FINAL SCORE: -51.0 - Temperature: 0.02958033686635036
+EPISODE: 428 - FINAL SCORE: -46.0 - Temperature: 0.028874772119517327
+EPISODE: 427 - FINAL SCORE: -52.0 - Temperature: 0.029225425338811135
+EPISODE: 425 - FINAL SCORE: -69.0 - Temperature: 0.029939558414733426
+Updating target network main
+Updating Finished
+EPISODE: 436 - FINAL SCORE: -44.0 - Temperature: 0.0262168413033816
+EPISODE: 437 - FINAL SCORE: -46.0 - Temperature: 0.0259022857512837
+EPISODE: 433 - FINAL SCORE: -51.0 - Temperature: 0.027183613723546513
+EPISODE: 434 - FINAL SCORE: -51.0 - Temperature: 0.026857458618746635
+EPISODE: 435 - FINAL SCORE: -51.0 - Temperature: 0.02653521679617144
+EPISODE: 439 - FINAL SCORE: -58.0 - Temperature: 0.02528445168904584
+EPISODE: 438 - FINAL SCORE: -58.0 - Temperature: 0.02559150430737109
+EPISODE: 440 - FINAL SCORE: -58.0 - Temperature: 0.024981083157020793
+Updating target network main
+Updating Finished
+EPISODE: 441 - FINAL SCORE: -54.0 - Temperature: 0.024681354508800817
+EPISODE: 442 - FINAL SCORE: -54.0 - Temperature: 0.024385222072242245
+EPISODE: 443 - FINAL SCORE: -62.0 - Temperature: 0.0240926426991896
+EPISODE: 445 - FINAL SCORE: -64.0 - Temperature: 0.02351797313327502
+EPISODE: 444 - FINAL SCORE: -69.0 - Temperature: 0.023803573759188672
+EPISODE: 447 - FINAL SCORE: -72.0 - Temperature: 0.02295701086855242
+EPISODE: 446 - FINAL SCORE: -82.0 - Temperature: 0.023235799207837
+EPISODE: 448 - FINAL SCORE: -96.0 - Temperature: 0.022681567494397974
+Updating target network main
+Updating Finished
+EPISODE: 449 - FINAL SCORE: -119.0 - Temperature: 0.022409428951730526
+EPISODE: 450 - FINAL SCORE: -116.0 - Temperature: 0.022140555588439387
+EPISODE: 451 - FINAL SCORE: -116.0 - Temperature: 0.021874908228168812
+EPISODE: 453 - FINAL SCORE: -140.0 - Temperature: 0.02135313715586026
+EPISODE: 455 - FINAL SCORE: -139.0 - Temperature: 0.020843811623851047
+EPISODE: 454 - FINAL SCORE: -142.0 - Temperature: 0.021096937418853136
+EPISODE: 456 - FINAL SCORE: -143.0 - Temperature: 0.02059372288900718
+EPISODE: 452 - FINAL SCORE: -154.0 - Temperature: 0.021612448164609784
+Updating target network main
+Updating Finished
+EPISODE: 460 - FINAL SCORE: -98.0 - Temperature: 0.01962301629130942
+EPISODE: 457 - FINAL SCORE: -101.0 - Temperature: 0.02034663477499143
+EPISODE: 458 - FINAL SCORE: -102.0 - Temperature: 0.02010251127968095
+EPISODE: 461 - FINAL SCORE: -101.0 - Temperature: 0.019387574933141583
+EPISODE: 464 - FINAL SCORE: -103.0 - Temperature: 0.018698064961073138
+EPISODE: 462 - FINAL SCORE: -106.0 - Temperature: 0.01915495845328567
+EPISODE: 463 - FINAL SCORE: -115.0 - Temperature: 0.01892513295821703
+EPISODE: 459 - FINAL SCORE: -145.0 - Temperature: 0.019861316832914446
+Updating target network main
+Updating Finished
+EPISODE: 465 - FINAL SCORE: -54.0 - Temperature: 0.018473721376774364
+EPISODE: 469 - FINAL SCORE: -51.0 - Temperature: 0.01760294326049519
+EPISODE: 468 - FINAL SCORE: -51.0 - Temperature: 0.017816712176065844
+EPISODE: 472 - FINAL SCORE: -57.0 - Temperature: 0.01697690287340591
+EPISODE: 470 - FINAL SCORE: -57.0 - Temperature: 0.017391739192401036
+EPISODE: 467 - FINAL SCORE: -63.0 - Temperature: 0.01803307708644191
+EPISODE: 471 - FINAL SCORE: -69.0 - Temperature: 0.01718306919816711
+EPISODE: 466 - FINAL SCORE: -78.0 - Temperature: 0.0182520695172033
+Updating target network main
+Updating Finished
+EPISODE: 473 - FINAL SCORE: -41.0 - Temperature: 0.0167732101785286
+EPISODE: 475 - FINAL SCORE: -40.0 - Temperature: 0.016373127317854567
+EPISODE: 474 - FINAL SCORE: -41.0 - Temperature: 0.016571961434368076
+EPISODE: 476 - FINAL SCORE: -40.0 - Temperature: 0.016176678857743064
+EPISODE: 479 - FINAL SCORE: -39.0 - Temperature: 0.015601362892449452
+EPISODE: 478 - FINAL SCORE: -39.0 - Temperature: 0.015790824755592972
+EPISODE: 480 - FINAL SCORE: -39.0 - Temperature: 0.015414174235306338
+EPISODE: 477 - FINAL SCORE: -39.0 - Temperature: 0.015982587430392072
+Updating target network main
+Updating Finished
+EPISODE: 481 - FINAL SCORE: -39.0 - Temperature: 0.015229231509727317
+EPISODE: 482 - FINAL SCORE: -39.0 - Temperature: 0.015046507768520893
+EPISODE: 483 - FINAL SCORE: -39.0 - Temperature: 0.014865976387814022
+EPISODE: 484 - FINAL SCORE: -39.0 - Temperature: 0.014687611063172871
+EPISODE: 485 - FINAL SCORE: -39.0 - Temperature: 0.014511385805770119
+EPISODE: 486 - FINAL SCORE: -39.0 - Temperature: 0.014337274938598224
+EPISODE: 487 - FINAL SCORE: -40.0 - Temperature: 0.014165253092728165
+EPISODE: 488 - FINAL SCORE: -49.0 - Temperature: 0.013995295203613017
+Updating target network main
+Updating Finished
+EPISODE: 494 - FINAL SCORE: -42.0 - Temperature: 0.013017524787117282
+EPISODE: 493 - FINAL SCORE: -42.0 - Temperature: 0.013175608700470638
+EPISODE: 496 - FINAL SCORE: -42.0 - Temperature: 0.012707024381989597
+EPISODE: 495 - FINAL SCORE: -42.0 - Temperature: 0.012861337600073068
+EPISODE: 489 - FINAL SCORE: -54.0 - Temperature: 0.013827376507435922
+EPISODE: 491 - FINAL SCORE: -58.0 - Temperature: 0.013497559120672745
+EPISODE: 492 - FINAL SCORE: -70.0 - Temperature: 0.013335612373845179
+EPISODE: 490 - FINAL SCORE: -82.0 - Temperature: 0.013661472537501872
+Updating target network main
+Updating Finished
+EPISODE: 497 - FINAL SCORE: -39.0 - Temperature: 0.012554562648566256
+EPISODE: 498 - FINAL SCORE: -39.0 - Temperature: 0.012403930185274118
+EPISODE: 499 - FINAL SCORE: -39.0 - Temperature: 0.012255105044119167
+EPISODE: 500 - FINAL SCORE: -39.0 - Temperature: 0.012108065540444352
+EPISODE: 504 - FINAL SCORE: -39.0 - Temperature: 0.011537339248320642
+EPISODE: 501 - FINAL SCORE: -39.0 - Temperature: 0.011962790249770002
+EPISODE: 502 - FINAL SCORE: -39.0 - Temperature: 0.011819258004672175
+EPISODE: 503 - FINAL SCORE: -39.0 - Temperature: 0.011677447891698434
+Updating target network main
+Updating Finished
+EPISODE: 509 - FINAL SCORE: -50.0 - Temperature: 0.010861612075264527
+EPISODE: 510 - FINAL SCORE: -50.0 - Temperature: 0.01073129201330621
+EPISODE: 512 - FINAL SCORE: -50.0 - Temperature: 0.010475323957000095
+EPISODE: 507 - FINAL SCORE: -54.0 - Temperature: 0.011127019211374966
+EPISODE: 511 - FINAL SCORE: -50.0 - Temperature: 0.010602535560730287
+EPISODE: 508 - FINAL SCORE: -50.0 - Temperature: 0.010993514734968554
+EPISODE: 506 - FINAL SCORE: -54.0 - Temperature: 0.011262144956834112
+EPISODE: 505 - FINAL SCORE: -64.0 - Temperature: 0.01139891165992432
+Updating target network main
+Updating Finished
+EPISODE: 514 - FINAL SCORE: -48.0 - Temperature: 0.010225461376695182
+EPISODE: 513 - FINAL SCORE: -54.0 - Temperature: 0.010349638666672099
+EPISODE: 515 - FINAL SCORE: -52.0 - Temperature: 0.01010277399374233
+EPISODE: 517 - FINAL SCORE: -51.0 - Temperature: 0.00986179765843511
+EPISODE: 516 - FINAL SCORE: -51.0 - Temperature: 0.009981558641574333
+EPISODE: 519 - FINAL SCORE: -52.0 - Temperature: 0.009626569209224722
+EPISODE: 518 - FINAL SCORE: -64.0 - Temperature: 0.0097434735944783
+EPISODE: 520 - FINAL SCORE: -64.0 - Temperature: 0.009511067469050335
+Updating target network main
+Updating Finished
+EPISODE: 521 - FINAL SCORE: -51.0 - Temperature: 0.009396951544704346
+EPISODE: 522 - FINAL SCORE: -51.0 - Temperature: 0.009284204808857093
+EPISODE: 523 - FINAL SCORE: -51.0 - Temperature: 0.009172810833677356
+EPISODE: 524 - FINAL SCORE: -51.0 - Temperature: 0.009062753388438718
+EPISODE: 525 - FINAL SCORE: -51.0 - Temperature: 0.00895401643715467
+EPISODE: 526 - FINAL SCORE: -51.0 - Temperature: 0.008846584136242066
+EPISODE: 527 - FINAL SCORE: -51.0 - Temperature: 0.008740440832212638
+EPISODE: 528 - FINAL SCORE: -55.0 - Temperature: 0.008635571059392177
+Updating target network main
+Updating Finished
+EPISODE: 531 - FINAL SCORE: -42.0 - Temperature: 0.008328451041520414
+EPISODE: 532 - FINAL SCORE: -48.0 - Temperature: 0.008228524414770462
+EPISODE: 530 - FINAL SCORE: -59.0 - Temperature: 0.008429591170258124
+EPISODE: 529 - FINAL SCORE: -59.0 - Temperature: 0.008531959537667118
+EPISODE: 535 - FINAL SCORE: -53.0 - Temperature: 0.007935880819119195
+EPISODE: 536 - FINAL SCORE: -53.0 - Temperature: 0.007840664338096395
+EPISODE: 533 - FINAL SCORE: -52.0 - Temperature: 0.008129796730138777
+EPISODE: 534 - FINAL SCORE: -53.0 - Temperature: 0.00803225360244846
+Updating target network main
+Updating Finished
+EPISODE: 537 - FINAL SCORE: -37.0 - Temperature: 0.0077465902858052035
+EPISODE: 538 - FINAL SCORE: -37.0 - Temperature: 0.007653644955129026
+EPISODE: 539 - FINAL SCORE: -37.0 - Temperature: 0.007561814803412336
+EPISODE: 540 - FINAL SCORE: -37.0 - Temperature: 0.00747108645048743
+EPISODE: 541 - FINAL SCORE: -37.0 - Temperature: 0.007381446676724864
+EPISODE: 544 - FINAL SCORE: -60.0 - Temperature: 0.00711892900190247
+EPISODE: 543 - FINAL SCORE: -68.0 - Temperature: 0.00720538077932633
+EPISODE: 542 - FINAL SCORE: -68.0 - Temperature: 0.007292882421107278
+Updating target network main
+Updating Finished
+EPISODE: 546 - FINAL SCORE: -53.0 - Temperature: 0.006949124805228038
+EPISODE: 551 - FINAL SCORE: -50.0 - Temperature: 0.0065421234716636825
+EPISODE: 550 - FINAL SCORE: -50.0 - Temperature: 0.006621570562946729
+EPISODE: 545 - FINAL SCORE: -70.0 - Temperature: 0.00703351449232727
+EPISODE: 547 - FINAL SCORE: -70.0 - Temperature: 0.006865747644554462
+EPISODE: 548 - FINAL SCORE: -70.0 - Temperature: 0.006783370861787
+EPISODE: 552 - FINAL SCORE: -70.0 - Temperature: 0.006463629604431235
+EPISODE: 549 - FINAL SCORE: -70.0 - Temperature: 0.006701982454166781
+Updating target network main
+Updating Finished
+EPISODE: 555 - FINAL SCORE: -47.0 - Temperature: 0.006233753661546099
+EPISODE: 556 - FINAL SCORE: -47.0 - Temperature: 0.006158959684576912
+EPISODE: 558 - FINAL SCORE: -47.0 - Temperature: 0.006012053148311373
+EPISODE: 559 - FINAL SCORE: -47.0 - Temperature: 0.0059399191839094485
+EPISODE: 560 - FINAL SCORE: -47.0 - Temperature: 0.005868650699018764
+EPISODE: 557 - FINAL SCORE: -50.0 - Temperature: 0.0060850631025473716
+EPISODE: 554 - FINAL SCORE: -81.0 - Temperature: 0.006309455931356506
+EPISODE: 553 - FINAL SCORE: -86.0 - Temperature: 0.006386077524253065
+Updating target network main
+Updating Finished
+EPISODE: 561 - FINAL SCORE: -38.0 - Temperature: 0.0057982373094216935
+EPISODE: 562 - FINAL SCORE: -40.0 - Temperature: 0.005728668755492791
+EPISODE: 563 - FINAL SCORE: -40.0 - Temperature: 0.0056599349007039
+EPISODE: 564 - FINAL SCORE: -40.0 - Temperature: 0.005592025730147207
+EPISODE: 565 - FINAL SCORE: -41.0 - Temperature: 0.005524931349076013
+EPISODE: 566 - FINAL SCORE: -41.0 - Temperature: 0.005458641981463011
+EPISODE: 567 - FINAL SCORE: -41.0 - Temperature: 0.005393147968575867
+EPISODE: 568 - FINAL SCORE: -41.0 - Temperature: 0.0053284397675698895
+Updating target network main
+Updating Finished
+EPISODE: 570 - FINAL SCORE: -42.0 - Temperature: 0.005201343200934866
+EPISODE: 569 - FINAL SCORE: -42.0 - Temperature: 0.005264507950097577
+EPISODE: 574 - FINAL SCORE: -37.0 - Temperature: 0.0049561724666654944
+EPISODE: 576 - FINAL SCORE: -37.0 - Temperature: 0.0048379554028266545
+EPISODE: 571 - FINAL SCORE: -42.0 - Temperature: 0.005138936316623837
+EPISODE: 572 - FINAL SCORE: -42.0 - Temperature: 0.005077278204131733
+EPISODE: 573 - FINAL SCORE: -50.0 - Temperature: 0.005016359879526041
+EPISODE: 575 - FINAL SCORE: -50.0 - Temperature: 0.004896707195906759
+Updating target network main
+Updating Finished
+EPISODE: 577 - FINAL SCORE: -57.0 - Temperature: 0.004779908526959696
+EPISODE: 583 - FINAL SCORE: -59.0 - Temperature: 0.004445963934636246
+EPISODE: 578 - FINAL SCORE: -66.0 - Temperature: 0.004722558110550785
+EPISODE: 584 - FINAL SCORE: -58.0 - Temperature: 0.004392620260473391
+EPISODE: 581 - FINAL SCORE: -66.0 - Temperature: 0.004554602555401329
+EPISODE: 580 - FINAL SCORE: -67.0 - Temperature: 0.0046099133312593925
+EPISODE: 579 - FINAL SCORE: -91.0 - Temperature: 0.0046658957973228716
+EPISODE: 582 - FINAL SCORE: -88.0 - Temperature: 0.004499955410658687
+Updating target network main
+Updating Finished
+EPISODE: 585 - FINAL SCORE: -41.0 - Temperature: 0.00433991661569787
+EPISODE: 586 - FINAL SCORE: -41.0 - Temperature: 0.004287845321093298
+EPISODE: 587 - FINAL SCORE: -41.0 - Temperature: 0.004236398789580254
+EPISODE: 588 - FINAL SCORE: -41.0 - Temperature: 0.0041855695251107996
+EPISODE: 590 - FINAL SCORE: -40.0 - Temperature: 0.004085733261728136
+EPISODE: 592 - FINAL SCORE: -41.0 - Temperature: 0.003988278342013618
+EPISODE: 589 - FINAL SCORE: -40.0 - Temperature: 0.004135350121576266
+EPISODE: 591 - FINAL SCORE: -41.0 - Temperature: 0.004036711716111889
+Updating target network main
+Updating Finished
+EPISODE: 594 - FINAL SCORE: -38.0 - Temperature: 0.0038931479649865867
+EPISODE: 595 - FINAL SCORE: -38.0 - Temperature: 0.0038464371010287993
+EPISODE: 596 - FINAL SCORE: -38.0 - Temperature: 0.0038002866845113104
+EPISODE: 598 - FINAL SCORE: -38.0 - Temperature: 0.0037096403769805667
+EPISODE: 597 - FINAL SCORE: -42.0 - Temperature: 0.0037546899910598165
+EPISODE: 600 - FINAL SCORE: -38.0 - Temperature: 0.003621156209770038
+EPISODE: 599 - FINAL SCORE: -38.0 - Temperature: 0.00366513127829234
+EPISODE: 593 - FINAL SCORE: -71.0 - Temperature: 0.003940426082419311
+Updating target network main
+Updating Finished
+EPISODE: 603 - FINAL SCORE: -54.0 - Temperature: 0.003492371494525127
+EPISODE: 608 - FINAL SCORE: -52.0 - Temperature: 0.003287827772054564
+EPISODE: 601 - FINAL SCORE: -62.0 - Temperature: 0.0035777087639997486
+EPISODE: 604 - FINAL SCORE: -64.0 - Temperature: 0.0034504692367024192
+EPISODE: 602 - FINAL SCORE: -72.0 - Temperature: 0.003534782610445153
+EPISODE: 605 - FINAL SCORE: -70.0 - Temperature: 0.0034090697315832517
+EPISODE: 606 - FINAL SCORE: -68.0 - Temperature: 0.003368166947027734
+EPISODE: 607 - FINAL SCORE: -68.0 - Temperature: 0.0033277549232709454
+Updating target network main
+Updating Finished
+EPISODE: 609 - FINAL SCORE: -49.0 - Temperature: 0.003248379675768913
+EPISODE: 610 - FINAL SCORE: -50.0 - Temperature: 0.0032094048866053043
+EPISODE: 613 - FINAL SCORE: -49.0 - Temperature: 0.00309526391325764
+EPISODE: 616 - FINAL SCORE: -49.0 - Temperature: 0.0029851823098732758
+EPISODE: 612 - FINAL SCORE: -52.0 - Temperature: 0.0031328525823995216
+EPISODE: 614 - FINAL SCORE: -53.0 - Temperature: 0.0030581262414131733
+EPISODE: 615 - FINAL SCORE: -53.0 - Temperature: 0.0030214341556992195
+EPISODE: 611 - FINAL SCORE: -63.0 - Temperature: 0.0031708977257185497
+Updating target network main
+Updating Finished
+EPISODE: 617 - FINAL SCORE: -47.0 - Temperature: 0.002949365421838257
+EPISODE: 618 - FINAL SCORE: -47.0 - Temperature: 0.0029139782728728656
+EPISODE: 619 - FINAL SCORE: -45.0 - Temperature: 0.002879015706871195
+EPISODE: 623 - FINAL SCORE: -48.0 - Temperature: 0.00274331030010246
+EPISODE: 624 - FINAL SCORE: -48.0 - Temperature: 0.0027103954467820757
+EPISODE: 621 - FINAL SCORE: -48.0 - Temperature: 0.0028103440079137133
+EPISODE: 622 - FINAL SCORE: -48.0 - Temperature: 0.002776624869106541
+EPISODE: 620 - FINAL SCORE: -71.0 - Temperature: 0.002844472629591455
+Updating target network main
+Updating Finished
+EPISODE: 630 - FINAL SCORE: -36.0 - Temperature: 0.0025210357765277397
+EPISODE: 632 - FINAL SCORE: -36.0 - Temperature: 0.002460902790975223
+EPISODE: 626 - FINAL SCORE: -47.0 - Temperature: 0.002645745761220122
+EPISODE: 625 - FINAL SCORE: -47.0 - Temperature: 0.0026778755132668124
+EPISODE: 629 - FINAL SCORE: -47.0 - Temperature: 0.0025516510592158686
+EPISODE: 627 - FINAL SCORE: -56.0 - Temperature: 0.0026140015091570814
+EPISODE: 628 - FINAL SCORE: -65.0 - Temperature: 0.0025826381317622773
+EPISODE: 631 - FINAL SCORE: -88.0 - Temperature: 0.0024907878228796415
+Updating target network main
+Updating Finished
+EPISODE: 636 - FINAL SCORE: -37.0 - Temperature: 0.0023449055723874365
+EPISODE: 638 - FINAL SCORE: -53.0 - Temperature: 0.0022889737311104353
+EPISODE: 634 - FINAL SCORE: -61.0 - Temperature: 0.0024022041269762223
+EPISODE: 640 - FINAL SCORE: -54.0 - Temperature: 0.0022343760036269596
+EPISODE: 635 - FINAL SCORE: -61.0 - Temperature: 0.00237338194215736
+EPISODE: 633 - FINAL SCORE: -78.0 - Temperature: 0.0024313763263978665
+EPISODE: 637 - FINAL SCORE: -74.0 - Temperature: 0.002316770868499801
+EPISODE: 639 - FINAL SCORE: -80.0 - Temperature: 0.0022615101100206527
+Updating target network main
+Updating Finished
+EPISODE: 645 - FINAL SCORE: -43.0 - Temperature: 0.0021035114647606832
+EPISODE: 641 - FINAL SCORE: -59.0 - Temperature: 0.0022075674583379996
+EPISODE: 642 - FINAL SCORE: -62.0 - Temperature: 0.002181080567998495
+EPISODE: 647 - FINAL SCORE: -56.0 - Temperature: 0.002053337474491404
+EPISODE: 646 - FINAL SCORE: -56.0 - Temperature: 0.002078273061610388
+EPISODE: 648 - FINAL SCORE: -60.0 - Temperature: 0.0020287010701489543
+EPISODE: 643 - FINAL SCORE: -72.0 - Temperature: 0.0021549114733200956
+EPISODE: 644 - FINAL SCORE: -70.0 - Temperature: 0.00212905636131906
+Updating target network main
+Updating Finished
+EPISODE: 650 - FINAL SCORE: -46.0 - Temperature: 0.0019803114942145484
+EPISODE: 654 - FINAL SCORE: -40.0 - Temperature: 0.0018869674474245978
+EPISODE: 653 - FINAL SCORE: -46.0 - Temperature: 0.0019098826485352176
+EPISODE: 651 - FINAL SCORE: -50.0 - Temperature: 0.0019565512719902133
+EPISODE: 649 - FINAL SCORE: -51.0 - Temperature: 0.002004360258920868
+EPISODE: 655 - FINAL SCORE: -46.0 - Temperature: 0.0018643271880452634
+EPISODE: 652 - FINAL SCORE: -52.0 - Temperature: 0.0019330761302503371
+EPISODE: 656 - FINAL SCORE: -50.0 - Temperature: 0.0018419585715845513
+Updating target network main
+Updating Finished
+EPISODE: 657 - FINAL SCORE: -39.0 - Temperature: 0.0018198583388096933
+EPISODE: 658 - FINAL SCORE: -39.0 - Temperature: 0.0017980232695929295
+EPISODE: 659 - FINAL SCORE: -38.0 - Temperature: 0.0017764501824423153
+EPISODE: 663 - FINAL SCORE: -38.0 - Temperature: 0.0016927153511118122
+EPISODE: 660 - FINAL SCORE: -39.0 - Temperature: 0.0017551359340381612
+EPISODE: 664 - FINAL SCORE: -38.0 - Temperature: 0.0016724057720266731
+EPISODE: 661 - FINAL SCORE: -39.0 - Temperature: 0.0017340774187750345
+EPISODE: 662 - FINAL SCORE: -39.0 - Temperature: 0.0017132715683092529
+Updating target network main
+Updating Finished
+EPISODE: 666 - FINAL SCORE: -48.0 - Temperature: 0.0016325147268207469
+EPISODE: 669 - FINAL SCORE: -44.0 - Temperature: 0.001574455109381574
+EPISODE: 668 - FINAL SCORE: -45.0 - Temperature: 0.0015935751824492697
+EPISODE: 671 - FINAL SCORE: -44.0 - Temperature: 0.0015369004315673907
+EPISODE: 670 - FINAL SCORE: -44.0 - Temperature: 0.0015555644432462528
+EPISODE: 672 - FINAL SCORE: -44.0 - Temperature: 0.0015184603548938965
+EPISODE: 667 - FINAL SCORE: -54.0 - Temperature: 0.0016129274483511313
+EPISODE: 665 - FINAL SCORE: -71.0 - Temperature: 0.0016523398718343524
+Updating target network main
+Updating Finished
+EPISODE: 675 - FINAL SCORE: -38.0 - Temperature: 0.0014644570274792764
+EPISODE: 674 - FINAL SCORE: -43.0 - Temperature: 0.0014822412915100895
+EPISODE: 673 - FINAL SCORE: -43.0 - Temperature: 0.001500241526403265
+EPISODE: 676 - FINAL SCORE: -48.0 - Temperature: 0.0014468861430438971
+EPISODE: 679 - FINAL SCORE: -49.0 - Temperature: 0.0013954283187663996
+EPISODE: 680 - FINAL SCORE: -49.0 - Temperature: 0.0013786856562868432
+EPISODE: 678 - FINAL SCORE: -49.0 - Temperature: 0.001412374302971707
+EPISODE: 677 - FINAL SCORE: -51.0 - Temperature: 0.0014295260780276258
+Updating target network main
+Updating Finished
+EPISODE: 682 - FINAL SCORE: -41.0 - Temperature: 0.0013458005677756662
+EPISODE: 681 - FINAL SCORE: -41.0 - Temperature: 0.001362143876033292
+EPISODE: 683 - FINAL SCORE: -41.0 - Temperature: 0.0013296533502023678
+EPISODE: 684 - FINAL SCORE: -40.0 - Temperature: 0.0013136998705733105
+EPISODE: 688 - FINAL SCORE: -42.0 - Temperature: 0.0012517772576182283
+EPISODE: 687 - FINAL SCORE: -50.0 - Temperature: 0.0012669787533531826
+EPISODE: 685 - FINAL SCORE: -50.0 - Temperature: 0.001297937804377112
+EPISODE: 686 - FINAL SCORE: -65.0 - Temperature: 0.0012823648549924005
+Updating target network main
+Updating Finished
+EPISODE: 689 - FINAL SCORE: -41.0 - Temperature: 0.0012367581528444239
+EPISODE: 690 - FINAL SCORE: -42.0 - Temperature: 0.001221919250664039
+EPISODE: 691 - FINAL SCORE: -42.0 - Temperature: 0.0012072583889658716
+EPISODE: 692 - FINAL SCORE: -40.0 - Temperature: 0.0011927734315802158
+EPISODE: 693 - FINAL SCORE: -40.0 - Temperature: 0.0011784622679676098
+EPISODE: 696 - FINAL SCORE: -73.0 - Temperature: 0.0011365508123950489
+EPISODE: 694 - FINAL SCORE: -73.0 - Temperature: 0.001164322812911318
+EPISODE: 695 - FINAL SCORE: -73.0 - Temperature: 0.0011503530062135043
+Updating target network main
+Updating Finished
+EPISODE: 698 - FINAL SCORE: -41.0 - Temperature: 0.0011094412432973884
+EPISODE: 697 - FINAL SCORE: -41.0 - Temperature: 0.001122914220398967
+EPISODE: 699 - FINAL SCORE: -41.0 - Temperature: 0.0010961299180020495
+EPISODE: 700 - FINAL SCORE: -41.0 - Temperature: 0.0010829783049782606
+EPISODE: 702 - FINAL SCORE: -41.0 - Temperature: 0.001057146573682229
+EPISODE: 701 - FINAL SCORE: -41.0 - Temperature: 0.001069984487962305
+EPISODE: 703 - FINAL SCORE: -41.0 - Temperature: 0.0010444626915819804
+EPISODE: 704 - FINAL SCORE: -41.0 - Temperature: 0.0010319309935488596
+Updating target network main
+Updating Finished
+EPISODE: 705 - FINAL SCORE: -53.0 - Temperature: 0.001019549653644238
+EPISODE: 706 - FINAL SCORE: -53.0 - Temperature: 0.0010073168678375083
+EPISODE: 708 - FINAL SCORE: -53.0 - Temperature: 0.0009832898503614185
+EPISODE: 712 - FINAL SCORE: -50.0 - Temperature: 0.0009369414581673793
+EPISODE: 710 - FINAL SCORE: -53.0 - Temperature: 0.0009598359371261381
+EPISODE: 709 - FINAL SCORE: -53.0 - Temperature: 0.0009714921178209695
+EPISODE: 711 - FINAL SCORE: -53.0 - Temperature: 0.0009483196099060785
+EPISODE: 707 - FINAL SCORE: -69.0 - Temperature: 0.000995230853743229
+Updating target network main
+Updating Finished
+EPISODE: 714 - FINAL SCORE: -40.0 - Temperature: 0.0009145930695835676
+EPISODE: 715 - FINAL SCORE: -41.0 - Temperature: 0.0009036195764530027
+EPISODE: 716 - FINAL SCORE: -40.0 - Temperature: 0.0008927777457584337
+EPISODE: 713 - FINAL SCORE: -48.0 - Temperature: 0.0009256998240495713
+EPISODE: 720 - FINAL SCORE: -41.0 - Temperature: 0.0008506957359753439
+EPISODE: 718 - FINAL SCORE: -41.0 - Temperature: 0.000871482771769115
+EPISODE: 717 - FINAL SCORE: -41.0 - Temperature: 0.0008820659977843733
+EPISODE: 719 - FINAL SCORE: -41.0 - Temperature: 0.0008610265256773219
+Updating target network main
+Updating Finished
+EPISODE: 723 - FINAL SCORE: -37.0 - Temperature: 0.00082044114275397
+EPISODE: 721 - FINAL SCORE: -41.0 - Temperature: 0.0008404888974092295
+EPISODE: 724 - FINAL SCORE: -41.0 - Temperature: 0.0008105973055946278
+EPISODE: 727 - FINAL SCORE: -42.0 - Temperature: 0.0007817687941656978
+EPISODE: 725 - FINAL SCORE: -42.0 - Temperature: 0.000800871577005139
+EPISODE: 722 - FINAL SCORE: -49.0 - Temperature: 0.0008304045227854028
+EPISODE: 726 - FINAL SCORE: -42.0 - Temperature: 0.0007912625398923471
+EPISODE: 728 - FINAL SCORE: -43.0 - Temperature: 0.0007723889565332373
+Updating target network main
+Updating Finished
+EPISODE: 729 - FINAL SCORE: -42.0 - Temperature: 0.0007631216603000601
+EPISODE: 730 - FINAL SCORE: -42.0 - Temperature: 0.0007539655551691728
+EPISODE: 731 - FINAL SCORE: -43.0 - Temperature: 0.0007449193070447487
+EPISODE: 732 - FINAL SCORE: -43.0 - Temperature: 0.0007359815978377429
+EPISODE: 735 - FINAL SCORE: -43.0 - Temperature: 0.000709806758915495
+EPISODE: 733 - FINAL SCORE: -43.0 - Temperature: 0.0007271511252738385
+EPISODE: 734 - FINAL SCORE: -43.0 - Temperature: 0.0007184266027036989
+EPISODE: 736 - FINAL SCORE: -43.0 - Temperature: 0.000701290337949683
+Updating target network main
+Updating Finished
+EPISODE: 737 - FINAL SCORE: -41.0 - Temperature: 0.0006928760989160039
+EPISODE: 740 - FINAL SCORE: -37.0 - Temperature: 0.0006682342867627058
+EPISODE: 738 - FINAL SCORE: -41.0 - Temperature: 0.0006845628158126786
+EPISODE: 739 - FINAL SCORE: -40.0 - Temperature: 0.000676349277347773
+EPISODE: 741 - FINAL SCORE: -65.0 - Temperature: 0.0006602166616578738
+EPISODE: 744 - FINAL SCORE: -65.0 - Temperature: 0.0006367363670099512
+EPISODE: 742 - FINAL SCORE: -65.0 - Temperature: 0.0006522952338203701
+EPISODE: 743 - FINAL SCORE: -65.0 - Temperature: 0.0006444688490537685
+Updating target network main
+Updating Finished
+EPISODE: 745 - FINAL SCORE: -44.0 - Temperature: 0.000629096661022953
+EPISODE: 751 - FINAL SCORE: -48.0 - Temperature: 0.0005851453119934812
+EPISODE: 748 - FINAL SCORE: -51.0 - Temperature: 0.0006067231345418874
+EPISODE: 752 - FINAL SCORE: -51.0 - Temperature: 0.0005781246070755373
+EPISODE: 750 - FINAL SCORE: -52.0 - Temperature: 0.0005922512758624222
+EPISODE: 747 - FINAL SCORE: -57.0 - Temperature: 0.0006140911379833186
+EPISODE: 749 - FINAL SCORE: -62.0 - Temperature: 0.0005994435340611164
+EPISODE: 746 - FINAL SCORE: -75.0 - Temperature: 0.0006215486179448001
+Updating target network main
+Updating Finished
+EPISODE: 753 - FINAL SCORE: -50.0 - Temperature: 0.0005711881381525412
+EPISODE: 756 - FINAL SCORE: -47.0 - Temperature: 0.0005508741010157899
+EPISODE: 754 - FINAL SCORE: -47.0 - Temperature: 0.0005643348945421002
+EPISODE: 757 - FINAL SCORE: -47.0 - Temperature: 0.0005442645897868722
+EPISODE: 755 - FINAL SCORE: -50.0 - Temperature: 0.0005575638776882161
+EPISODE: 758 - FINAL SCORE: -51.0 - Temperature: 0.0005377343809586384
+EPISODE: 760 - FINAL SCORE: -51.0 - Temperature: 0.0005249080759683087
+EPISODE: 759 - FINAL SCORE: -51.0 - Temperature: 0.0005312825230430683
+Updating target network main
+Updating Finished
+EPISODE: 764 - FINAL SCORE: -36.0 - Temperature: 0.000500165986581486
+EPISODE: 762 - FINAL SCORE: -47.0 - Temperature: 0.0005123877103144441
+EPISODE: 763 - FINAL SCORE: -47.0 - Temperature: 0.0005062399674479018
+EPISODE: 765 - FINAL SCORE: -46.0 - Temperature: 0.0004941648827021473
+EPISODE: 766 - FINAL SCORE: -50.0 - Temperature: 0.00048823578141542147
+EPISODE: 761 - FINAL SCORE: -55.0 - Temperature: 0.0005186101109416997
+EPISODE: 767 - FINAL SCORE: -50.0 - Temperature: 0.0004823778188180254
+EPISODE: 768 - FINAL SCORE: -51.0 - Temperature: 0.00047659014137198187
+Updating target network main
+Updating Finished
+EPISODE: 771 - FINAL SCORE: -67.0 - Temperature: 0.00045964043744053495
+EPISODE: 775 - FINAL SCORE: -63.0 - Temperature: 0.0004379748062383992
+EPISODE: 769 - FINAL SCORE: -70.0 - Temperature: 0.0004708719057802539
+EPISODE: 770 - FINAL SCORE: -71.0 - Temperature: 0.00046522227886387193
+EPISODE: 773 - FINAL SCORE: -72.0 - Temperature: 0.0004486768676089189
+EPISODE: 776 - FINAL SCORE: -77.0 - Temperature: 0.0004327198861133146
+EPISODE: 774 - FINAL SCORE: -77.0 - Temperature: 0.00044329354174707774
+EPISODE: 772 - FINAL SCORE: -90.0 - Temperature: 0.0004541255682046679
+Updating target network main
+Updating Finished
+EPISODE: 778 - FINAL SCORE: -37.0 - Temperature: 0.0004223984385153842
+EPISODE: 779 - FINAL SCORE: -37.0 - Temperature: 0.00041733040714978415
+EPISODE: 780 - FINAL SCORE: -37.0 - Temperature: 0.00041232318316314364
+EPISODE: 782 - FINAL SCORE: -36.0 - Temperature: 0.0004024882477580354
+EPISODE: 784 - FINAL SCORE: -36.0 - Temperature: 0.00039288790007045656
+EPISODE: 781 - FINAL SCORE: -36.0 - Temperature: 0.00040737603697486814
+EPISODE: 783 - FINAL SCORE: -37.0 - Temperature: 0.00039765910333436626
+EPISODE: 777 - FINAL SCORE: -85.0 - Temperature: 0.000427528015700514
+Updating target network main
+Updating Finished
+EPISODE: 788 - FINAL SCORE: -36.0 - Temperature: 0.00037436871930797346
+EPISODE: 787 - FINAL SCORE: -37.0 - Temperature: 0.0003789150269319741
+EPISODE: 790 - FINAL SCORE: -36.0 - Temperature: 0.00036543909244624495
+EPISODE: 786 - FINAL SCORE: -49.0 - Temperature: 0.0003835165445987642
+EPISODE: 785 - FINAL SCORE: -49.0 - Temperature: 0.0003881739427752538
+EPISODE: 789 - FINAL SCORE: -51.0 - Temperature: 0.0003698769593042649
+EPISODE: 791 - FINAL SCORE: -65.0 - Temperature: 0.00036105447211184346
+EPISODE: 792 - FINAL SCORE: -87.0 - Temperature: 0.0003567224594373071
+Updating target network main
+Updating Finished
+EPISODE: 796 - FINAL SCORE: -37.0 - Temperature: 0.0003399079744221862
+EPISODE: 793 - FINAL SCORE: -51.0 - Temperature: 0.00035244242322411354
+EPISODE: 797 - FINAL SCORE: -46.0 - Temperature: 0.00033582968217791577
+EPISODE: 794 - FINAL SCORE: -51.0 - Temperature: 0.0003482137398470019
+EPISODE: 800 - FINAL SCORE: -46.0 - Temperature: 0.00032388605768765436
+EPISODE: 798 - FINAL SCORE: -46.0 - Temperature: 0.0003318003222002624
+EPISODE: 795 - FINAL SCORE: -51.0 - Temperature: 0.0003440357931631076
+EPISODE: 799 - FINAL SCORE: -70.0 - Temperature: 0.0003278193073888975
+Updating target network main
+Updating Finished
+--- 219.38914561271667 seconds ---
