@@ -43,7 +43,9 @@ bad_state_penalty = 0   # Penalty to the reward when we are in a bad state (in t
 min_samples_for_training = 1000   # Minimum samples in the replay memory to enable the training
 
 ### Create environment
+print("got here")
 env = gym.make('AcrobotCdyn') # Initialize the Gym environment
+print("got here")
 # Get the shapes of the state space (observation_space) and action space (action_space)
 state_space_dim = env.observation_space.shape[0]
 action_space_dim = env.action_space.n
