@@ -16,12 +16,12 @@ conda activate final_project_cpp
 conda install pytorch matplotlib IPython
 
 cd ..
+git submodule update --init
 pip install ./gymnasium
 cd ME759
 
 g++ rk4.cpp -Wall -O3 -std=c++17 -o rk4
 
-python SequentionalQlearn.py
 python SequentionalQlearnCPP.py
 python ParallelQlearnCPP.py
 
