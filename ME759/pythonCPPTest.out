@@ -1,0 +1,7 @@
+WARNING: A conda environment already exists at '/srv/home/cjdunbar/.conda/envs/pythonCPPTest'
+Remove existing environment (y/[n])? 
+b'-9394.96,18476.7,1.23975e+07,-3.28524e+07,5\n'
+-9394.96,18476.7,1.23975e+07,-3.28524e+07,5
+
+['-9394.96', '18476.7', '1.23975e+07', '-3.28524e+07', '5\n']
+[-9394.96, 18476.7, 12397500.0, -32852400.0, 5.0]

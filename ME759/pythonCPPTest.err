@@ -1,0 +1,10 @@
+
+CondaSystemExit: Exiting.
+
+rk4.cpp: In function ‘void dsdt(double**, double, double, double, double, double)’:
+rk4.cpp:9:12: warning: unused variable ‘dt’ [-Wunused-variable]
+    9 |     double dt = 0.2;
+      |            ^~
+rk4.cpp:14:12: warning: unused variable ‘l2’ [-Wunused-variable]
+   14 |     double l2 = 1.0;  // [m]
+      |            ^~
