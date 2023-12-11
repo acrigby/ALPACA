@@ -19,6 +19,7 @@ conda activate final_project_cpp
 
 conda install pytorch matplotlib IPython
 pip install ../gymnasium
+pip install gymnasium[classic-control]
 
 g++ rk4.cpp -Wall -O3 -std=c++17 -o rk4
 
