@@ -25,5 +25,4 @@ g++ rk4.cpp -o rk4
 
 
 python delVar.py
-python SequentionalQlearnCPP.py
 python ParallelQlearnCPPdequeue.py
