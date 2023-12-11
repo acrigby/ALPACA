@@ -21,6 +21,7 @@ os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 from SolverClasses import *
 import time
      
+print("got here")
 ### Define exploration profile
 initial_value = 5
 num_iterations = 800
