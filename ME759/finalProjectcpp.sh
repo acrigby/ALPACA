@@ -10,7 +10,6 @@ cd $SLURM_SUBMIT_DIR
 
 cd ..
 git submodule update --init
-pip install ./gymnasium
 cd ME759
 
 module load anaconda/full/2021.05
@@ -19,6 +18,7 @@ conda create --name final_project_cpp
 conda activate final_project_cpp
 
 conda install pytorch matplotlib IPython
+pip install ../gymnasium
 
 g++ rk4.cpp -Wall -O3 -std=c++17 -o rk4
 
