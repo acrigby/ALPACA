@@ -1,50 +1,10 @@
+Submodule 'gymnasium' (https://github.com/acrigby/gymnasium) registered for path 'gymnasium'
+Cloning into '/srv/home/cjdunbar/ALPACA/gymnasium'...
 
-CondaSystemExit: Exiting.
+[notice] A new release of pip available: 22.3.1 -> 23.3.1
+[notice] To update, run: pip install --upgrade pip
 
-
-
-==> WARNING: A newer version of conda exists. <==
-  current version: 4.10.1
-  latest version: 23.11.0
-
-Please update conda by running
-
-    $ conda update -n base -c defaults conda
-
-
-rk4.cpp: In function ‘void dsdt(double**, double, double, double, double, double)’:
-rk4.cpp:9:12: warning: unused variable ‘dt’ [-Wunused-variable]
-    9 |     double dt = 0.2;
-      |            ^~
-rk4.cpp:14:12: warning: unused variable ‘l2’ [-Wunused-variable]
-   14 |     double l2 = 1.0;  // [m]
-      |            ^~
-Traceback (most recent call last):
-  File "/srv/home/cjdunbar/ALPACA/ME759/SequentionalQlearnCPP.py", line 98, in <module>
-    next_observation, reward, terminated, truncated, info = env.step(action)
-                                                            ^^^^^^^^^^^^^^^^
-  File "/srv/home/cjdunbar/.conda/envs/final_project_cpp/lib/python3.11/site-packages/gymnasium/wrappers/time_limit.py", line 57, in step
-    observation, reward, terminated, truncated, info = self.env.step(action)
-                                                       ^^^^^^^^^^^^^^^^^^^^^
-  File "/srv/home/cjdunbar/.conda/envs/final_project_cpp/lib/python3.11/site-packages/gymnasium/wrappers/order_enforcing.py", line 56, in step
-    return self.env.step(action)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/srv/home/cjdunbar/.conda/envs/final_project_cpp/lib/python3.11/site-packages/gymnasium/wrappers/env_checker.py", line 49, in step
-    return env_step_passive_checker(self.env, action)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/srv/home/cjdunbar/.conda/envs/final_project_cpp/lib/python3.11/site-packages/gymnasium/utils/passive_env_checker.py", line 208, in env_step_passive_checker
-    result = env.step(action)
-             ^^^^^^^^^^^^^^^^
-  File "/srv/home/cjdunbar/.conda/envs/final_project_cpp/lib/python3.11/site-packages/gymnasium/envs/classic_control/acrobotCdyn.py", line 218, in step
-    ns = rk4(self._dsdt, s_augmented, [0, self.dt])
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/srv/home/cjdunbar/.conda/envs/final_project_cpp/lib/python3.11/site-packages/gymnasium/envs/classic_control/acrobotCdyn.py", line 435, in rk4
-    k1 = np.asarray(derivs(y0))
-                    ^^^^^^^^^^
-  File "/srv/home/cjdunbar/.conda/envs/final_project_cpp/lib/python3.11/site-packages/gymnasium/envs/classic_control/acrobotCdyn.py", line 251, in _dsdt
-    output = [float(n) for n in dsdt]
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/srv/home/cjdunbar/.conda/envs/final_project_cpp/lib/python3.11/site-packages/gymnasium/envs/classic_control/acrobotCdyn.py", line 251, in <listcomp>
-    output = [float(n) for n in dsdt]
-              ^^^^^^^^
-ValueError: could not convert string to float: ''
+[notice] A new release of pip available: 22.3.1 -> 23.3.1
+[notice] To update, run: pip install --upgrade pip
+/srv/home/cjdunbar/ALPACA/ME759/SolverClasses.py:59: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:261.)
+  states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
