@@ -1,6 +1,6 @@
 from subprocess import Popen, PIPE
 
-test = Popen(['./rk4 %s %s %s %s %s %s' %(str(1), str(2), str(3), str(4), str(5), str(6))], shell=True, stdout=PIPE, stdin=PIPE).communicate()[0]
+test = Popen(['./rk4 %s %s %s %s %s' %(str(1), str(2), str(3), str(4), str(5))], shell=True, stdout=PIPE, stdin=PIPE).communicate()[0]
 
 print(test)
 
