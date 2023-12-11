@@ -4,7 +4,6 @@ Created on Tue Jul 18 13:29:29 2023
 
 @author: aidan
 """
-print("got here")
 import random
 import torch
 import sys
@@ -21,7 +20,6 @@ os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 from SolverClasses import *
 import time
      
-print("got here")
 ### Define exploration profile
 initial_value = 5
 num_iterations = 800
@@ -44,9 +42,7 @@ bad_state_penalty = 0   # Penalty to the reward when we are in a bad state (in t
 min_samples_for_training = 1000   # Minimum samples in the replay memory to enable the training
 
 ### Create environment
-print("got here")
 env = gym.make('AcrobotCdyn') # Initialize the Gym environment
-print("got here")
 # Get the shapes of the state space (observation_space) and action space (action_space)
 state_space_dim = env.observation_space.shape[0]
 action_space_dim = env.action_space.n
