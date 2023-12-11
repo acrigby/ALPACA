@@ -12,10 +12,12 @@ cd ..
 git submodule update --init
 cd ME759
 
+cd ..
+cd ..
 python -m venv env-01
 source env-01/bin/activate
+cd ALPACA
 
-cd ..
 pip install ./gymnasium
 cd ME759
 
@@ -23,7 +25,5 @@ pip install torch matplotlib IPython
 
 g++ rk4.cpp -o rk4
 
-
-python delVar.py
 python SequentionalQlearnCPP.py
 python ParallelQlearnCPPdequeue.py
