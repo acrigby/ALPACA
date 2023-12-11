@@ -25,8 +25,4 @@ g++ rk4.cpp -o rk4
 
 
 python delVar.py
-python del replay_mem
-python del policy_net
-python del target_net
-python del shared_deque
 python ParallelQlearnCPPdequeue.py
