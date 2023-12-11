@@ -4,7 +4,7 @@
 #SBATCH -o finalProjectCPP.out
 #SBATCH -e finalProjectCPP.err
 #SBATCH -t 0-12:00:00
-#SBATCH -c 5
+#SBATCH -c 10
 
 cd $SLURM_SUBMIT_DIR
 
@@ -20,6 +20,8 @@ pip install ./gymnasium
 cd ME759
 
 g++ rk4.cpp -Wall -O3 -std=c++17 -o rk4
+
+ls
 
 python SequentionalQlearnCPP.py
 
