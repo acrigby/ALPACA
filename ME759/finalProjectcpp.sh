@@ -12,17 +12,16 @@ cd ..
 git submodule update --init
 cd ME759
 
-module load anaconda/full/2021.05
-bootstrap_conda
-conda create --name final_project_cpp
-conda activate final_project_cpp
+python -m venv env-01
+source env-01/bin/activate
 
-conda install pytorch matplotlib IPython
-pip install ../gymnasium
-pip install gymnasium[classic-control]
+cd ..
+pip install ./gymnasium
+cd ME759
 
-g++ rk4.cpp -Wall -O3 -std=c++17 -o rk4
+pip install torch matplotlib IPython
 
-pwd
+g++ rk4.cpp -o rk4
 
 python SequentionalQlearnCPP.py
+python ParallelQlearnCPPdequeue.py
