@@ -19,7 +19,8 @@ import os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 from SolverClasses import *
 import time
-     
+
+update_num = int(sys.argv[1]) 
 ### Define exploration profile
 initial_value = 5
 num_iterations = 800
@@ -106,7 +107,7 @@ for episode_num, tau in enumerate(exploration_profile):
       replay_mem.push(observation, action, next_observation, reward)
 
       # Update the network
-      if score % 8 == 1:
+      if score % update_num == 1:
         if len(replay_mem) > min_samples_for_training: # we enable the training only if we have enough samples in the replay memory, otherwise the training will use the same samples too often
             update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size, device)
 
