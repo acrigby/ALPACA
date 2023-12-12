@@ -33,6 +33,8 @@ python SequentionalQlearnCPP.py 5
 python SequentionalQlearnCPP.py 6
 python SequentionalQlearnCPP.py 7
 python SequentionalQlearnCPP.py 8
+python SequentionalQlearnCPP.py 9
+python SequentionalQlearnCPP.py 10
 
 python ParallelQlearnCPPdequeue.py 1
 python ParallelQlearnCPPdequeue.py 2
@@ -42,3 +44,5 @@ python ParallelQlearnCPPdequeue.py 5
 python ParallelQlearnCPPdequeue.py 6
 python ParallelQlearnCPPdequeue.py 7
 python ParallelQlearnCPPdequeue.py 8
+python ParallelQlearnCPPdequeue.py 9
+python ParallelQlearnCPPdequeue.py 10
