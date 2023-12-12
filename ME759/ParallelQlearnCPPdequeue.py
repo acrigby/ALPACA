@@ -40,7 +40,7 @@ DequeManager.register('DequeProxy', DequeProxy,
 
 process_shared_deque = None  # Global only within each process.
 
-def episode_func(episode_num, tau, plotting_rewards, replay_mem, policy_net, target_net, q):
+def episode_func(episode_num, tau, plotting_rewards, replay_mem, policy_net, target_net, q, max_workers):
     #print(id(policy_net))
     global process_shared_deque
     process_shared_deque = q
@@ -75,7 +75,7 @@ def episode_func(episode_num, tau, plotting_rewards, replay_mem, policy_net, tar
 
         process_shared_deque.append((observation, action, next_observation, reward))
 
-        if score % 8 == 1:
+        if score % max_workers == 1:
             # Update the network
             if len(replay_mem) > min_samples_for_training: # we enable the training only if we have enough samples in the replay memory, otherwise the training will use the same samples too often
                   update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size, device)
@@ -149,7 +149,7 @@ def main(plotting_rewards, replay_mem):
 
     env = gym.make('AcrobotCdyn') 
     observation, info = env.reset()
-    max_workers=8
+    max_workers = int(sys.argv[1])
     start_time = time.time()
 
     for episode_collection in range(len(exploration_profile)//max_workers):
@@ -158,7 +158,7 @@ def main(plotting_rewards, replay_mem):
         for episode in range(max_workers):
 
             # Launch the first round of tasks, building a list of ApplyResult objects
-            process = multiprocessing.Process(target = episode_func,args = (episode_collection*max_workers + episode, exploration_profile[episode_collection*max_workers + episode], plotting_rewards, replay_mem,policy_net, target_net, shared_deque))
+            process = multiprocessing.Process(target = episode_func,args = (episode_collection*max_workers + episode, exploration_profile[episode_collection*max_workers + episode], plotting_rewards, replay_mem,policy_net, target_net, shared_deque, max_workers))
             processes.append(process)
             
         for p in processes:
