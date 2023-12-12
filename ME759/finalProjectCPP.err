@@ -1,10 +1,24 @@
-Submodule 'gymnasium' (https://github.com/acrigby/gymnasium) registered for path 'gymnasium'
-Cloning into '/srv/home/cjdunbar/ALPACA/gymnasium'...
 
 [notice] A new release of pip available: 22.3.1 -> 23.3.1
 [notice] To update, run: pip install --upgrade pip
 
 [notice] A new release of pip available: 22.3.1 -> 23.3.1
 [notice] To update, run: pip install --upgrade pip
+/srv/home/cjdunbar/ALPACA/ME759/SolverClasses.py:59: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:261.)
+  states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
+/srv/home/cjdunbar/ALPACA/ME759/SolverClasses.py:59: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:261.)
+  states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
+/srv/home/cjdunbar/ALPACA/ME759/SolverClasses.py:59: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:261.)
+  states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
+/srv/home/cjdunbar/ALPACA/ME759/SolverClasses.py:59: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:261.)
+  states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
+/srv/home/cjdunbar/ALPACA/ME759/SolverClasses.py:59: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:261.)
+  states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
+/srv/home/cjdunbar/ALPACA/ME759/SolverClasses.py:59: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:261.)
+  states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
+/srv/home/cjdunbar/ALPACA/ME759/SolverClasses.py:59: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:261.)
+  states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
+/srv/home/cjdunbar/ALPACA/ME759/SolverClasses.py:59: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:261.)
+  states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
 /srv/home/cjdunbar/ALPACA/ME759/SolverClasses.py:59: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:261.)
   states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
