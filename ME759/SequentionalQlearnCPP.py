@@ -130,6 +130,6 @@ ax = fig.add_subplot()
 fig.suptitle('Sequential Plotting Rewards CPP', fontsize=10, fontweight='bold')
 ax.set_title("--- %s seconds ---" % (time.time() - start_time))
 ax.plot(plotting_rewards)
-plt.savefig('SeqCPP.png')
+plt.savefig('SeqCPP' + str(update_num) + '.png')
 
 print("--- %s seconds ---" % (time.time() - start_time))
