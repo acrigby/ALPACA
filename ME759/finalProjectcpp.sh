@@ -25,5 +25,20 @@ pip install torch matplotlib IPython
 
 g++ rk4.cpp -o rk4
 
-python SequentionalQlearnCPP.py
-python ParallelQlearnCPPdequeue.py
+python SequentionalQlearnCPP.py 1
+python SequentionalQlearnCPP.py 2
+python SequentionalQlearnCPP.py 3
+python SequentionalQlearnCPP.py 4
+python SequentionalQlearnCPP.py 5
+python SequentionalQlearnCPP.py 6
+python SequentionalQlearnCPP.py 7
+python SequentionalQlearnCPP.py 8
+
+python ParallelQlearnCPPdequeue.py 1
+python ParallelQlearnCPPdequeue.py 2
+python ParallelQlearnCPPdequeue.py 3
+python ParallelQlearnCPPdequeue.py 4
+python ParallelQlearnCPPdequeue.py 5
+python ParallelQlearnCPPdequeue.py 6
+python ParallelQlearnCPPdequeue.py 7
+python ParallelQlearnCPPdequeue.py 8
