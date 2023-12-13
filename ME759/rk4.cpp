@@ -48,7 +48,7 @@ void dsdt(double* deriv[], double theta1, double theta2,double dtheta1,double dt
 
 int main(int argc, char *argv[]) {
 
-    usleep(128000);
+    // usleep(128000);
 
     double *y = new double[5];
     double *y1 = new double[5];
