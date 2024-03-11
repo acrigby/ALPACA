@@ -4,7 +4,6 @@ Created on Tue Jul 18 13:29:29 2023
 
 @author: aidan
 """
-
 import random
 import torch
 import sys
@@ -20,7 +19,8 @@ import os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 from SolverClasses import *
 import time
-     
+
+update_num = int(sys.argv[1]) 
 ### Define exploration profile
 initial_value = 5
 num_iterations = 800
@@ -37,15 +37,13 @@ replay_memory_capacity = 10000   # Replay memory capacity
 #lr = 1e-2   # Optimizer learning rate
 #lr = 1e-4
 lr = 1e-3
-target_net_update_steps = 8   # Number of episodes to wait before updating the target network
+target_net_update_steps = update_num   # Number of episodes to wait before updating the target network
 batch_size = 256   # Number of samples to take from the replay memory for each update
 bad_state_penalty = 0   # Penalty to the reward when we are in a bad state (in this case when the pole falls down) 
 min_samples_for_training = 1000   # Minimum samples in the replay memory to enable the training
 
-
 ### Create environment
-env = gym.make('Acrobot') # Initialize the Gym environment
-
+env = gym.make('AcrobotCdyn') # Initialize the Gym environment
 # Get the shapes of the state space (observation_space) and action space (action_space)
 state_space_dim = env.observation_space.shape[0]
 action_space_dim = env.action_space.n
@@ -72,7 +70,7 @@ optimizer = torch.optim.Adam(policy_net.parameters(), lr=lr) # The optimizer wil
 loss_fn = nn.SmoothL1Loss()
 
 # Initialize the Gym environment
-env = gym.make('Acrobot') 
+env = gym.make('AcrobotCdyn') 
 observation, info = env.reset()
 
 plotting_rewards=[]
@@ -109,7 +107,7 @@ for episode_num, tau in enumerate(exploration_profile):
       replay_mem.push(observation, action, next_observation, reward)
 
       # Update the network
-      if score % 8 == 1:
+      if score % update_num == 1:
         if len(replay_mem) > min_samples_for_training: # we enable the training only if we have enough samples in the replay memory, otherwise the training will use the same samples too often
             update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size, device)
 
@@ -129,9 +127,9 @@ env.close()
 fig = plt.figure()
 ax = fig.add_subplot()
 
-fig.suptitle('Sequential Plotting Rewards', fontsize=10, fontweight='bold')
+fig.suptitle('Sequential Plotting Rewards CPP', fontsize=10, fontweight='bold')
 ax.set_title("--- %s seconds ---" % (time.time() - start_time))
 ax.plot(plotting_rewards)
-plt.savefig('slearn.png')
+plt.savefig('SeqCPP' + str(update_num) + '.png')
 
 print("--- %s seconds ---" % (time.time() - start_time))

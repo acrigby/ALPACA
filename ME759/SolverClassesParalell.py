@@ -11,25 +11,30 @@ import matplotlib.pyplot as plt
 import matplotlib
 from torch import nn
 from collections import deque
+from multiprocessing.managers import BaseManager
 from IPython import display
+import collections
 
-class ReplayMemory(object):
+class DequeManager(BaseManager):
+    pass
 
+class DequeProxy(object):
     def __init__(self, capacity):
-        # Define a queue with maxlen "capacity"
-        self.memory = deque(maxlen=capacity)
-
-    def push(self, state, action, next_state, reward):
-        # Add the tuple (state, action, next_state, reward) to the queue
-        self.memory.append((state, action, next_state, reward))
-
-    def sample(self, batch_size):
-        batch_size = min(batch_size, len(self)) # Get all the samples if the requested batch_size is higher than the number of sample currently in the memory
-        # Randomly select "batch_size" samples and return the selection
-        return random.sample(self.memory,batch_size)
-
+        self.deque = collections.deque(maxlen=capacity)
     def __len__(self):
-        return len(self.memory) # Return the number of samples currently stored in the memory
+        return self.deque.__len__()
+    def appendleft(self, x):
+        self.deque.appendleft(x)
+    def append(self, x):
+        self.deque.append(x)
+    def pop(self):
+        return self.deque.pop()
+    def popleft(self):
+        return self.deque.popleft()
+    def sample(self,batch_size):
+        batch_size = min(batch_size, len(self))
+        return random.sample(self.deque,batch_size)
+    
     
 class DQN(nn.Module):
     
@@ -51,7 +56,6 @@ class DQN(nn.Module):
         return self.linear(x)
     
 def update_step(policy_net, target_net, replay_mem, gamma, optimizer, loss_fn, batch_size, device):
-        
     # Sample the data from the replay memory
     batch = replay_mem.sample(batch_size)
     batch_size = len(batch)

@@ -1,0 +1,18 @@
+
+CondaSystemExit: Exiting.
+
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.10.1
+  latest version: 23.11.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+/srv/home/cjdunbar/ALPACA/ME759/SolverClasses.py:59: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /croot/pytorch-select_1700158693612/work/torch/csrc/utils/tensor_new.cpp:261.)
+  states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
+/srv/home/cjdunbar/ALPACA/ME759/SolverClasses.py:59: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /croot/pytorch-select_1700158693612/work/torch/csrc/utils/tensor_new.cpp:261.)
+  states      = torch.tensor([s[0] for s in batch], dtype=torch.float32, device=device)
