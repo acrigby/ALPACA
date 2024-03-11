@@ -1,0 +1,23 @@
+Model: ControlTests.SteamTurbine_L2_OpenFeedHeat_Test2
+Integration started at 10080 using integration method:
+RK-method: esdirk45a
+Local extrapolation
+FSAL
+Continuous extension
+
+
+Integration terminated successfully at T = 10085
+   CPU-time for integration                  : 0.378 seconds
+   CPU-time for initialization               : 0.01 seconds
+   Number of result points                   : 51
+   Number of grid points                     : 51
+   Number of accepted steps                  : 28
+   Number of rejected steps                  : 0
+   Number of f-evaluations (dynamics)        : 239
+   Number of crossing function evaluations   : 85
+   Number of Jacobian-evaluations            : 1
+   Number of model time events               : 0
+   Number of state events                    : 0
+   Number of step events                     : 0
+
+SUCCESSFUL simulation of ControlTests.SteamTurbine_L2_OpenFeedHeat_Test2

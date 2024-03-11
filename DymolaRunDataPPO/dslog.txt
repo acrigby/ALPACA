@@ -1,0 +1,48 @@
+Initial values for the following variables cannot be used:
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].HCRIT0
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].SCRIT0
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].acentricFactor
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].criticalMolarVolume
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].criticalPressure
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].criticalTemperature
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].deltah
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].deltas
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].dipoleMoment
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].hasAccurateConductivityData
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].hasAccurateViscosityData
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].hasAcentricFactor
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].hasCriticalData
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].hasDipoleMoment
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].hasFundamentalEquation
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].hasIdealGasHeatCapacity
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].hasLiquidHeatCapacity
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].hasSolidHeatCapacity
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].hasVapourPressureCurve
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].meltingPoint
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].molarMass
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].normalBoilingPoint
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].triplePointPressure
+_GlobalScope.Modelica.Media.Water.WaterIF97_ph.fluidConstants[1].triplePointTemperature
+Model: ControlTests.SteamTurbine_L2_OpenFeedHeat_Test2
+Integration started at 9900 using integration method:
+RK-method: esdirk45a
+Local extrapolation
+FSAL
+Continuous extension
+
+
+Integration terminated successfully at T = 9905
+   CPU-time for integration                  : 0.16 seconds
+   CPU-time for initialization               : 0.002 seconds
+   Number of result points                   : 51
+   Number of grid points                     : 51
+   Number of accepted steps                  : 27
+   Number of rejected steps                  : 0
+   Number of f-evaluations (dynamics)        : 233
+   Number of crossing function evaluations   : 82
+   Number of Jacobian-evaluations            : 1
+   Number of model time events               : 0
+   Number of state events                    : 0
+   Number of step events                     : 0
+
+SUCCESSFUL simulation of ControlTests.SteamTurbine_L2_OpenFeedHeat_Test2
