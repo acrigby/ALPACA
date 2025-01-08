@@ -1,7 +1,5 @@
 DymolaRunData/
 env_RL_2/
-#env_RL_3/
-env_sankey/
 RunData/
 HPC_runs/Output
 ConventionalOpt_Ecom/LWR_L2_Turbine_AdditionalFeedheater_NewControl2_Deaerator_2_Opt2.mat
