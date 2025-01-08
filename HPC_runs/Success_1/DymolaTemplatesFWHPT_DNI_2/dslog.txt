@@ -1,0 +1,30 @@
+... loading "BOP" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "ES" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "SES" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "NetDemand" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "IP" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "DNI" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/DNI_timeSeries.txt"
+... loading "CosEff" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/CosEff_timeSeries.txt"
+Model: NHES.Systems.Examples.FWHPT.LWR_L2_Turbine_AdditionalFeedheater_NewControl2_Deaerator_SmallPT
+Integration started at 1e+06 using integration method:
+RK-method: esdirk45a
+Local extrapolation
+FSAL
+Continuous extension
+
+
+Integration terminated successfully at T = 1.0036e+06
+   CPU-time for integration                  : 2.25034 seconds
+   CPU-time for initialization               : 0.0415921 seconds
+   Number of result points                   : 361
+   Number of grid points                     : 361
+   Number of accepted steps                  : 87
+   Number of rejected steps                  : 18
+   Number of f-evaluations (dynamics)        : 889
+   Number of crossing function evaluations   : 276
+   Number of Jacobian-evaluations            : 9
+   Number of model time events               : 4
+   Number of state events                    : 2
+   Number of step events                     : 0
+
+SUCCESSFUL simulation of NHES.Systems.Examples.FWHPT.LWR_L2_Turbine_AdditionalFeedheater_NewControl2_Deaerator_SmallPT

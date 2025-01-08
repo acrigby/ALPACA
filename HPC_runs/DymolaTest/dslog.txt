@@ -1,0 +1,1776 @@
+... loading "BOP" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "ES" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "SES" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "NetDemand" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "IP" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "DNI" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/DNI_timeSeries.txt"
+... loading "CosEff" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/CosEff_timeSeries.txt"
+Error: The following error was detected at time: 0
+  Error in region computation of IF97 steam tables(p = 3.28166e+06, h = -487441)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.rho_props_ph(
+BOP.pump_SimpleMassFlow2.medium.p, 
+BOP.pump_SimpleMassFlow2.medium.h, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0))
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 2
+
+Error: The following error was detected at time: 0
+  IF97 medium function g2: the input temperature (= 39185.4 K) is higher than the limit of 1073.15 K
+  Failed condition: T <= 1073.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.rho_props_ph(
+dual_Pipe_CTES_Controlled_Feedwater.pump_SimpleMassFlow1.medium.p, 
+dual_Pipe_CTES_Controlled_Feedwater.pump_SimpleMassFlow1.medium.h, 
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(dual_Pipe_CTES_Controlled_Feedwater.pump_SimpleMassFlow1.medium.p, dual_Pipe_CTES_Controlled_Feedwater.pump_SimpleMassFlow1.medium.h, dual_Pipe_CTES_Controlle...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[2, 2]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[2, 2]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[7, 1]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[7, 1]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[6, 2]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[6, 2]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[2, 1]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[2, 1]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[8, 2]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[8, 2]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[3, 1]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[3, 1]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[5, 1]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[5, 1]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[4, 2]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[4, 2]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[6, 1]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[6, 1]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[5, 2]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[5, 2]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[4, 1]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[4, 1]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[7, 2]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[7, 2]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[3, 2]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[3, 2]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[9, 1]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[9, 1]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[8, 1]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[8, 1]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[1, 2]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[1, 2]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[9, 2]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[9, 2]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[1, 1]) = (1) / (0)
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0
+
+Model error - division by zero: (1.0) / (dual_Pipe_CTES_Controlled_Feedwater.CTES.hc[1, 1]) = (1) / (0)
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 1
+
+Model: NHES.Systems.Examples.FWHPT.LWR_L2_Turbine_AdditionalFeedheater_NewControl2_Deaerator_SmallPT
+Integration started at 0 using integration method:
+RK-method: esdirk45a
+Local extrapolation
+FSAL
+Continuous extension
+
+Error: The following error was detected at time: 0.01078426053805588
+  Error in region computation of IF97 steam tables(p = 5e+06, h = -320150)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(dual_Pipe_CTES_Controlled_Feedwater.pump_SimpleMassFlow1.medium.p, dual_Pipe_CTES_Controlled_Feedwater.pump_SimpleMassFlow1.medium.h, dual_Pipe_CTES_Controlled_Feedwater.pump_SimpleMassFlow1.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(dual_Pipe_CTES_Controlled_Feedwater.pump_SimpleMassFlow1.medium.p, dual_Pipe_CTES_Controlled_...
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0.01078426053805588
+  Error in region computation of IF97 steam tables(p = 5e+06, h = -320150)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(dual_Pipe_CTES_Controlled_Feedwater.pump_SimpleMassFlow1.medium.p, dual_Pipe_CTES_Controlled_Feedwater.pump_SimpleMassFlow1.medium.h, dual_Pipe_CTES_Controlled_Feedwater.pump_SimpleMassFlow1.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(dual_Pipe_CTES_Controlled_Feedwater.pump_SimpleMassFlow1.medium.p, dual_Pipe_CTES_Controlled_...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 2
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 3.467461022766004
+  Error in region computation of IF97 steam tables(p = 1.17548e+07, h = -6.34514e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.Lower_Riser.mediums[1].p, SMR_Taveprogram.Lower_Riser.mediums[1].h, SMR_Taveprogram.Lower_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.Lower_Riser.mediums[1].p, SMR_Taveprogram.Lower_Riser.mediums[1].h, SMR_Taveprogram.Lower_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+Error: The following error was detected at time: 3.343759523362494
+  IF97 medium function g2: the temperature (= -188520 K) is lower than 273.15 K!
+  Failed condition: T >= 273.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.core.coolantSubchannel.mediums[3].p, SMR_Taveprogram.core.coolantSubchannel.mediums[3].h, SMR_Taveprogram.core.coolantSubchannel.mediums[3].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.core.coolantSubchannel.mediums[3].p, SMR_Taveprogram.core.coolantSubchannel.mediums[3].h, SMR_Taveprogram.core.coolantS...
+
+Error: The following error was detected at time: 3.281908773660738
+  Error in region computation of IF97 steam tables(p = 1.27468e+07, h = -1.05346e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.core.coolantSubchannel.mediums[3].p, SMR_Taveprogram.core.coolantSubchannel.mediums[3].h, SMR_Taveprogram.core.coolantSubchannel.mediums[3].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.core.coolantSubchannel.mediums[3].p, SMR_Taveprogram.core.coolantSubchannel.mediums[3].h, SMR_Taveprogram.core.coolantS...
+
+Error: The following error was detected at time: 4.168985882997261
+  Error in region computation of IF97 steam tables(p = 1.21181e+07, h = -4.26194e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.STHX.shell.mediums[4].p, SMR_Taveprogram.STHX.shell.mediums[4].h, SMR_Taveprogram.STHX.shell.mediums[4].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.STHX.shell.mediums[4].p, SMR_Taveprogram.STHX.shell.mediums[4].h, SMR_Taveprogram.STHX.shell.mediums[4].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density...
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.69209011934225
+  IF97 medium function tsat called with too low pressure
+p = -2.42435e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 58
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 6.595832583745377
+  IF97 medium function tsat called with too low pressure
+p = -268308 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(SMR_Taveprogram.STHX.tube.mediums[3].sat.psat)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(SMR_Taveprogram.STHX.tube.mediums[3].sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique42(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = SMR_Taveprogram.STHX.tube.mediums[3].sat.psat, 
+Tsat ...
+
+Error: The following error was detected at time: 6.547703815946941
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -186.355 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(SMR_Taveprogram.STHX.tube.flowModel.mediaProps[3].state.d, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[3].state.T, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[3].state.p, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[3].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique16(
+Modelica.Media.Water.WaterIF97_base.T...
+
+Error: The following error was detected at time: 11.80545885333222
+  Error in region computation of IF97 steam tables(p = 1.27553e+07, h = -537217)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(smooth(1, smooth(1, (if noEvent(SMR_Taveprogram.pipeLoss.dp > SMR_Taveprogram.pipeLoss.dp_smooth) then SMR_Taveprogram.pipeLoss.state_a.p else (if noEvent(SMR_Taveprogram.pipeLoss.dp <  -SMR_Taveprogram.pipeLoss.dp_smooth) then SMR_Taveprogram.pipeLoss.state_b.p else (if abs(SMR_Taveprogram.pipeLoss.dp_smooth) > 0 then 0.25*(SMR_Taveprogram.p...
+
+Error: The following error was detected at time: 11.61559314040077
+  Error in region computation of IF97 steam tables(p = 1.2661e+07, h = -2.7687e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.Lower_Riser.mediums[1].p, SMR_Taveprogram.Lower_Riser.mediums[1].h, SMR_Taveprogram.Lower_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.Lower_Riser.mediums[1].p, SMR_Taveprogram.Lower_Riser.mediums[1].h, SMR_Taveprogram.Lower_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+Error: The following error was detected at time: 13.77041439754587
+  IF97 medium function tsat called with too low pressure
+p = -2.05519e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(SMR_Taveprogram.STHX.tube.mediums[1].sat.psat)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(SMR_Taveprogram.STHX.tube.mediums[1].sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique42(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = SMR_Taveprogram.STHX.tube.mediums[1].sat.psat, 
+Tsat ...
+
+Error: The following error was detected at time: 13.57103628374115
+  Error in region computation of IF97 steam tables(p = 1.08171e+08, h = 304217)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 4
+
+Error: The following error was detected at time: 13.57103628374115
+  Error in region computation of IF97 steam tables(p = 2.75366e+07, h = -2.08822e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.STHX.tube.mediums[9].p, SMR_Taveprogram.STHX.tube.mediums[9].h, SMR_Taveprogram.STHX.tube.mediums[9].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.STHX.tube.mediums[9].p, SMR_Taveprogram.STHX.tube.mediums[9].h, SMR_Taveprogram.STHX.tube.mediums[9].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Error: The following error was detected at time: 13.47134722683878
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -63.916 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(SMR_Taveprogram.STHX.tube.flowModel.mediaProps[4].state.d, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[4].state.T, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[4].state.p, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[4].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique16(
+Modelica.Media.Water.WaterIF97_base.T...
+
+Error: The following error was detected at time: 29.44114677156697
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -237359 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(SMR_Taveprogram.STHX.tube.flowModel.mediaProps[3].state.d, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[3].state.T, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[3].state.p, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[3].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique16(
+Modelica.Media.Water.WaterIF97_base.T...
+
+Error: The following error was detected at time: 34.04890211957345
+  Error in region computation of IF97 steam tables(p = 5.43687e+06, h = 1.99376e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.STHX.tube.heatTransfer.states[10].p, SMR_Taveprogram.STHX.tube.heatTransfer.states[10].h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.cp_ph(SMR_Taveprogram.STHX.tube.heatTransfer.states[10].p, SMR_Taveprogram.STHX.tube.heatTransfer.states[10].h, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.specificHeatCapacityCp_Unique36(
+Modelica.Me...
+
+Error: The following error was detected at time: 33.85211692560122
+  Error in region computation of IF97 steam tables(p = 4.49373e+06, h = 8.54573e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.STHX.tube.heatTransfer.states[10].p, SMR_Taveprogram.STHX.tube.heatTransfer.states[10].h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.cp_ph(SMR_Taveprogram.STHX.tube.heatTransfer.states[10].p, SMR_Taveprogram.STHX.tube.heatTransfer.states[10].h, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.specificHeatCapacityCp_Unique36(
+Modelica.Me...
+
+Error: The following error was detected at time: 33.75372432861511
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -4.68319 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(SMR_Taveprogram.STHX.tube.flowModel.mediaProps[10].state.d, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[10].state.T, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[10].state.p, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[10].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique16(
+Modelica.Media.Water.WaterIF97_ba...
+
+Error: The following error was detected at time: 33.95635466404
+  Error in region computation of IF97 steam tables(p = 1.26304e+07, h = 5.14918e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.pressurizer_tee.medium.p, SMR_Taveprogram.pressurizer_tee.medium.h, SMR_Taveprogram.pressurizer_tee.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.pressurizer_tee.medium.p, SMR_Taveprogram.pressurizer_tee.medium.h, SMR_Taveprogram.pressurizer_tee.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+Error: The following error was detected at time: 33.92404427697299
+  IF97 medium function g2: the temperature (= -12287.1 K) is lower than 273.15 K!
+  Failed condition: T >= 273.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.pressurizer_tee.medium.p, SMR_Taveprogram.pressurizer_tee.medium.h, SMR_Taveprogram.pressurizer_tee.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.pressurizer_tee.medium.p, SMR_Taveprogram.pressurizer_tee.medium.h, SMR_Taveprogram.pressurizer_tee.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+Error: The following error was detected at time: 36.3153328433626
+  Error in region computation of IF97 steam tables(p = 1.25334e+07, h = 7.57367e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.pressurizer_tee.medium.p, SMR_Taveprogram.pressurizer_tee.medium.h, SMR_Taveprogram.pressurizer_tee.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.pressurizer_tee.medium.p, SMR_Taveprogram.pressurizer_tee.medium.h, SMR_Taveprogram.pressurizer_tee.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 36.06122324306429
+  Tag: simulation.nonlinear[13]
+  For debugging information enable
+  Simulation/Setup/Debug/Nonlinear solver diagnostics/Detailed logging of failed nonlinear solutions.
+Error: The following error was detected at time: 39.73974486662719
+  IF97 medium function visc_dTp: viscosity computed outside the range
+of validity of the IF97 formulation: p = 2.16591e+06 Pa, Tc = 1106.7 K
+  Failed condition: p <= 500000000.0 and (Tc >= 0.0 and Tc <= 150) or p <= 350000000.0 and (Tc > 150.0 and Tc <= 600) or p <= 300000000.0 and (Tc > 600.0 and Tc <= 900)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(SMR_Taveprogram.STHX.tube.flowModel.mediaProps[10].state.d, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[10].state.T, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[10].state.p, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[10].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique16(
+Modelica.Media.Water.WaterIF97_ba...
+
+Error: The following error was detected at time: 39.46744194428276
+  IF97 medium function psat: input temperature (= 273.16 K).
+lower than the triple point temperature 273.16 K
+  Failed condition: T >= 273.16
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.psat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.psat(SMR_Taveprogram.STHX.tube.Ts_wall[10, 1])
+Modelica.Media.Water.WaterIF97_ph.saturationPressure_Unique50(SMR_Taveprogram.STHX.tube.heatTransfer.Ts_wall[10, 1])
+
+Error: The following error was detected at time: 45.99953095058049
+  Error in region computation of IF97 steam tables(p = 9.8292e+06, h = 8.0669e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.STHX.tube.mediums[10].p, SMR_Taveprogram.STHX.tube.mediums[10].h, SMR_Taveprogram.STHX.tube.mediums[10].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.STHX.tube.mediums[10].p, SMR_Taveprogram.STHX.tube.mediums[10].h, SMR_Taveprogram.STHX.tube.mediums[10].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density...
+
+Error: The following error was detected at time: 45.11408597993541
+  IF97 medium function visc_dTp: viscosity computed outside the range
+of validity of the IF97 formulation: p = 6.27314e+06 Pa, Tc = 906.179 K
+  Failed condition: p <= 500000000.0 and (Tc >= 0.0 and Tc <= 150) or p <= 350000000.0 and (Tc > 150.0 and Tc <= 600) or p <= 300000000.0 and (Tc > 600.0 and Tc <= 900)
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(SMR_Taveprogram.STHX.tube.flowModel.mediaProps[10].state.d, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[10].state.T, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[10].state.p, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[10].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique16(
+Modelica.Media.Water.WaterIF97_ba...
+
+Error: The following error was detected at time: 44.67136349461287
+  IF97 medium function g2: the input temperature (= 1898.75 K) is higher than the limit of 1073.15 K
+  Failed condition: T <= 1073.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(EM.steamHeader.medium.p, EM.steamHeader.medium.h, EM.steamHeader.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(EM.steamHeader.medium.p, EM.steamHeader.medium.h, EM.steamHeader.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(EM.steamHeader.medium.p, EM.steamHeader.medium.h, EM.steamHeader.medium.phase, 0)
+
+Error: The following error was detected at time: 47.62460908310427
+  Error in region computation of IF97 steam tables(p = 1.22825e+07, h = 7.66049e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.pressurizer_tee.medium.p, SMR_Taveprogram.pressurizer_tee.medium.h, SMR_Taveprogram.pressurizer_tee.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.pressurizer_tee.medium.p, SMR_Taveprogram.pressurizer_tee.medium.h, SMR_Taveprogram.pressurizer_tee.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+Error: The following error was detected at time: 47.57519954568459
+  Error in region computation of IF97 steam tables(p = 1.19146e+07, h = 1.38404e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.pressurizer_tee.medium.p, SMR_Taveprogram.pressurizer_tee.medium.h, SMR_Taveprogram.pressurizer_tee.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.pressurizer_tee.medium.p, SMR_Taveprogram.pressurizer_tee.medium.h, SMR_Taveprogram.pressurizer_tee.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 47.55049477697474
+  Tag: simulation.nonlinear[13]
+Error: The following error was detected at time: 47.53814239261983
+  Error in region computation of IF97 steam tables(p = 1.23807e+07, h = -1.41163e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.pressurizer_tee.medium.p, SMR_Taveprogram.pressurizer_tee.medium.h, SMR_Taveprogram.pressurizer_tee.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.pressurizer_tee.medium.p, SMR_Taveprogram.pressurizer_tee.medium.h, SMR_Taveprogram.pressurizer_tee.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 47.53196620044237
+  Tag: simulation.nonlinear[13]
+Error: The following error was detected at time: 68.11616099544553
+  IF97 medium function g2: the temperature (= -43181.5 K) is lower than 273.15 K!
+  Failed condition: T >= 273.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.Lower_Riser.mediums[1].p, SMR_Taveprogram.Lower_Riser.mediums[1].h, SMR_Taveprogram.Lower_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.Lower_Riser.mediums[1].p, SMR_Taveprogram.Lower_Riser.mediums[1].h, SMR_Taveprogram.Lower_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+Error: The following error was detected at time: 66.5350557980157
+  IF97 medium function g2: the temperature (= -343172 K) is lower than 273.15 K!
+  Failed condition: T >= 273.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.core.coolantSubchannel.mediums[2].p, SMR_Taveprogram.core.coolantSubchannel.mediums[2].h, SMR_Taveprogram.core.coolantSubchannel.mediums[2].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.core.coolantSubchannel.mediums[2].p, SMR_Taveprogram.core.coolantSubchannel.mediums[2].h, SMR_Taveprogram.core.coolantS...
+
+Error: The following error was detected at time: 65.74450319930081
+  IF97 medium function g2: the temperature (= -32985.7 K) is lower than 273.15 K!
+  Failed condition: T >= 273.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.core.coolantSubchannel.mediums[3].p, SMR_Taveprogram.core.coolantSubchannel.mediums[3].h, SMR_Taveprogram.core.coolantSubchannel.mediums[3].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.core.coolantSubchannel.mediums[3].p, SMR_Taveprogram.core.coolantSubchannel.mediums[3].h, SMR_Taveprogram.core.coolantS...
+
+Error: The following error was detected at time: 102.1026831409329
+  Error in region computation of IF97 steam tables(p = 1.25408e+07, h = 1.2099e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(smooth(1, smooth(1, (if noEvent(SMR_Taveprogram.pipeLoss.dp > SMR_Taveprogram.pipeLoss.dp_smooth) then SMR_Taveprogram.pipeLoss.state_a.p else (if noEvent(SMR_Taveprogram.pipeLoss.dp <  -SMR_Taveprogram.pipeLoss.dp_smooth) then SMR_Taveprogram.pipeLoss.state_b.p else (if abs(SMR_Taveprogram.pipeLoss.dp_smooth) > 0 then 0.25*(SMR_Taveprogram.p...
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 100.2185343387891
+  IF97 medium function tsat called with too low pressure
+p = -4.35961e+08 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.region_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 49
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 99.27645993771714
+  Error in region computation of IF97 steam tables(p = 1.35147e+07, h = 7.73635e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.Upper_Riser.mediums[2].p, SMR_Taveprogram.Upper_Riser.mediums[2].h, SMR_Taveprogram.Upper_Riser.mediums[2].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.Upper_Riser.mediums[2].p, SMR_Taveprogram.Upper_Riser.mediums[2].h, SMR_Taveprogram.Upper_Riser.mediums[2].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+Error: The following error was detected at time: 98.80542273718117
+  Error in region computation of IF97 steam tables(p = 1.27414e+07, h = 4.6085e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.PressurizerandTopper.mediums[1].p, SMR_Taveprogram.PressurizerandTopper.mediums[1].h, SMR_Taveprogram.PressurizerandTopper.mediums[1].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.PressurizerandTopper.mediums[1].p, SMR_Taveprogram.PressurizerandTopper.mediums[1].h, SMR_Taveprogram.PressurizerandTopper.me...
+
+Error: The following error was detected at time: 180.6140236577946
+  IF97 medium function g2: the temperature (= -266702 K) is lower than 273.15 K!
+  Failed condition: T >= 273.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.Lower_Riser.mediums[1].p, SMR_Taveprogram.Lower_Riser.mediums[1].h, SMR_Taveprogram.Lower_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.Lower_Riser.mediums[1].p, SMR_Taveprogram.Lower_Riser.mediums[1].h, SMR_Taveprogram.Lower_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+Error: The following error was detected at time: 176.5410802183935
+  IF97 medium function visc_dTp for viscosity called with too low density
+d = -116.93 <= 0.00485458 (triple point density)
+  Failed condition: d > 0.004854575724778614
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity
+Modelica.Media.Water.IF97_Utilities.dynamicViscosity(SMR_Taveprogram.STHX.tube.flowModel.mediaProps[3].state.d, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[3].state.T, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[3].state.p, SMR_Taveprogram.STHX.tube.flowModel.mediaProps[3].state.phase, true)
+Modelica.Media.Water.WaterIF97_ph.dynamicViscosity_Unique16(
+Modelica.Media.Water.WaterIF97_base.T...
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 235.386497354943
+  Error in region computation of IF97 steam tables(p = 3.6e+06, h = -651293)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.MainFeedwaterHeater1.Tube.medium.p, BOP.MainFeedwaterHeater1.Tube.medium.h, BOP.MainFeedwaterHeater1.Tube.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Un...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 44
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 225.4313024324056
+  Error in region computation of IF97 steam tables(p = 4.79078e+08, h = 1.52307e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 69
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 220.4537049711369
+  Error in region computation of IF97 steam tables(p = 1.11406e+07, h = 1.18757e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 6
+
+Error: The following error was detected at time: 220.4537049711369
+  Error in region computation of IF97 steam tables(p = 7.1298e+06, h = 1.9894e+07)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.Upper_Riser.mediums[1].p, SMR_Taveprogram.Upper_Riser.mediums[1].h, SMR_Taveprogram.Upper_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.Upper_Riser.mediums[1].p, SMR_Taveprogram.Upper_Riser.mediums[1].h, SMR_Taveprogram.Upper_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+Error: The following error was detected at time: 217.9649062405026
+  Error in region computation of IF97 steam tables(p = 1.10433e+07, h = 5.16127e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.Upper_Riser.mediums[1].p, SMR_Taveprogram.Upper_Riser.mediums[1].h, SMR_Taveprogram.Upper_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.Upper_Riser.mediums[1].p, SMR_Taveprogram.Upper_Riser.mediums[1].h, SMR_Taveprogram.Upper_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+Error: The following error was detected at time: 216.7205068751854
+  IF97 medium function g2: the temperature (= -75822.9 K) is lower than 273.15 K!
+  Failed condition: T >= 273.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SMR_Taveprogram.Upper_Riser.mediums[1].p, SMR_Taveprogram.Upper_Riser.mediums[1].h, SMR_Taveprogram.Upper_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(SMR_Taveprogram.Upper_Riser.mediums[1].p, SMR_Taveprogram.Upper_Riser.mediums[1].h, SMR_Taveprogram.Upper_Riser.mediums[1].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.d...
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 216.0983071925268
+  Tag: simulation.nonlinear[13]
+Error: The following error was detected at time: 288.0182005731678
+  Error in region computation of IF97 steam tables(p = 1.269e+07, h = 6.50533e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(smooth(1, smooth(1, (if noEvent(SMR_Taveprogram.pipeLoss.dp > SMR_Taveprogram.pipeLoss.dp_smooth) then SMR_Taveprogram.pipeLoss.state_a.p else (if noEvent(SMR_Taveprogram.pipeLoss.dp <  -SMR_Taveprogram.pipeLoss.dp_smooth) then SMR_Taveprogram.pipeLoss.state_b.p else (if abs(SMR_Taveprogram.pipeLoss.dp_smooth) > 0 then 0.25*(SMR_Taveprogram.p...
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+Error: The following error was detected at time: 287.3851929589867
+  Error in region computation of IF97 steam tables(p = 2.57957e+08, h = 252963)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.pump_SimpleMassFlow2.medium.p, BOP.pump_SimpleMassFlow2.medium.h, BOP.pump_SimpleMassFlow2.medium.phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique26(BOP.pump_SimpleMassFlow...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver recovered after failed attempt number: 61
+
+Fixed point iterating to handle problem.
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 287.0686891518963
+  Tag: simulation.nonlinear[13]
+Error: The following error was detected at time: 286.910437248351
+  Error in region computation of IF97 steam tables(p = 1.28481e+07, h = -1.06643e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(smooth(1, smooth(1, (if noEvent(SMR_Taveprogram.pipeLoss.dp > SMR_Taveprogram.pipeLoss.dp_smooth) then SMR_Taveprogram.pipeLoss.state_a.p else (if noEvent(SMR_Taveprogram.pipeLoss.dp <  -SMR_Taveprogram.pipeLoss.dp_smooth) then SMR_Taveprogram.pipeLoss.state_b.p else (if abs(SMR_Taveprogram.pipeLoss.dp_smooth) > 0 then 0.25*(SMR_Taveprogram.p...
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 443.3359558494986
+  Tag: simulation.nonlinear[17]
+Trying homotopy
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 443.3359558494986
+  Tag: simulation.nonlinear[17]
+HandleRoot:HandleRoot
+
+Integration terminated unsuccesfully at T = 442.209
+   CPU-time for integration                  : 40.3811 seconds
+   CPU-time for initialization               : 0.054812 seconds
+   Number of result points                   : 45
+   Number of grid points                     : 45
+   Number of accepted steps                  : 1059
+   Number of rejected steps                  : 597
+   Number of f-evaluations (dynamics)        : 15165
+   Number of crossing function evaluations   : 4084
+   Number of Jacobian-evaluations            : 290
+   Number of model time events               : 1
+   Number of state events                    : 56
+   Number of step events                     : 0
+
+ERROR: The simulation of NHES.Systems.Examples.FWHPT.LWR_L2_Turbine_AdditionalFeedheater_NewControl2_Deaerator_SmallPT FAILED

@@ -1,0 +1,5 @@
+Model was not translated with Binary Model Export or Source Code Generation options.
+Default license from "/apps/local/dymola/2023.3/dymola.lic" not checked out
+Maximum number of shareable (floating) license users exceeded
+
+You can specify the location of the license through the environment variable "DYMOLA_RUNTIME_LICENSE"

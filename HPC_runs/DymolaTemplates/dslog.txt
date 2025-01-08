@@ -1,0 +1,165 @@
+Model: ControlTests.SteamTurbine_L2_OpenFeedHeat_Test2
+Integration started at 0 using integration method:
+RK-method: esdirk45a
+Local extrapolation
+FSAL
+Continuous extension
+
+Error: The following error was detected at time: 0.02237857380163852
+  Error in region computation of IF97 steam tables(p = 3.22389e+06, h = -31846.7)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique15(BOP.HPT.portHP.p, BOP.s...
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0.02237857380163852
+  Error in region computation of IF97 steam tables(p = 3.22389e+06, h = -31846.7)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique15(BOP.HPT.portHP.p, BOP.s...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 40.16512909441897
+  Tag: simulation.nonlinear[3]
+  For debugging information enable
+  Simulation/Setup/Debug/Nonlinear solver diagnostics/Detailed logging of failed nonlinear solutions.
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 35.1690640836024
+  Tag: simulation.nonlinear[3]
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 131.4967240590344
+  Tag: simulation.nonlinear[3]
+Error: The following error was detected at time: 238.0788896155233
+  IF97 medium function tsat called with too low pressure
+p = -7.74873e+06 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(pipe.pipe.mediums[1].sat.psat)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(pipe.pipe.mediums[1].sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique21(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = pipe.pipe.mediums[1].sat.psat, 
+Tsat = pipe.pipe.mediums[1].sat.Tsat
+))
+
+Error: The following error was detected at time: 235.5646125161923
+  Error in region computation of IF97 steam tables(p = 2.77634e+06, h = 8.33231e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique15(BOP.HPT.portHP.p, BOP.s...
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 235.5646125161923
+  Error in region computation of IF97 steam tables(p = 2.77634e+06, h = 8.33231e+06)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique15(BOP.HPT.portHP.p, BOP.s...
+
+Non-linear solver will silently attempt to handle this problem.
+Non-linear solver gave up after attempt: 2
+
+Error: The following error was detected at time: 306.3610094738828
+  IF97 medium function g2: the temperature (= -6444.63 K) is lower than 273.15 K!
+  Failed condition: T >= 273.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pipe.pipe.mediums[1].p, pipe.pipe.mediums[1].h, pipe.pipe.mediums[1].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(pipe.pipe.mediums[1].p, pipe.pipe.mediums[1].h, pipe.pipe.mediums[1].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(pipe.pipe.mediums[1].p, pipe.pipe.mediums[1].h, pipe.pipe.mediums[1].phase, 0)
+
+Error: The following error was detected at time: 365.1154286101778
+  Error in region computation of IF97 steam tables(p = 517261, h = -466855)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflow, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique15(BOP.LPT.portHP.p, BOP.tee.port_1.h_outflo...
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 357.5577143050889
+  Tag: simulation.nonlinear[3]
+Error: The following error was detected at time: 1091.005028728613
+  IF97 medium function g2: the temperature (= -223690 K) is lower than 273.15 K!
+  Failed condition: T >= 273.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pipe.pipe.mediums[4].p, pipe.pipe.mediums[4].h, pipe.pipe.mediums[4].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(pipe.pipe.mediums[4].p, pipe.pipe.mediums[4].h, pipe.pipe.mediums[4].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(pipe.pipe.mediums[4].p, pipe.pipe.mediums[4].h, pipe.pipe.mediums[4].phase, 0)
+
+Error: The following error was detected at time: 1076.82684977617
+  IF97 medium function g2: the temperature (= -9933.97 K) is lower than 273.15 K!
+  Failed condition: T >= 273.15
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.g2
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pipe.pipe.mediums[7].p, pipe.pipe.mediums[7].h, pipe.pipe.mediums[7].phase, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(pipe.pipe.mediums[7].p, pipe.pipe.mediums[7].h, pipe.pipe.mediums[7].phase, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(pipe.pipe.mediums[7].p, pipe.pipe.mediums[7].h, pipe.pipe.mediums[7].phase, 0)
+
+
+Warning: Failed to solve nonlinear system using Newton solver.
+  Time: 1069.737760299949
+  Tag: simulation.nonlinear[3]
+Error: The following error was detected at time: 2539.650653876214
+  IF97 medium function tsat called with too low pressure
+p = -5.64414e+07 Pa <= 611.657 Pa (triple point pressure)
+  Failed condition: p > 611.657
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Basic.tsat
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.boilingcurve_p(pipe.pipe.mediums[1].sat.psat)
+Modelica.Media.Water.IF97_Utilities.BaseIF97.Regions.hl_p(pipe.pipe.mediums[1].sat.psat)
+Modelica.Media.Water.WaterIF97_ph.bubbleEnthalpy_Unique21(
+Modelica.Media.Water.WaterIF97_base.SaturationProperties(
+psat = pipe.pipe.mediums[1].sat.psat, 
+Tsat = pipe.pipe.mediums[1].sat.Tsat
+))
+
+
+Integration terminated successfully at T = 9960
+   CPU-time for integration                  : 10.3498 seconds
+   CPU-time for initialization               : 0.00193501 seconds
+   Number of result points                   : 10032
+   Number of grid points                     : 9961
+   Number of accepted steps                  : 536
+   Number of rejected steps                  : 257
+   Number of f-evaluations (dynamics)        : 8729
+   Number of crossing function evaluations   : 2069
+   Number of Jacobian-evaluations            : 228
+   Number of model time events               : 2
+   Number of state events                    : 34
+   Number of step events                     : 0
+
+SUCCESSFUL simulation of ControlTests.SteamTurbine_L2_OpenFeedHeat_Test2

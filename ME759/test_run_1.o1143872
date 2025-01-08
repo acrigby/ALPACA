@@ -1,0 +1,14 @@
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+/var/spool/pbs/mom_priv/jobs/1143872.sawtoothpbs.SC: line 9: cd: ME759: No such file or directory
+Error: [Errno 13] Permission denied: '/env-01'
+/var/spool/pbs/mom_priv/jobs/1143872.sawtoothpbs.SC: line 14: env-01/bin/activate: No such file or directory
+/var/spool/pbs/mom_priv/jobs/1143872.sawtoothpbs.SC: line 15: cd: ALPACA: No such file or directory
+/var/spool/pbs/mom_priv/jobs/1143872.sawtoothpbs.SC: line 17: pip: command not found
+/var/spool/pbs/mom_priv/jobs/1143872.sawtoothpbs.SC: line 18: cd: ME759: No such file or directory
+/var/spool/pbs/mom_priv/jobs/1143872.sawtoothpbs.SC: line 20: pip: command not found
+g++: error: rk4.cpp: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+python: can't open file 'SequentionalQlearnCPP.py': [Errno 2] No such file or directory
+python: can't open file 'ParallelQlearnCPPdequeue.py': [Errno 2] No such file or directory
