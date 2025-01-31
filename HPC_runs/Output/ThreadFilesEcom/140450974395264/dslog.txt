@@ -1,0 +1,29 @@
+... loading "BOP" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "ES" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "SES" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "NetDemand" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "IP" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "BOP" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/DMM_Dissertation_Demand.txt"
+Model: NHES.Systems.Examples.TES_Use_Case.HTGR_Case_03_OversizedTurbine_RL
+Integration started at 202000 using integration method:
+RK-method: esdirk45a
+Local extrapolation
+FSAL
+Continuous extension
+
+
+Integration terminated successfully at T = 203000
+   CPU-time for integration                  : 1.54223 seconds
+   CPU-time for initialization               : 0.0092051 seconds
+   Number of result points                   : 2001
+   Number of grid points                     : 2001
+   Number of accepted steps                  : 54
+   Number of rejected steps                  : 1
+   Number of f-evaluations (dynamics)        : 545
+   Number of crossing function evaluations   : 163
+   Number of Jacobian-evaluations            : 6
+   Number of model time events               : 4
+   Number of state events                    : 0
+   Number of step events                     : 0
+
+SUCCESSFUL simulation of NHES.Systems.Examples.TES_Use_Case.HTGR_Case_03_OversizedTurbine_RL

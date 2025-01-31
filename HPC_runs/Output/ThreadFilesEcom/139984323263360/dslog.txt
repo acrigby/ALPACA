@@ -1,0 +1,13 @@
+... loading "BOP" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "ES" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "SES" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "NetDemand" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "IP" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/Nominal_50_timeSeries.txt"
+... loading "BOP" from "/home/rigbac/Projects/HYBRID/Models/NHES/Resources/Data/RAVEN/DMM_Dissertation_Demand.txt"
+Model: NHES.Systems.Examples.TES_Use_Case.HTGR_Case_03_OversizedTurbine_RL
+Integration started at 202000 using integration method:
+RK-method: esdirk45a
+Local extrapolation
+FSAL
+Continuous extension
+
