@@ -2,7 +2,7 @@ DymolaRunData/
 env_RL_2/
 RunData/
 #HPC_runs/Output/
-HPC_runs/Output/Figures
+HPC_runs/Output/Figures/Batch_2
 HPC_runs/Output/StartPoints
 
 #HPC_runs/Output/ThreadfilesEcom
