@@ -1,0 +1,43 @@
+Model: ControlTests.SteamTurbine_L2_OpenFeedHeat_Test2
+Integration started at 0 using integration method:
+RK-method: esdirk45a
+Local extrapolation
+FSAL
+Continuous extension
+
+Error: The following error was detected at time: 0.02288057434725334
+  Error in region computation of IF97 steam tables(p = 3.23341e+06, h = -806583)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.portHP.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique15(BOP.HPT.portHP.p, BOP.sensor_T1.port...
+
+First evaluation failed for non-linear solver.
+
+Error: The following error was detected at time: 0.02288057434725334
+  Error in region computation of IF97 steam tables(p = 3.23341e+06, h = -806583)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.portHP.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique15(BOP.HPT.portHP.p, BOP.sensor_T1.port...
+
+Non-linear solver will attempt to handle this problem.
+
+Error: The following error was detected at time: 0.02288057434725334
+  Error in region computation of IF97 steam tables(p = 3.23341e+06, h = -806583)
+  Failed condition: false
+The stack of functions is:
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph
+Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(BOP.HPT.portHP.p, BOP.HPT.state_a.h, 0, 0)
+Modelica.Media.Water.IF97_Utilities.rho_ph(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.density_ph_Unique16(BOP.HPT.portHP.p, BOP.sensor_T1.port_b.h_outflow, 0, 0)
+Modelica.Media.Water.WaterIF97_ph.setState_phX_Unique15(BOP.HPT.portHP.p, BOP.sensor_T1.port...
+
+Non-linear solver will attempt to handle this problem.
+
