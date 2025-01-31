@@ -1,7 +1,0 @@
-model dsmodelIterationSelect
-  extends ControlTests.SteamTurbine_L2_OpenFeedHeat_Test2;
-  annotation(__Dymola_SimulationIterationVariables={"BOP.deaerator.medium.h", 
-  "BOP.deaerator.medium.p", "BOP.HPT.portHP.p", "der(BOP.tee.medium.h)", 
-  "der(BOP.tee.medium.p)", "der(BOP.Moisture_Separator.medium.h)", 
-  "BOP.tee.port_2.m_flow", "der(BOP.FeedwaterMixVolume.medium.h)"});
-end dsmodelIterationSelect;
