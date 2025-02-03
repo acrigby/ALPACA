@@ -1,0 +1,9 @@
+Failure # 1 (occurred at 2024-06-15_17-33-04)
+The actor died unexpectedly before finishing this task.
+	class_name: PPO
+	actor_id: 7a29140445adaa5cb138608d01000000
+	pid: 12399
+	namespace: 53edaf55-7604-4594-8cc7-c0a6031d73a4
+	ip: 10.159.28.40
+The actor is dead because its node has died. Node Id: c2e28170c4168b4bf7ea3adade5beb05abd52056c906bcad02dd769d
+The actor never ran - it was cancelled before it started running.
