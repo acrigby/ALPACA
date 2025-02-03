@@ -1,0 +1,108 @@
+Failure # 1 (occurred at 2024-08-15_17-45-34)
+[36mray::PPO.train()[39m (pid=53226, ip=10.159.28.42, actor_id=c6bd52956f33b02c6a8dfb8901000000, repr=PPO)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 331, in train
+    raise skipped from exception_cause(skipped)
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/tune/trainable/trainable.py", line 328, in train
+    result = self.step()
+             ^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/algorithms/algorithm.py", line 873, in step
+    train_results, train_iter_ctx = self._run_one_training_iteration()
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/algorithms/algorithm.py", line 3156, in _run_one_training_iteration
+    results = self.training_step()
+              ^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/algorithms/ppo/ppo.py", line 428, in training_step
+    return self._training_step_old_and_hybrid_api_stacks()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/algorithms/ppo/ppo.py", line 562, in _training_step_old_and_hybrid_api_stacks
+    train_batch = synchronous_parallel_sample(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/execution/rollout_ops.py", line 97, in synchronous_parallel_sample
+    sampled_data = worker_set.foreach_worker(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/env/env_runner_group.py", line 849, in foreach_worker
+    _handle_remote_call_result_errors(
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/env/env_runner_group.py", line 1184, in _handle_remote_call_result_errors
+    raise r.get()
+ray.exceptions.RayTaskError(FileNotFoundError): [36mray::RolloutWorker.apply()[39m (pid=54240, ip=10.159.28.42, actor_id=be685c2140cfffe9fef5322201000000, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x14388f9b75d0>)
+           ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'dsres.mat'
+
+During handling of the above exception, another exception occurred:
+
+[36mray::RolloutWorker.apply()[39m (pid=54240, ip=10.159.28.42, actor_id=be685c2140cfffe9fef5322201000000, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x14388f9b75d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/utils/actor_manager.py", line 189, in apply
+    raise e
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/utils/actor_manager.py", line 178, in apply
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/execution/rollout_ops.py", line 99, in <lambda>
+    (lambda w: w.sample())
+               ^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/evaluation/rollout_worker.py", line 685, in sample
+    batches = [self.input_reader.next()]
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/evaluation/sampler.py", line 91, in next
+    batches = [self.get_data()]
+               ^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/evaluation/sampler.py", line 273, in get_data
+    item = next(self._env_runner)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/evaluation/env_runner_v2.py", line 348, in run
+    outputs = self.step()
+              ^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/evaluation/env_runner_v2.py", line 404, in step
+    self._base_env.send_actions(actions_to_send)
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/env/vector_env.py", line 462, in send_actions
+    ) = self.vector_env.vector_step(action_vector)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/env/vector_env.py", line 358, in vector_step
+    raise e
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/ray/rllib/env/vector_env.py", line 351, in vector_step
+    results = self.envs[i].step(actions[i])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/gymnasium/wrappers/common.py", line 121, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+                                                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/gymnasium/wrappers/common.py", line 408, in step
+    return super().step(action)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/gymnasium/core.py", line 317, in step
+    return self.env.step(action)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/gymnasium/wrappers/common.py", line 298, in step
+    return env_step_passive_checker(self.env, action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/gymnasium/utils/passive_env_checker.py", line 215, in env_step_passive_checker
+    result = env.step(action)
+             ^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/gymnasium/envs/classic_control/Reactor-v8.py", line 284, in step
+    ns, results, terminal = DymolaDyn(self,s_augmented, self.t, self.variables, self.results, self.fflist)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/gymnasium/envs/classic_control/Reactor-v8.py", line 389, in DymolaDyn
+    response = matreader(matSourceFileName,variables)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/HPC_runs/PythonScripts/matreader.py", line 96, in matreader
+    mat = scipy.io.loadmat(matSourceFileName, chars_as_strings=False)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/scipy/io/matlab/_mio.py", line 225, in loadmat
+    with _open_file_context(file_name, appendmat) as f:
+  File "/apps/spack/opt/gcc-12.3.0/python-3.11.6-3twidc7jth73nctkuwdshsdcqg4vrkcb/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/scipy/io/matlab/_mio.py", line 17, in _open_file_context
+    f, opened = _open_file(file_like, appendmat, mode)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rigbac/Projects/ALPACA/env_RL_2/lib/python3.11/site-packages/scipy/io/matlab/_mio.py", line 45, in _open_file
+    return open(file_like, mode), True
+           ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'dsres.mat'

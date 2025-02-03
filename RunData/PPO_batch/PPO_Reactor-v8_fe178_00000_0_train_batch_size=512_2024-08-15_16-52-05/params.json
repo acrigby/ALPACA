@@ -1,0 +1,12 @@
+{
+  "clip_param": 0.2304,
+  "env": "Reactor-v8",
+  "kl_coeff": 1.0,
+  "lambda": 0.9785840092290766,
+  "lr": 0.0001,
+  "num_cpus": 1,
+  "num_gpus": 0,
+  "num_workers": 6,
+  "rollout_fragment_length": 1,
+  "train_batch_size": 2048
+}
